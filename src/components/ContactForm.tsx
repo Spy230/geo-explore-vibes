@@ -1,0 +1,178 @@
+const ContactForm = () => {
+  return (
+    <section id="contact" style={{ padding: '5rem 0', background: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
+      <div className="container">
+        <div className="text-center" style={{ marginBottom: '4rem' }}>
+          <h2 className="text-6xl font-bold" style={{ marginBottom: '1rem' }}>
+            <span
+              style={{
+                background: 'linear-gradient(135deg, #7a6145, #9c7a5a, #b8956f)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                color: 'transparent'
+              }}
+            >
+              Получить консультацию
+            </span>
+          </h2>
+          <p className="text-2xl" style={{ color: '#a08670', maxWidth: '32rem', margin: '0 auto' }}>
+            Оставьте заявку и мы свяжемся с вами в течение 15 минут
+          </p>
+        </div>
+
+        <div style={{ maxWidth: '32rem', margin: '0 auto' }}>
+          <form className="glass-card" style={{ padding: '2rem', borderRadius: '0.75rem' }}>
+            <div style={{ marginBottom: '1.5rem' }}>
+              <label style={{ display: 'block', marginBottom: '0.5rem', color: '#d4c4b0', fontWeight: '600' }}>
+                Ваше имя
+              </label>
+              <input
+                type="text"
+                placeholder="Введите ваше имя"
+                style={{
+                  width: '100%',
+                  padding: '0.75rem',
+                  borderRadius: '0.5rem',
+                  border: '1px solid rgba(122, 97, 69, 0.3)',
+                  background: 'rgba(28, 20, 19, 0.5)',
+                  color: '#d4c4b0',
+                  fontSize: '1rem'
+                }}
+              />
+            </div>
+
+            <div style={{ marginBottom: '1.5rem' }}>
+              <label style={{ display: 'block', marginBottom: '0.5rem', color: '#d4c4b0', fontWeight: '600' }}>
+                Телефон
+              </label>
+              <input
+                type="tel"
+                placeholder="+7 (___) ___-__-__"
+                style={{
+                  width: '100%',
+                  padding: '0.75rem',
+                  borderRadius: '0.5rem',
+                  border: '1px solid rgba(122, 97, 69, 0.3)',
+                  background: 'rgba(28, 20, 19, 0.5)',
+                  color: '#d4c4b0',
+                  fontSize: '1rem'
+                }}
+              />
+            </div>
+
+            <div style={{ marginBottom: '1.5rem' }}>
+              <label style={{ display: 'block', marginBottom: '0.5rem', color: '#d4c4b0', fontWeight: '600' }}>
+                Город
+              </label>
+              <input
+                type="text"
+                placeholder="В каком городе ваш бизнес?"
+                style={{
+                  width: '100%',
+                  padding: '0.75rem',
+                  borderRadius: '0.5rem',
+                  border: '1px solid rgba(122, 97, 69, 0.3)',
+                  background: 'rgba(28, 20, 19, 0.5)',
+                  color: '#d4c4b0',
+                  fontSize: '1rem'
+                }}
+              />
+            </div>
+
+            <div style={{ marginBottom: '2rem' }}>
+              <label style={{ display: 'block', marginBottom: '0.5rem', color: '#d4c4b0', fontWeight: '600' }}>
+                Тип бизнеса
+              </label>
+              <select
+                style={{
+                  width: '100%',
+                  padding: '0.75rem',
+                  borderRadius: '0.5rem',
+                  border: '1px solid rgba(122, 97, 69, 0.3)',
+                  background: 'rgba(28, 20, 19, 0.5)',
+                  color: '#d4c4b0',
+                  fontSize: '1rem'
+                }}
+              >
+                <option value="">Выберите тип бизнеса</option>
+                <option value="restaurant">Ресторан/Кафе</option>
+                <option value="beauty">Салон красоты</option>
+                <option value="medical">Медицинские услуги</option>
+                <option value="auto">Автосервис</option>
+                <option value="retail">Розничная торговля</option>
+                <option value="services">Услуги</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full px-8 py-4 text-lg font-semibold text-white rounded-lg"
+              style={{
+                background: 'linear-gradient(135deg, #6b5439, #7a6145)',
+                boxShadow: '0 0 30px rgba(122, 97, 69, 0.4)',
+                border: 'none',
+                cursor: 'pointer',
+                marginBottom: '1rem'
+              }}
+            >
+              Получить консультацию
+            </button>
+
+            <p style={{ textAlign: 'center', color: '#a08670', fontSize: '0.875rem' }}>
+              Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+            </p>
+          </form>
+
+          <div className="text-center" style={{ marginTop: '2rem' }}>
+            <p style={{ color: '#a08670', marginBottom: '1rem' }}>Или свяжитесь с нами напрямую:</p>
+            <div className="flex justify-center" style={{ gap: '1rem', flexWrap: 'wrap' }}>
+              <a
+                href="tel:+79023845591"
+                className="px-6 py-3 text-white rounded-lg"
+                style={{
+                  background: 'rgba(122, 97, 69, 0.3)',
+                  border: '1px solid rgba(122, 97, 69, 0.5)',
+                  textDecoration: 'none',
+                  display: 'inline-block'
+                }}
+              >
+                📞 +7 902 384-55-91
+              </a>
+              <a
+                href="https://wa.me/79023889482"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 text-white rounded-lg"
+                style={{
+                  background: 'rgba(37, 211, 102, 0.3)',
+                  border: '1px solid rgba(37, 211, 102, 0.5)',
+                  textDecoration: 'none',
+                  display: 'inline-block'
+                }}
+              >
+                💬 WhatsApp
+              </a>
+              <a
+                href="https://t.me/+79023889482"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 text-white rounded-lg"
+                style={{
+                  background: 'rgba(0, 136, 204, 0.3)',
+                  border: '1px solid rgba(0, 136, 204, 0.5)',
+                  textDecoration: 'none',
+                  display: 'inline-block'
+                }}
+              >
+                ✈️ Telegram
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactForm;
