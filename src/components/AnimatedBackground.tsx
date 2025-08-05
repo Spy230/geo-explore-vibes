@@ -1,7 +1,7 @@
 const AnimatedBackground = () => {
   return (
     <div className="particles-background">
-      {/* Темный фон с текстурой как на изображении */}
+      {/* Темный фон с текстурой */}
       <div
         className="absolute inset-0"
         style={{
@@ -15,190 +15,125 @@ const AnimatedBackground = () => {
         }}
       />
 
-      {/* Дополнительный слой для создания глубины */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `
-            radial-gradient(ellipse at center, transparent 20%, rgba(0, 0, 0, 0.3) 70%),
-            linear-gradient(45deg, transparent 30%, rgba(20, 20, 20, 0.2) 50%, transparent 70%)
-          `,
-        }}
-      />
-
-      {/* Анимированные золотистые частицы */}
+      {/* Анимированные золотистые частицы - МНОГО БОЛЬШЕ */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Крупные яркие частицы */}
-        <div
-          className="absolute animate-float"
-          style={{
-            top: '15%', left: '10%', width: '6px', height: '6px',
-            backgroundColor: '#6e5a4a',
-            borderRadius: '50%',
-            boxShadow: '0 0 30px rgba(110, 90, 74, 0.9), 0 0 60px rgba(110, 90, 74, 0.5), 0 0 90px rgba(110, 90, 74, 0.2)',
-            animationDelay: '0s',
-            animationDuration: '12s'
-          }}
-        />
-        <div
-          className="absolute animate-float"
-          style={{
-            top: '70%', right: '15%', width: '8px', height: '8px',
-            backgroundColor: '#5c4a3a',
-            borderRadius: '50%',
-            boxShadow: '0 0 35px rgba(92, 74, 58, 0.8), 0 0 70px rgba(92, 74, 58, 0.4)',
-            animationDelay: '3s',
-            animationDuration: '15s'
-          }}
-        />
-        <div
-          className="absolute animate-float"
-          style={{
-            top: '30%', left: '70%', width: '4px', height: '4px',
-            backgroundColor: '#4a3a2a',
-            borderRadius: '50%',
-            boxShadow: '0 0 25px rgba(74, 58, 42, 0.7), 0 0 50px rgba(74, 58, 42, 0.3)',
-            animationDelay: '6s',
-            animationDuration: '18s'
-          }}
-        />
-        <div
-          className="absolute animate-float"
-          style={{
-            top: '80%', left: '25%', width: '5px', height: '5px',
-            backgroundColor: '#564836',
-            borderRadius: '50%',
-            boxShadow: '0 0 20px rgba(86, 72, 54, 0.6), 0 0 40px rgba(86, 72, 54, 0.3)',
-            animationDelay: '9s',
-            animationDuration: '20s'
-          }}
-        />
+        {Array.from({ length: 15 }, (_, i) => (
+          <div
+            key={`large-${i}`}
+            className="absolute animate-float"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${6 + Math.random() * 4}px`,
+              height: `${6 + Math.random() * 4}px`,
+              backgroundColor: '#6e5a4a',
+              borderRadius: '50%',
+              boxShadow: `0 0 ${30 + Math.random() * 20}px rgba(110, 90, 74, 0.9), 0 0 ${60 + Math.random() * 30}px rgba(110, 90, 74, 0.6), 0 0 ${90 + Math.random() * 40}px rgba(110, 90, 74, 0.3)`,
+              animationDelay: `${Math.random() * 10}s`,
+              animationDuration: `${12 + Math.random() * 8}s`
+            }}
+          />
+        ))}
 
         {/* Средние частицы */}
-        <div
-          className="absolute animate-float"
-          style={{
-            top: '25%', right: '30%', width: '3px', height: '3px',
-            backgroundColor: '#4a3a2a',
-            borderRadius: '50%',
-            boxShadow: '0 0 15px rgba(74, 58, 42, 0.5), 0 0 30px rgba(74, 58, 42, 0.2)',
-            animationDelay: '2s',
-            animationDuration: '14s'
-          }}
-        />
-        <div
-          className="absolute animate-float"
-          style={{
-            top: '45%', left: '5%', width: '3px', height: '3px',
-            backgroundColor: '#392e20',
-            borderRadius: '50%',
-            boxShadow: '0 0 12px rgba(57, 46, 32, 0.4), 0 0 24px rgba(57, 46, 32, 0.2)',
-            animationDelay: '5s',
-            animationDuration: '16s'
-          }}
-        />
-        <div
-          className="absolute animate-float"
-          style={{
-            top: '60%', right: '40%', width: '2px', height: '2px',
-            backgroundColor: '#5c4a3a',
-            borderRadius: '50%',
-            boxShadow: '0 0 10px rgba(92, 74, 58, 0.4), 0 0 20px rgba(92, 74, 58, 0.2)',
-            animationDelay: '8s',
-            animationDuration: '22s'
-          }}
-        />
+        {Array.from({ length: 25 }, (_, i) => (
+          <div
+            key={`medium-${i}`}
+            className="absolute animate-float"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${3 + Math.random() * 2}px`,
+              height: `${3 + Math.random() * 2}px`,
+              backgroundColor: '#5c4a3a',
+              borderRadius: '50%',
+              boxShadow: `0 0 ${15 + Math.random() * 10}px rgba(92, 74, 58, 0.7), 0 0 ${30 + Math.random() * 15}px rgba(92, 74, 58, 0.4)`,
+              animationDelay: `${Math.random() * 15}s`,
+              animationDuration: `${14 + Math.random() * 6}s`
+            }}
+          />
+        ))}
 
         {/* Мелкие частицы */}
-        <div
-          className="absolute animate-float"
-          style={{
-            top: '10%', left: '60%', width: '2px', height: '2px',
-            backgroundColor: '#453528',
-            borderRadius: '50%',
-            boxShadow: '0 0 8px rgba(69, 53, 40, 0.3), 0 0 16px rgba(69, 53, 40, 0.1)',
-            animationDelay: '1s',
-            animationDuration: '13s'
-          }}
-        />
-        <div
-          className="absolute animate-float"
-          style={{
-            top: '85%', right: '60%', width: '2px', height: '2px',
-            backgroundColor: '#392e20',
-            borderRadius: '50%',
-            boxShadow: '0 0 6px rgba(57, 46, 32, 0.3), 0 0 12px rgba(57, 46, 32, 0.1)',
-            animationDelay: '4s',
-            animationDuration: '17s'
-          }}
-        />
-        <div
-          className="absolute animate-float"
-          style={{
-            top: '40%', right: '10%', width: '1px', height: '1px',
-            backgroundColor: '#2d2118',
-            borderRadius: '50%',
-            boxShadow: '0 0 4px rgba(45, 33, 24, 0.2), 0 0 8px rgba(45, 33, 24, 0.1)',
-            animationDelay: '7s',
-            animationDuration: '19s'
-          }}
-        />
+        {Array.from({ length: 40 }, (_, i) => (
+          <div
+            key={`small-${i}`}
+            className="absolute animate-float"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${1 + Math.random() * 2}px`,
+              height: `${1 + Math.random() * 2}px`,
+              backgroundColor: '#4a3a2a',
+              borderRadius: '50%',
+              boxShadow: `0 0 ${8 + Math.random() * 5}px rgba(74, 58, 42, 0.5), 0 0 ${16 + Math.random() * 8}px rgba(74, 58, 42, 0.2)`,
+              animationDelay: `${Math.random() * 20}s`,
+              animationDuration: `${16 + Math.random() * 4}s`
+            }}
+          />
+        ))}
 
-        {/* Очень мелкие точки для создания глубины */}
-        <div
-          className="absolute animate-glow"
-          style={{
-            top: '20%', left: '80%', width: '1px', height: '1px',
-            backgroundColor: '#6e5a4a',
-            borderRadius: '50%',
-            animationDelay: '1.5s',
-            animationDuration: '4s'
-          }}
-        />
-        <div
-          className="absolute animate-glow"
-          style={{
-            top: '90%', left: '50%', width: '1px', height: '1px',
-            backgroundColor: '#5c4a3a',
-            borderRadius: '50%',
-            animationDelay: '3.5s',
-            animationDuration: '5s'
-          }}
-        />
-        <div
-          className="absolute animate-glow"
-          style={{
-            top: '5%', left: '30%', width: '1px', height: '1px',
-            backgroundColor: '#4a3a2a',
-            borderRadius: '50%',
-            animationDelay: '2.5s',
-            animationDuration: '6s'
-          }}
-        />
+        {/* Очень мелкие мерцающие точки */}
+        {Array.from({ length: 60 }, (_, i) => (
+          <div
+            key={`tiny-${i}`}
+            className="absolute animate-glow"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: '1px',
+              height: '1px',
+              backgroundColor: '#6e5a4a',
+              borderRadius: '50%',
+              boxShadow: `0 0 ${3 + Math.random() * 2}px rgba(110, 90, 74, 0.8)`,
+              animationDelay: `${Math.random() * 8}s`,
+              animationDuration: `${3 + Math.random() * 3}s`
+            }}
+          />
+        ))}
 
-        {/* Волновые эффекты */}
+        {/* Движущиеся волны света */}
+        {Array.from({ length: 8 }, (_, i) => (
+          <div
+            key={`wave-${i}`}
+            className="absolute inset-0"
+            style={{
+              background: `linear-gradient(${45 + i * 22.5}deg, transparent 0%, rgba(110, 90, 74, ${0.05 + Math.random() * 0.03}) 50%, transparent 100%)`,
+              animation: 'wave 15s linear infinite',
+              animationDelay: `${i * 2}s`
+            }}
+          />
+        ))}
+
+        {/* Пульсирующие области света */}
+        {Array.from({ length: 12 }, (_, i) => (
+          <div
+            key={`pulse-${i}`}
+            className="absolute animate-glow"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${20 + Math.random() * 40}px`,
+              height: `${20 + Math.random() * 40}px`,
+              background: `radial-gradient(circle, rgba(110, 90, 74, 0.1) 0%, transparent 70%)`,
+              borderRadius: '50%',
+              animationDelay: `${Math.random() * 6}s`,
+              animationDuration: `${4 + Math.random() * 4}s`
+            }}
+          />
+        ))}
+
+        {/* Дополнительные эффекты движения */}
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(90deg, transparent 0%, rgba(110, 90, 74, 0.02) 50%, transparent 100%)',
-            animation: 'wave 15s linear infinite',
-            animationDelay: '0s'
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background: 'linear-gradient(45deg, transparent 0%, rgba(92, 74, 58, 0.01) 50%, transparent 100%)',
-            animation: 'wave 20s linear infinite',
-            animationDelay: '5s'
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background: 'linear-gradient(135deg, transparent 0%, rgba(74, 58, 42, 0.015) 50%, transparent 100%)',
-            animation: 'wave 25s linear infinite',
-            animationDelay: '10s'
+            background: `
+              radial-gradient(ellipse at 20% 30%, rgba(110, 90, 74, 0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 70%, rgba(92, 74, 58, 0.06) 0%, transparent 60%),
+              radial-gradient(ellipse at 50% 20%, rgba(74, 58, 42, 0.04) 0%, transparent 60%)
+            `,
+            animation: 'wave 25s ease-in-out infinite alternate'
           }}
         />
       </div>
