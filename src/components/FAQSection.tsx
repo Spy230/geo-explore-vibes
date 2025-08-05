@@ -57,10 +57,10 @@ const FAQSection = () => {
 
         <div style={{ maxWidth: '50rem', margin: '0 auto' }}>
           {faqs.map((faq, index) => (
-            <div key={index} className="glass-card hover-lift stagger-animation" style={{ marginBottom: '1rem', borderRadius: '0.75rem' }}>
+            <div key={index} className="glass-card stagger-animation" style={{ marginBottom: '1rem', borderRadius: '0.75rem' }}>
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left hover-glow"
+                className="w-full text-left"
                 style={{
                   padding: '1.5rem',
                   background: 'transparent',
@@ -76,7 +76,7 @@ const FAQSection = () => {
               >
                 <span>{faq.question}</span>
                 <span
-                  className="animate-bounce"
+                  className=""
                   style={{
                     transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
                     transition: 'transform 0.3s ease',
@@ -109,7 +109,7 @@ const FAQSection = () => {
             Остались вопросы? Мы с радостью на них ответим!
           </p>
           <button
-            className="px-8 py-4 text-lg font-semibold text-white rounded-lg hover-lift animate-pulse"
+            className="px-8 py-4 text-lg font-semibold text-white rounded-lg"
             style={{
               background: 'linear-gradient(135deg, #6b5439, #7a6145)',
               boxShadow: '0 0 30px rgba(122, 97, 69, 0.4)',

@@ -55,11 +55,11 @@ const CasesSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {cases.map((caseItem, index) => (
-            <div key={index} className="glass-card hover-lift stagger-animation" style={{ padding: '2rem', borderRadius: '1rem' }}>
+            <div key={index} className="glass-card stagger-animation" style={{ padding: '2rem', borderRadius: '1rem' }}>
               <img
                 src={caseItem.screenshot}
                 alt={caseItem.title}
-                className="hover-glow"
+                className=""
                 style={{
                   width: '100%',
                   height: '200px',
@@ -79,7 +79,7 @@ const CasesSection = () => {
 
               <div className="space-y-3">
                 {caseItem.metrics.map((metric, metricIndex) => (
-                  <div key={metricIndex} className="flex justify-between items-center hover-glow">
+                  <div key={metricIndex} className="flex justify-between items-center">
                     <span style={{ color: '#a08670' }}>{metric.label}:</span>
                     <span
                       className="font-bold"
@@ -99,7 +99,7 @@ const CasesSection = () => {
 
         <div className="text-center animate-slide-in-up" style={{ marginTop: '4rem', animationDelay: '0.8s' }}>
           <button
-            className="px-8 py-4 text-lg font-semibold text-white rounded-lg hover-lift animate-pulse"
+            className="px-8 py-4 text-lg font-semibold text-white rounded-lg"
             style={{
               background: 'linear-gradient(135deg, #6b5439, #7a6145)',
               boxShadow: '0 0 30px rgba(122, 97, 69, 0.4)',

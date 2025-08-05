@@ -31,7 +31,7 @@ const HeroSection = () => {
 
         <div className="flex justify-center animate-slide-in-up" style={{ gap: '1rem', marginBottom: '4rem', flexWrap: 'wrap', animationDelay: '0.5s' }}>
           <button
-            className="px-8 py-4 text-lg font-semibold text-white rounded-lg hover-lift animate-pulse"
+            className="px-8 py-4 text-lg font-semibold text-white rounded-lg"
             style={{
               background: 'linear-gradient(135deg, #6b5439, #7a6145)',
               boxShadow: '0 0 30px rgba(122, 97, 69, 0.4)',
@@ -43,7 +43,7 @@ const HeroSection = () => {
             Получить консультацию
           </button>
           <button
-            className="px-8 py-4 text-lg font-semibold rounded-lg hover-glow"
+            className="px-8 py-4 text-lg font-semibold rounded-lg"
             style={{
               background: 'transparent',
               color: '#d4c4b0',
@@ -58,7 +58,7 @@ const HeroSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ maxWidth: '48rem', margin: '0 auto' }}>
           {stats.map((stat, index) => (
-            <div key={index} className="text-center stagger-animation hover-glow">
+            <div key={index} className="text-center stagger-animation">
               <div
                 className="text-4xl font-bold"
                 style={{

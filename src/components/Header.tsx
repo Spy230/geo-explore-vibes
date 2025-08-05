@@ -5,7 +5,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex-1 flex justify-start">
             <h1
-              className="text-2xl font-bold animate-fade-in-scale hover-glow"
+              className="text-2xl font-bold animate-fade-in-scale"
               style={{
                 color: '#b8956f',
                 textShadow: '0 0 10px rgba(184, 149, 111, 0.3)'
@@ -19,7 +19,7 @@ const Header = () => {
             <img
               src="https://a.imgfoto.host/2025/07/30/LOGO.png"
               alt="Phoenix Logo"
-              className="h-16 w-auto animate-float hover-glow"
+              className="h-16 w-auto animate-float"
               style={{
                 filter: 'drop-shadow(0 0 15px #FFD700) drop-shadow(0 0 25px #FFA500)',
                 maxWidth: '120px'
@@ -31,14 +31,14 @@ const Header = () => {
             <div className="flex items-center space-x-4 text-sm">
               <a
                 href="tel:+79023845591"
-                className="transition-colors hover-glow"
+                className="transition-colors"
                 style={{ color: '#d4c4b0' }}
               >
                 +7 902 384-55-91
               </a>
               <a
                 href="mailto:XSchoolbiz@yandex.ru"
-                className="transition-colors hover-glow"
+                className="transition-colors"
                 style={{ color: '#d4c4b0' }}
               >
                 XSchoolbiz@yandex.ru
@@ -47,7 +47,7 @@ const Header = () => {
                 href="https://wa.me/79023889482"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover-lift"
+                className="transition-colors"
                 style={{ color: '#25D366' }}
               >
                 WhatsApp
@@ -56,7 +56,7 @@ const Header = () => {
                 href="https://t.me/+79023889482"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover-lift"
+                className="transition-colors"
                 style={{ color: '#0088cc' }}
               >
                 Telegram
