@@ -8,8 +8,8 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center" style={{ paddingTop: '5rem', paddingBottom: '2.5rem' }}>
       <div className="container text-center">
-        <div style={{ marginBottom: '2rem' }}>
-          <h1 className="text-6xl font-bold" style={{ marginBottom: '1rem' }}>
+        <div className="animate-slide-in-up" style={{ marginBottom: '2rem' }}>
+          <h1 className="text-6xl font-bold animate-fade-in-scale" style={{ marginBottom: '1rem' }}>
             <span
               style={{
                 background: 'linear-gradient(135deg, #7a6145, #9c7a5a, #b8956f)',
@@ -23,15 +23,15 @@ const HeroSection = () => {
             <br />
             <span style={{ color: '#d4c4b0' }}>для вашего бизнеса</span>
           </h1>
-          <p className="text-2xl" style={{ color: '#a08670', maxWidth: '48rem', margin: '0 auto', lineHeight: '1.6' }}>
+          <p className="text-2xl animate-slide-in-up" style={{ color: '#a08670', maxWidth: '48rem', margin: '0 auto', lineHeight: '1.6', animationDelay: '0.3s' }}>
             Поднимем ваш бизнес в топ локального поиска.
             Больше клиентов из вашего города уже через 2 недели
           </p>
         </div>
 
-        <div className="flex justify-center" style={{ gap: '1rem', marginBottom: '4rem', flexWrap: 'wrap' }}>
+        <div className="flex justify-center animate-slide-in-up" style={{ gap: '1rem', marginBottom: '4rem', flexWrap: 'wrap', animationDelay: '0.5s' }}>
           <button
-            className="px-8 py-4 text-lg font-semibold text-white rounded-lg"
+            className="px-8 py-4 text-lg font-semibold text-white rounded-lg hover-lift animate-pulse"
             style={{
               background: 'linear-gradient(135deg, #6b5439, #7a6145)',
               boxShadow: '0 0 30px rgba(122, 97, 69, 0.4)',
@@ -43,7 +43,7 @@ const HeroSection = () => {
             Получить консультацию
           </button>
           <button
-            className="px-8 py-4 text-lg font-semibold rounded-lg"
+            className="px-8 py-4 text-lg font-semibold rounded-lg hover-glow"
             style={{
               background: 'transparent',
               color: '#d4c4b0',
@@ -58,7 +58,7 @@ const HeroSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ maxWidth: '48rem', margin: '0 auto' }}>
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="text-center stagger-animation hover-glow">
               <div
                 className="text-4xl font-bold"
                 style={{

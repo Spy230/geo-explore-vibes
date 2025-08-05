@@ -35,8 +35,8 @@ const CasesSection = () => {
   return (
     <section style={{ padding: '5rem 0', background: 'rgba(0, 0, 0, 0.3)', backdropFilter: 'blur(5px)' }}>
       <div className="container">
-        <div className="text-center" style={{ marginBottom: '4rem' }}>
-          <h2 className="text-6xl font-bold" style={{ marginBottom: '1rem' }}>
+        <div className="text-center animate-slide-in-up" style={{ marginBottom: '4rem' }}>
+          <h2 className="text-6xl font-bold animate-fade-in-scale" style={{ marginBottom: '1rem' }}>
             <span
               style={{
                 background: 'linear-gradient(135deg, #7a6145, #9c7a5a, #b8956f)',
@@ -48,17 +48,18 @@ const CasesSection = () => {
               Результаты наших клиентов
             </span>
           </h2>
-          <p className="text-2xl" style={{ color: '#a08670', maxWidth: '48rem', margin: '0 auto' }}>
+          <p className="text-2xl animate-slide-in-up" style={{ color: '#a08670', maxWidth: '48rem', margin: '0 auto', animationDelay: '0.3s' }}>
             Реальные кейсы с подтвержденными результатами
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {cases.map((caseItem, index) => (
-            <div key={index} className="glass-card" style={{ padding: '2rem', borderRadius: '1rem' }}>
+            <div key={index} className="glass-card hover-lift stagger-animation" style={{ padding: '2rem', borderRadius: '1rem' }}>
               <img
                 src={caseItem.screenshot}
                 alt={caseItem.title}
+                className="hover-glow"
                 style={{
                   width: '100%',
                   height: '200px',
@@ -78,7 +79,7 @@ const CasesSection = () => {
 
               <div className="space-y-3">
                 {caseItem.metrics.map((metric, metricIndex) => (
-                  <div key={metricIndex} className="flex justify-between items-center">
+                  <div key={metricIndex} className="flex justify-between items-center hover-glow">
                     <span style={{ color: '#a08670' }}>{metric.label}:</span>
                     <span
                       className="font-bold"
@@ -96,9 +97,9 @@ const CasesSection = () => {
           ))}
         </div>
 
-        <div className="text-center" style={{ marginTop: '4rem' }}>
+        <div className="text-center animate-slide-in-up" style={{ marginTop: '4rem', animationDelay: '0.8s' }}>
           <button
-            className="px-8 py-4 text-lg font-semibold text-white rounded-lg"
+            className="px-8 py-4 text-lg font-semibold text-white rounded-lg hover-lift animate-pulse"
             style={{
               background: 'linear-gradient(135deg, #6b5439, #7a6145)',
               boxShadow: '0 0 30px rgba(122, 97, 69, 0.4)',

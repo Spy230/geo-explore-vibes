@@ -37,8 +37,8 @@ const FAQSection = () => {
   return (
     <section style={{ padding: '5rem 0', background: 'rgba(0, 0, 0, 0.5)', backdropFilter: 'blur(5px)' }}>
       <div className="container">
-        <div className="text-center" style={{ marginBottom: '4rem' }}>
-          <h2 className="text-6xl font-bold" style={{ marginBottom: '1rem' }}>
+        <div className="text-center animate-slide-in-up" style={{ marginBottom: '4rem' }}>
+          <h2 className="text-6xl font-bold animate-fade-in-scale" style={{ marginBottom: '1rem' }}>
             <span
               style={{
                 background: 'linear-gradient(135deg, #7a6145, #9c7a5a, #b8956f)',
@@ -50,17 +50,17 @@ const FAQSection = () => {
               Частые вопросы
             </span>
           </h2>
-          <p className="text-2xl" style={{ color: '#a08670', maxWidth: '32rem', margin: '0 auto' }}>
+          <p className="text-2xl animate-slide-in-up" style={{ color: '#a08670', maxWidth: '32rem', margin: '0 auto', animationDelay: '0.3s' }}>
             Ответы на самые популярные вопросы о гео-продвижении
           </p>
         </div>
 
         <div style={{ maxWidth: '50rem', margin: '0 auto' }}>
           {faqs.map((faq, index) => (
-            <div key={index} className="glass-card" style={{ marginBottom: '1rem', borderRadius: '0.75rem' }}>
+            <div key={index} className="glass-card hover-lift stagger-animation" style={{ marginBottom: '1rem', borderRadius: '0.75rem' }}>
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left"
+                className="w-full text-left hover-glow"
                 style={{
                   padding: '1.5rem',
                   background: 'transparent',
@@ -76,6 +76,7 @@ const FAQSection = () => {
               >
                 <span>{faq.question}</span>
                 <span
+                  className="animate-bounce"
                   style={{
                     transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
                     transition: 'transform 0.3s ease',
@@ -88,6 +89,7 @@ const FAQSection = () => {
 
               {openIndex === index && (
                 <div
+                  className="animate-slide-in-up"
                   style={{
                     padding: '0 1.5rem 1.5rem',
                     color: '#a08670',
@@ -102,12 +104,12 @@ const FAQSection = () => {
           ))}
         </div>
 
-        <div className="text-center" style={{ marginTop: '3rem' }}>
+        <div className="text-center animate-slide-in-up" style={{ marginTop: '3rem', animationDelay: '0.8s' }}>
           <p style={{ color: '#a08670', marginBottom: '1rem', fontSize: '1.125rem' }}>
             Остались вопросы? Мы с радостью на них ответим!
           </p>
           <button
-            className="px-8 py-4 text-lg font-semibold text-white rounded-lg"
+            className="px-8 py-4 text-lg font-semibold text-white rounded-lg hover-lift animate-pulse"
             style={{
               background: 'linear-gradient(135deg, #6b5439, #7a6145)',
               boxShadow: '0 0 30px rgba(122, 97, 69, 0.4)',

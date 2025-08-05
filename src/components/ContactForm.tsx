@@ -2,8 +2,8 @@ const ContactForm = () => {
   return (
     <section id="contact" style={{ padding: '5rem 0', background: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
       <div className="container">
-        <div className="text-center" style={{ marginBottom: '4rem' }}>
-          <h2 className="text-6xl font-bold" style={{ marginBottom: '1rem' }}>
+        <div className="text-center animate-slide-in-up" style={{ marginBottom: '4rem' }}>
+          <h2 className="text-6xl font-bold animate-fade-in-scale" style={{ marginBottom: '1rem' }}>
             <span
               style={{
                 background: 'linear-gradient(135deg, #7a6145, #9c7a5a, #b8956f)',
@@ -15,13 +15,13 @@ const ContactForm = () => {
               Получить консультацию
             </span>
           </h2>
-          <p className="text-2xl" style={{ color: '#a08670', maxWidth: '32rem', margin: '0 auto' }}>
+          <p className="text-2xl animate-slide-in-up" style={{ color: '#a08670', maxWidth: '32rem', margin: '0 auto', animationDelay: '0.3s' }}>
             Оставьте заявку и мы свяжемся с вами в течение 15 минут
           </p>
         </div>
 
         <div style={{ maxWidth: '32rem', margin: '0 auto' }}>
-          <form className="glass-card" style={{ padding: '2rem', borderRadius: '0.75rem' }}>
+          <form className="glass-card hover-lift animate-slide-in-up" style={{ padding: '2rem', borderRadius: '0.75rem', animationDelay: '0.5s' }}>
             <div style={{ marginBottom: '1.5rem' }}>
               <label style={{ display: 'block', marginBottom: '0.5rem', color: '#d4c4b0', fontWeight: '600' }}>
                 Ваше имя
@@ -29,6 +29,7 @@ const ContactForm = () => {
               <input
                 type="text"
                 placeholder="Введите ваше имя"
+                className="hover-glow"
                 style={{
                   width: '100%',
                   padding: '0.75rem',
@@ -48,6 +49,7 @@ const ContactForm = () => {
               <input
                 type="tel"
                 placeholder="+7 (___) ___-__-__"
+                className="hover-glow"
                 style={{
                   width: '100%',
                   padding: '0.75rem',
@@ -67,6 +69,7 @@ const ContactForm = () => {
               <input
                 type="text"
                 placeholder="В каком городе ваш бизнес?"
+                className="hover-glow"
                 style={{
                   width: '100%',
                   padding: '0.75rem',
@@ -84,6 +87,7 @@ const ContactForm = () => {
                 Тип бизнеса
               </label>
               <select
+                className="hover-glow"
                 style={{
                   width: '100%',
                   padding: '0.75rem',
@@ -107,7 +111,7 @@ const ContactForm = () => {
 
             <button
               type="submit"
-              className="w-full px-8 py-4 text-lg font-semibold text-white rounded-lg"
+              className="w-full px-8 py-4 text-lg font-semibold text-white rounded-lg hover-lift animate-pulse"
               style={{
                 background: 'linear-gradient(135deg, #6b5439, #7a6145)',
                 boxShadow: '0 0 30px rgba(122, 97, 69, 0.4)',
@@ -124,12 +128,12 @@ const ContactForm = () => {
             </p>
           </form>
 
-          <div className="text-center" style={{ marginTop: '2rem' }}>
+          <div className="text-center animate-slide-in-up" style={{ marginTop: '2rem', animationDelay: '0.7s' }}>
             <p style={{ color: '#a08670', marginBottom: '1rem' }}>Или свяжитесь с нами напрямую:</p>
             <div className="flex justify-center" style={{ gap: '1rem', flexWrap: 'wrap' }}>
               <a
                 href="tel:+79023845591"
-                className="px-6 py-3 text-white rounded-lg"
+                className="px-6 py-3 text-white rounded-lg hover-lift"
                 style={{
                   background: 'rgba(122, 97, 69, 0.3)',
                   border: '1px solid rgba(122, 97, 69, 0.5)',
@@ -143,7 +147,7 @@ const ContactForm = () => {
                 href="https://wa.me/79023889482"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 text-white rounded-lg"
+                className="px-6 py-3 text-white rounded-lg hover-lift"
                 style={{
                   background: 'rgba(37, 211, 102, 0.3)',
                   border: '1px solid rgba(37, 211, 102, 0.5)',
@@ -157,7 +161,7 @@ const ContactForm = () => {
                 href="https://t.me/+79023889482"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 text-white rounded-lg"
+                className="px-6 py-3 text-white rounded-lg hover-lift"
                 style={{
                   background: 'rgba(0, 136, 204, 0.3)',
                   border: '1px solid rgba(0, 136, 204, 0.5)',

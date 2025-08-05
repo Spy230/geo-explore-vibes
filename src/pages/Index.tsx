@@ -18,10 +18,10 @@ const Index = () => {
         <FAQSection />
       </main>
 
-      <footer style={{ padding: '2rem 0', borderTop: '1px solid rgba(44, 44, 43, 0.3)' }}>
+      <footer className="animate-slide-in-up" style={{ padding: '2rem 0', borderTop: '1px solid rgba(44, 44, 43, 0.3)' }}>
         <div className="container text-center" style={{ color: '#a08670' }}>
           <p>&copy; 2024 Phenix-project. Все права защищены.</p>
-          <div className="flex justify-center space-x-4" style={{ marginTop: '1rem' }}>
+          <div className="flex justify-center space-x-4 stagger-animation" style={{ marginTop: '1rem' }}>
             <a href="tel:+79023845591" style={{ color: '#d4c4b0' }}>
               +7 902 384-55-91
             </a>
