@@ -33,9 +33,9 @@ const AnimatedBackground = () => {
           className="absolute animate-float"
           style={{
             top: '15%', left: '10%', width: '6px', height: '6px',
-            backgroundColor: '#FFD700',
+            backgroundColor: '#6e5a4a',
             borderRadius: '50%',
-            boxShadow: '0 0 30px rgba(255, 215, 0, 0.9), 0 0 60px rgba(255, 215, 0, 0.5), 0 0 90px rgba(255, 215, 0, 0.2)',
+            boxShadow: '0 0 30px rgba(110, 90, 74, 0.9), 0 0 60px rgba(110, 90, 74, 0.5), 0 0 90px rgba(110, 90, 74, 0.2)',
             animationDelay: '0s',
             animationDuration: '12s'
           }}
@@ -44,9 +44,9 @@ const AnimatedBackground = () => {
           className="absolute animate-float"
           style={{
             top: '70%', right: '15%', width: '8px', height: '8px',
-            backgroundColor: '#FFA500',
+            backgroundColor: '#5c4a3a',
             borderRadius: '50%',
-            boxShadow: '0 0 35px rgba(255, 165, 0, 0.8), 0 0 70px rgba(255, 165, 0, 0.4)',
+            boxShadow: '0 0 35px rgba(92, 74, 58, 0.8), 0 0 70px rgba(92, 74, 58, 0.4)',
             animationDelay: '3s',
             animationDuration: '15s'
           }}
@@ -55,9 +55,9 @@ const AnimatedBackground = () => {
           className="absolute animate-float"
           style={{
             top: '30%', left: '70%', width: '4px', height: '4px',
-            backgroundColor: '#FFB347',
+            backgroundColor: '#4a3a2a',
             borderRadius: '50%',
-            boxShadow: '0 0 25px rgba(255, 179, 71, 0.7), 0 0 50px rgba(255, 179, 71, 0.3)',
+            boxShadow: '0 0 25px rgba(74, 58, 42, 0.7), 0 0 50px rgba(74, 58, 42, 0.3)',
             animationDelay: '6s',
             animationDuration: '18s'
           }}
@@ -66,9 +66,9 @@ const AnimatedBackground = () => {
           className="absolute animate-float"
           style={{
             top: '80%', left: '25%', width: '5px', height: '5px',
-            backgroundColor: '#FFDC73',
+            backgroundColor: '#564836',
             borderRadius: '50%',
-            boxShadow: '0 0 20px rgba(255, 220, 115, 0.6), 0 0 40px rgba(255, 220, 115, 0.3)',
+            boxShadow: '0 0 20px rgba(86, 72, 54, 0.6), 0 0 40px rgba(86, 72, 54, 0.3)',
             animationDelay: '9s',
             animationDuration: '20s'
           }}
@@ -79,9 +79,9 @@ const AnimatedBackground = () => {
           className="absolute animate-float"
           style={{
             top: '25%', right: '30%', width: '3px', height: '3px',
-            backgroundColor: '#DAA520',
+            backgroundColor: '#4a3a2a',
             borderRadius: '50%',
-            boxShadow: '0 0 15px rgba(218, 165, 32, 0.5), 0 0 30px rgba(218, 165, 32, 0.2)',
+            boxShadow: '0 0 15px rgba(74, 58, 42, 0.5), 0 0 30px rgba(74, 58, 42, 0.2)',
             animationDelay: '2s',
             animationDuration: '14s'
           }}
@@ -90,9 +90,9 @@ const AnimatedBackground = () => {
           className="absolute animate-float"
           style={{
             top: '45%', left: '5%', width: '3px', height: '3px',
-            backgroundColor: '#B8860B',
+            backgroundColor: '#392e20',
             borderRadius: '50%',
-            boxShadow: '0 0 12px rgba(184, 134, 11, 0.4), 0 0 24px rgba(184, 134, 11, 0.2)',
+            boxShadow: '0 0 12px rgba(57, 46, 32, 0.4), 0 0 24px rgba(57, 46, 32, 0.2)',
             animationDelay: '5s',
             animationDuration: '16s'
           }}
@@ -101,9 +101,9 @@ const AnimatedBackground = () => {
           className="absolute animate-float"
           style={{
             top: '60%', right: '40%', width: '2px', height: '2px',
-            backgroundColor: '#CD853F',
+            backgroundColor: '#5c4a3a',
             borderRadius: '50%',
-            boxShadow: '0 0 10px rgba(205, 133, 63, 0.4), 0 0 20px rgba(205, 133, 63, 0.2)',
+            boxShadow: '0 0 10px rgba(92, 74, 58, 0.4), 0 0 20px rgba(92, 74, 58, 0.2)',
             animationDelay: '8s',
             animationDuration: '22s'
           }}
@@ -114,9 +114,9 @@ const AnimatedBackground = () => {
           className="absolute animate-float"
           style={{
             top: '10%', left: '60%', width: '2px', height: '2px',
-            backgroundColor: '#D2691E',
+            backgroundColor: '#453528',
             borderRadius: '50%',
-            boxShadow: '0 0 8px rgba(210, 105, 30, 0.3), 0 0 16px rgba(210, 105, 30, 0.1)',
+            boxShadow: '0 0 8px rgba(69, 53, 40, 0.3), 0 0 16px rgba(69, 53, 40, 0.1)',
             animationDelay: '1s',
             animationDuration: '13s'
           }}
@@ -125,9 +125,9 @@ const AnimatedBackground = () => {
           className="absolute animate-float"
           style={{
             top: '85%', right: '60%', width: '2px', height: '2px',
-            backgroundColor: '#A0522D',
+            backgroundColor: '#392e20',
             borderRadius: '50%',
-            boxShadow: '0 0 6px rgba(160, 82, 45, 0.3), 0 0 12px rgba(160, 82, 45, 0.1)',
+            boxShadow: '0 0 6px rgba(57, 46, 32, 0.3), 0 0 12px rgba(57, 46, 32, 0.1)',
             animationDelay: '4s',
             animationDuration: '17s'
           }}
@@ -136,9 +136,9 @@ const AnimatedBackground = () => {
           className="absolute animate-float"
           style={{
             top: '40%', right: '10%', width: '1px', height: '1px',
-            backgroundColor: '#8B4513',
+            backgroundColor: '#2d2118',
             borderRadius: '50%',
-            boxShadow: '0 0 4px rgba(139, 69, 19, 0.2), 0 0 8px rgba(139, 69, 19, 0.1)',
+            boxShadow: '0 0 4px rgba(45, 33, 24, 0.2), 0 0 8px rgba(45, 33, 24, 0.1)',
             animationDelay: '7s',
             animationDuration: '19s'
           }}
@@ -149,7 +149,7 @@ const AnimatedBackground = () => {
           className="absolute animate-glow"
           style={{
             top: '20%', left: '80%', width: '1px', height: '1px',
-            backgroundColor: '#FFD700',
+            backgroundColor: '#6e5a4a',
             borderRadius: '50%',
             animationDelay: '1.5s',
             animationDuration: '4s'
@@ -159,7 +159,7 @@ const AnimatedBackground = () => {
           className="absolute animate-glow"
           style={{
             top: '90%', left: '50%', width: '1px', height: '1px',
-            backgroundColor: '#FFA500',
+            backgroundColor: '#5c4a3a',
             borderRadius: '50%',
             animationDelay: '3.5s',
             animationDuration: '5s'
@@ -169,7 +169,7 @@ const AnimatedBackground = () => {
           className="absolute animate-glow"
           style={{
             top: '5%', left: '30%', width: '1px', height: '1px',
-            backgroundColor: '#FFB347',
+            backgroundColor: '#4a3a2a',
             borderRadius: '50%',
             animationDelay: '2.5s',
             animationDuration: '6s'
@@ -180,7 +180,7 @@ const AnimatedBackground = () => {
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(90deg, transparent 0%, rgba(255, 215, 0, 0.02) 50%, transparent 100%)',
+            background: 'linear-gradient(90deg, transparent 0%, rgba(110, 90, 74, 0.02) 50%, transparent 100%)',
             animation: 'wave 15s linear infinite',
             animationDelay: '0s'
           }}
@@ -188,7 +188,7 @@ const AnimatedBackground = () => {
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(45deg, transparent 0%, rgba(255, 165, 0, 0.01) 50%, transparent 100%)',
+            background: 'linear-gradient(45deg, transparent 0%, rgba(92, 74, 58, 0.01) 50%, transparent 100%)',
             animation: 'wave 20s linear infinite',
             animationDelay: '5s'
           }}
@@ -196,7 +196,7 @@ const AnimatedBackground = () => {
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(135deg, transparent 0%, rgba(255, 179, 71, 0.015) 50%, transparent 100%)',
+            background: 'linear-gradient(135deg, transparent 0%, rgba(74, 58, 42, 0.015) 50%, transparent 100%)',
             animation: 'wave 25s linear infinite',
             animationDelay: '10s'
           }}
