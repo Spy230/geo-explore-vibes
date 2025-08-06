@@ -27,9 +27,9 @@ const AnimatedBackground = () => {
               left: `${Math.random() * 100}%`,
               width: `${6 + Math.random() * 4}px`,
               height: `${6 + Math.random() * 4}px`,
-              backgroundColor: '#6e5a4a',
+              backgroundColor: '#392e20',
               borderRadius: '50%',
-              boxShadow: `0 0 ${30 + Math.random() * 20}px rgba(110, 90, 74, 0.9), 0 0 ${60 + Math.random() * 30}px rgba(110, 90, 74, 0.6), 0 0 ${90 + Math.random() * 40}px rgba(110, 90, 74, 0.3)`,
+              boxShadow: `0 0 ${30 + Math.random() * 20}px rgba(57, 46, 32, 0.9), 0 0 ${60 + Math.random() * 30}px rgba(75, 60, 42, 0.8), 0 0 ${90 + Math.random() * 40}px rgba(95, 77, 55, 0.6)`,
               animationDelay: `${Math.random() * 10}s`,
               animationDuration: `${12 + Math.random() * 8}s`
             }}
@@ -46,9 +46,9 @@ const AnimatedBackground = () => {
               left: `${Math.random() * 100}%`,
               width: `${3 + Math.random() * 2}px`,
               height: `${3 + Math.random() * 2}px`,
-              backgroundColor: '#5c4a3a',
+              backgroundColor: '#4b3c2a',
               borderRadius: '50%',
-              boxShadow: `0 0 ${15 + Math.random() * 10}px rgba(92, 74, 58, 0.7), 0 0 ${30 + Math.random() * 15}px rgba(92, 74, 58, 0.4)`,
+              boxShadow: `0 0 ${15 + Math.random() * 10}px rgba(75, 60, 42, 0.8), 0 0 ${30 + Math.random() * 15}px rgba(95, 77, 55, 0.6)`,
               animationDelay: `${Math.random() * 15}s`,
               animationDuration: `${14 + Math.random() * 6}s`
             }}
@@ -65,9 +65,9 @@ const AnimatedBackground = () => {
               left: `${Math.random() * 100}%`,
               width: `${1 + Math.random() * 2}px`,
               height: `${1 + Math.random() * 2}px`,
-              backgroundColor: '#4a3a2a',
+              backgroundColor: '#392e20',
               borderRadius: '50%',
-              boxShadow: `0 0 ${8 + Math.random() * 5}px rgba(74, 58, 42, 0.5), 0 0 ${16 + Math.random() * 8}px rgba(74, 58, 42, 0.2)`,
+              boxShadow: `0 0 ${8 + Math.random() * 5}px rgba(57, 46, 32, 0.7), 0 0 ${16 + Math.random() * 8}px rgba(75, 60, 42, 0.4)`,
               animationDelay: `${Math.random() * 20}s`,
               animationDuration: `${16 + Math.random() * 4}s`
             }}
@@ -84,9 +84,9 @@ const AnimatedBackground = () => {
               left: `${Math.random() * 100}%`,
               width: '1px',
               height: '1px',
-              backgroundColor: '#6e5a4a',
+              backgroundColor: '#5f4d37',
               borderRadius: '50%',
-              boxShadow: `0 0 ${3 + Math.random() * 2}px rgba(110, 90, 74, 0.8)`,
+              boxShadow: `0 0 ${3 + Math.random() * 2}px rgba(95, 77, 55, 0.9)`,
               animationDelay: `${Math.random() * 8}s`,
               animationDuration: `${3 + Math.random() * 3}s`
             }}
@@ -99,7 +99,7 @@ const AnimatedBackground = () => {
             key={`wave-${i}`}
             className="absolute inset-0"
             style={{
-              background: `linear-gradient(${45 + i * 22.5}deg, transparent 0%, rgba(110, 90, 74, ${0.05 + Math.random() * 0.03}) 50%, transparent 100%)`,
+              background: `linear-gradient(${45 + i * 22.5}deg, transparent 0%, rgba(57, 46, 32, ${0.08 + Math.random() * 0.05}) 50%, transparent 100%)`,
               animation: 'wave 15s linear infinite',
               animationDelay: `${i * 2}s`
             }}
@@ -116,7 +116,7 @@ const AnimatedBackground = () => {
               left: `${Math.random() * 100}%`,
               width: `${20 + Math.random() * 40}px`,
               height: `${20 + Math.random() * 40}px`,
-              background: `radial-gradient(circle, rgba(110, 90, 74, 0.1) 0%, transparent 70%)`,
+              background: `radial-gradient(circle, rgba(57, 46, 32, 0.15) 0%, transparent 70%)`,
               borderRadius: '50%',
               animationDelay: `${Math.random() * 6}s`,
               animationDuration: `${4 + Math.random() * 4}s`
@@ -129,9 +129,9 @@ const AnimatedBackground = () => {
           className="absolute inset-0"
           style={{
             background: `
-              radial-gradient(ellipse at 20% 30%, rgba(110, 90, 74, 0.08) 0%, transparent 60%),
-              radial-gradient(ellipse at 80% 70%, rgba(92, 74, 58, 0.06) 0%, transparent 60%),
-              radial-gradient(ellipse at 50% 20%, rgba(74, 58, 42, 0.04) 0%, transparent 60%)
+              radial-gradient(ellipse at 20% 30%, rgba(57, 46, 32, 0.12) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 70%, rgba(75, 60, 42, 0.10) 0%, transparent 60%),
+              radial-gradient(ellipse at 50% 20%, rgba(95, 77, 55, 0.08) 0%, transparent 60%)
             `,
             animation: 'wave 25s ease-in-out infinite alternate'
           }}
