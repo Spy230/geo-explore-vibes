@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection';
 import CasesSection from '../components/CasesSection';
 import ContactForm from '../components/ContactForm';
 import FAQSection from '../components/FAQSection';
+import { Toaster } from '../components/ui/toaster';
 
 const Index = () => {
   return (
@@ -32,6 +33,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      <Toaster />
     </div>
   );
 };

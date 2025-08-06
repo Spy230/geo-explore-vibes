@@ -1,4 +1,64 @@
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { toast } from '../hooks/use-toast';
+
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    city: '',
+    business_type: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      await emailjs.send(
+        'service_ad7ibtx', // Service ID
+        'template_2rxivsp', // Template ID  
+        {
+          from_name: formData.name,
+          phone: formData.phone,
+          city: formData.city,
+          business_type: formData.business_type,
+        },
+        'RpE_8tUva8bMWnOdf' // Public Key
+      );
+
+      toast({
+        title: "Заявка отправлена!",
+        description: "Мы свяжемся с вами в течение 15 минут.",
+      });
+
+      // Очистка формы
+      setFormData({
+        name: '',
+        phone: '',
+        city: '',
+        business_type: ''
+      });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Ошибка отправки",
+        description: "Попробуйте еще раз или свяжитесь с нами напрямую.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section id="contact" style={{ padding: '5rem 0', background: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
       <div className="container">
@@ -21,14 +81,18 @@ const ContactForm = () => {
         </div>
 
         <div style={{ maxWidth: '32rem', margin: '0 auto' }}>
-          <form className="glass-card animate-slide-in-up" style={{ padding: '2rem', borderRadius: '0.75rem', animationDelay: '0.5s' }}>
+          <form onSubmit={handleSubmit} className="glass-card animate-slide-in-up" style={{ padding: '2rem', borderRadius: '0.75rem', animationDelay: '0.5s' }}>
             <div style={{ marginBottom: '1.5rem' }}>
               <label style={{ display: 'block', marginBottom: '0.5rem', color: '#d4c4b0', fontWeight: '600' }}>
                 Ваше имя
               </label>
               <input
                 type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Введите ваше имя"
+                required
                 className=""
                 style={{
                   width: '100%',
@@ -48,7 +112,11 @@ const ContactForm = () => {
               </label>
               <input
                 type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 placeholder="+7 (___) ___-__-__"
+                required
                 className=""
                 style={{
                   width: '100%',
@@ -68,7 +136,11 @@ const ContactForm = () => {
               </label>
               <input
                 type="text"
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
                 placeholder="В каком городе ваш бизнес?"
+                required
                 className=""
                 style={{
                   width: '100%',
@@ -87,6 +159,10 @@ const ContactForm = () => {
                 Тип бизнеса
               </label>
               <select
+                name="business_type"
+                value={formData.business_type}
+                onChange={handleChange}
+                required
                 className=""
                 style={{
                   width: '100%',
@@ -111,16 +187,18 @@ const ContactForm = () => {
 
             <button
               type="submit"
+              disabled={isLoading}
               className="w-full px-8 py-4 text-lg font-semibold text-white rounded-lg"
               style={{
-                background: 'linear-gradient(135deg, #6b5439, #7a6145)',
+                background: isLoading ? 'rgba(122, 97, 69, 0.5)' : 'linear-gradient(135deg, #6b5439, #7a6145)',
                 boxShadow: '0 0 30px rgba(122, 97, 69, 0.4)',
                 border: 'none',
-                cursor: 'pointer',
-                marginBottom: '1rem'
+                cursor: isLoading ? 'not-allowed' : 'pointer',
+                marginBottom: '1rem',
+                opacity: isLoading ? 0.7 : 1
               }}
             >
-              Получить консультацию
+              {isLoading ? 'Отправка...' : 'Получить консультацию'}
             </button>
 
             <p style={{ textAlign: 'center', color: '#a08670', fontSize: '0.875rem' }}>
