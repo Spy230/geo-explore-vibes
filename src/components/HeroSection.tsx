@@ -33,8 +33,8 @@ const HeroSection = () => {
           <button
             className="px-8 py-4 text-lg font-semibold text-white rounded-lg"
             style={{
-              background: 'linear-gradient(135deg, #6b5439, #7a6145)',
-              boxShadow: '0 0 30px rgba(122, 97, 69, 0.4)',
+              background: 'linear-gradient(135deg, #2d7a3d, #4ade80)',
+              boxShadow: '0 0 30px rgba(74, 222, 128, 0.4)',
               border: 'none',
               cursor: 'pointer'
             }}

@@ -5,7 +5,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex-1 flex justify-start">
             <h1
-              className="text-2xl font-bold animate-fade-in-scale"
+              className="text-3xl font-bold animate-fade-in-scale"
               style={{
                 color: '#b8956f',
                 textShadow: '0 0 10px rgba(184, 149, 111, 0.3)'
@@ -27,7 +27,7 @@ const Header = () => {
             />
           </div>
 
-          <div className="flex-1 flex items-center justify-end space-x-6 animate-slide-in-right">
+          <div className="flex-1 flex items-center justify-end space-x-6 animate-slide-in-right" style={{ paddingLeft: '2rem' }}>
             <div className="flex items-center space-x-4 text-sm">
               <a
                 href="tel:+79023845591"

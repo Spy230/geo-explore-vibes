@@ -247,7 +247,7 @@ const ContactForm = () => {
                   display: 'inline-block'
                 }}
               >
-                ✈️ Telegram
+                📤 Telegram
               </a>
             </div>
           </div>
