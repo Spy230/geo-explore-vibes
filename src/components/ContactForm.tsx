@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast } from '../hooks/use-toast';
-import telegramIcon from '../assets/telegram-icon.png';
+import telegramIcon from '../assets/telegram-icon-new.png';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
