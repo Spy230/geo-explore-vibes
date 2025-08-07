@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast } from '../hooks/use-toast';
+import telegramIcon from '../assets/telegram-icon.png';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -247,7 +248,8 @@ const ContactForm = () => {
                   display: 'inline-block'
                 }}
               >
-                📤 Telegram
+                <img src={telegramIcon} alt="Telegram" style={{ width: '20px', height: '20px', display: 'inline-block', marginRight: '8px' }} />
+                Telegram
               </a>
             </div>
           </div>
