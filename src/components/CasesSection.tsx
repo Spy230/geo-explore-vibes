@@ -58,9 +58,9 @@ const CasesSection = () => {
             <div key={index} className="stagger-animation" style={{ 
               padding: '2rem', 
               borderRadius: '1rem',
-              background: 'rgba(20, 20, 20, 0.2)',
+              background: 'rgba(20, 20, 20, 0.1)',
               backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.05)'
+              border: '1px solid rgba(255, 255, 255, 0.03)'
             }}>
               <img
                 src={caseItem.screenshot}
