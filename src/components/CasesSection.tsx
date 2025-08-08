@@ -55,7 +55,13 @@ const CasesSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {cases.map((caseItem, index) => (
-            <div key={index} className="glass-card stagger-animation" style={{ padding: '2rem', borderRadius: '1rem' }}>
+            <div key={index} className="stagger-animation" style={{ 
+              padding: '2rem', 
+              borderRadius: '1rem',
+              background: 'rgba(20, 20, 20, 0.2)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.05)'
+            }}>
               <img
                 src={caseItem.screenshot}
                 alt={caseItem.title}
