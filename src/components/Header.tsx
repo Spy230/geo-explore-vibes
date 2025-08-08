@@ -3,7 +3,7 @@ const Header = () => {
     <header className="fixed top-0 w-full z-50 glass-card border-b border-glass-border animate-slide-in-up">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex-1 flex justify-start">
             <h1
               className="text-3xl font-bold animate-fade-in-scale"
               style={{
@@ -15,7 +15,7 @@ const Header = () => {
             </h1>
           </div>
 
-          <div className="flex justify-center items-center mx-8">
+          <div className="flex justify-center items-center">
             <img
               src="https://a.imgfoto.host/2025/07/30/LOGO.png"
               alt="Phoenix Logo"
@@ -27,7 +27,7 @@ const Header = () => {
             />
           </div>
 
-          <div className="flex items-center justify-end space-x-6 animate-slide-in-right">
+          <div className="flex-1 flex items-center justify-end space-x-6 animate-slide-in-right" style={{ paddingLeft: '2rem' }}>
             <div className="flex items-center space-x-4 text-sm">
               <a
                 href="tel:+79023845591"
