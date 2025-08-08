@@ -15,7 +15,7 @@ const Header = () => {
             </h1>
           </div>
 
-          <div className="flex justify-center items-center flex-1">
+          <div className="flex justify-center items-center mx-8">
             <img
               src="https://a.imgfoto.host/2025/07/30/LOGO.png"
               alt="Phoenix Logo"
@@ -27,7 +27,7 @@ const Header = () => {
             />
           </div>
 
-          <div className="flex items-center space-x-6 animate-slide-in-right" style={{ paddingLeft: '2rem' }}>
+          <div className="flex items-center justify-end space-x-6 animate-slide-in-right">
             <div className="flex items-center space-x-4 text-sm">
               <a
                 href="tel:+79023845591"
