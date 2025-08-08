@@ -6,8 +6,145 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center" style={{ paddingTop: '5rem', paddingBottom: '2.5rem' }}>
-      <div className="container text-center">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ paddingTop: '5rem', paddingBottom: '2.5rem' }}>
+      {/* Основной фон с изображением */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url("https://a.imgfoto.host/2025/07/30/GLAVNOE-FOTO.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      
+      {/* Темный оверлей */}
+      <div className="absolute inset-0 z-10 bg-black bg-opacity-50" />
+
+      {/* АНИМИРОВАННЫЕ БЕЛЫЕ ЧАСТИЦЫ */}
+      <div className="absolute inset-0 z-20 overflow-hidden pointer-events-none">
+        {/* Крупные белые частицы */}
+        {Array.from({ length: 20 }, (_, i) => (
+          <div
+            key={`white-large-${i}`}
+            className="absolute animate-float"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${4 + Math.random() * 6}px`,
+              height: `${4 + Math.random() * 6}px`,
+              backgroundColor: 'rgba(255, 255, 255, 0.9)',
+              borderRadius: '50%',
+              boxShadow: `0 0 ${15 + Math.random() * 10}px rgba(255, 255, 255, 0.8), 0 0 ${30 + Math.random() * 20}px rgba(255, 255, 255, 0.4)`,
+              animationDelay: `${Math.random() * 8}s`,
+              animationDuration: `${8 + Math.random() * 12}s`,
+              transform: `translateZ(0)`,
+              willChange: 'transform'
+            }}
+          />
+        ))}
+
+        {/* Средние белые частицы */}
+        {Array.from({ length: 35 }, (_, i) => (
+          <div
+            key={`white-medium-${i}`}
+            className="absolute animate-float"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${2 + Math.random() * 4}px`,
+              height: `${2 + Math.random() * 4}px`,
+              backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              borderRadius: '50%',
+              boxShadow: `0 0 ${8 + Math.random() * 6}px rgba(255, 255, 255, 0.6), 0 0 ${16 + Math.random() * 12}px rgba(255, 255, 255, 0.3)`,
+              animationDelay: `${Math.random() * 10}s`,
+              animationDuration: `${10 + Math.random() * 8}s`,
+              transform: `translateZ(0)`,
+              willChange: 'transform'
+            }}
+          />
+        ))}
+
+        {/* Мелкие белые частицы */}
+        {Array.from({ length: 50 }, (_, i) => (
+          <div
+            key={`white-small-${i}`}
+            className="absolute animate-glow"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${1 + Math.random() * 2}px`,
+              height: `${1 + Math.random() * 2}px`,
+              backgroundColor: 'rgba(255, 255, 255, 0.9)',
+              borderRadius: '50%',
+              boxShadow: `0 0 ${4 + Math.random() * 4}px rgba(255, 255, 255, 0.8)`,
+              animationDelay: `${Math.random() * 6}s`,
+              animationDuration: `${4 + Math.random() * 6}s`,
+              transform: `translateZ(0)`,
+              willChange: 'transform'
+            }}
+          />
+        ))}
+
+        {/* Очень мелкие мерцающие точки */}
+        {Array.from({ length: 80 }, (_, i) => (
+          <div
+            key={`white-tiny-${i}`}
+            className="absolute animate-glow"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: '1px',
+              height: '1px',
+              backgroundColor: 'rgba(255, 255, 255, 1)',
+              borderRadius: '50%',
+              boxShadow: `0 0 ${2 + Math.random() * 3}px rgba(255, 255, 255, 0.9)`,
+              animationDelay: `${Math.random() * 4}s`,
+              animationDuration: `${2 + Math.random() * 4}s`,
+              transform: `translateZ(0)`,
+              willChange: 'transform'
+            }}
+          />
+        ))}
+
+        {/* Движущиеся белые волны */}
+        {Array.from({ length: 6 }, (_, i) => (
+          <div
+            key={`white-wave-${i}`}
+            className="absolute inset-0"
+            style={{
+              background: `linear-gradient(${30 + i * 30}deg, transparent 0%, rgba(255, 255, 255, ${0.05 + Math.random() * 0.03}) 50%, transparent 100%)`,
+              animation: 'wave 20s linear infinite',
+              animationDelay: `${i * 3}s`,
+              transform: `translateZ(0)`,
+              willChange: 'transform'
+            }}
+          />
+        ))}
+
+        {/* Пульсирующие белые области */}
+        {Array.from({ length: 15 }, (_, i) => (
+          <div
+            key={`white-pulse-${i}`}
+            className="absolute animate-glow"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${15 + Math.random() * 30}px`,
+              height: `${15 + Math.random() * 30}px`,
+              background: `radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%)`,
+              borderRadius: '50%',
+              animationDelay: `${Math.random() * 8}s`,
+              animationDuration: `${6 + Math.random() * 6}s`,
+              transform: `translateZ(0)`,
+              willChange: 'transform'
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Контент */}
+      <div className="container text-center relative z-30">
         <div className="animate-slide-in-up" style={{ marginBottom: '2rem' }}>
           <h1 className="text-6xl font-bold animate-fade-in-scale" style={{ marginBottom: '1rem' }}>
             <span
@@ -31,7 +168,7 @@ const HeroSection = () => {
 
         <div className="flex justify-center animate-slide-in-up" style={{ gap: '1rem', marginBottom: '4rem', flexWrap: 'wrap', animationDelay: '0.5s' }}>
           <button
-            className="px-8 py-4 text-lg font-semibold text-white rounded-lg"
+            className="px-8 py-4 text-lg font-semibold text-white rounded-lg hover-lift animate-pulse"
             style={{
               background: 'linear-gradient(135deg, #6b5439, #7a6145)',
               boxShadow: '0 0 30px rgba(122, 97, 69, 0.4)',
@@ -43,7 +180,7 @@ const HeroSection = () => {
             Получить консультацию
           </button>
           <button
-            className="px-8 py-4 text-lg font-semibold rounded-lg"
+            className="px-8 py-4 text-lg font-semibold rounded-lg hover-glow"
             style={{
               background: 'transparent',
               color: '#d4c4b0',
@@ -58,9 +195,9 @@ const HeroSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ maxWidth: '48rem', margin: '0 auto' }}>
           {stats.map((stat, index) => (
-            <div key={index} className="text-center stagger-animation">
+            <div key={index} className="text-center stagger-animation hover-lift">
               <div
-                className="text-4xl font-bold"
+                className="text-4xl font-bold animate-pulse"
                 style={{
                   color: '#b8956f',
                   textShadow: '0 0 20px rgba(184, 149, 111, 0.3)'
