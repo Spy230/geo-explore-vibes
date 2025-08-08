@@ -60,7 +60,7 @@ const CasesSection = () => {
               borderRadius: '1rem',
               background: 'rgba(20, 20, 20, 0.02)',
               backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.01)'
+              border: '1px solid rgba(128, 128, 128, 0.3)'
             }}>
               <img
                 src={caseItem.screenshot}
