@@ -1,6 +1,6 @@
 const AnimatedBackground = () => {
   return (
-    <div className="particles-background">
+    <div className="particles-background fixed inset-0 z-0">
       {/* Темный фон с текстурой */}
       <div
         className="absolute inset-0"

@@ -6,7 +6,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center" style={{ paddingTop: '5rem', paddingBottom: '2.5rem' }}>
+    <section className="min-h-screen flex items-center justify-center relative z-10" style={{ paddingTop: '5rem', paddingBottom: '2.5rem' }}>
       <div className="container text-center">
         <div className="animate-slide-in-up" style={{ marginBottom: '2rem' }}>
           <h1 className="text-6xl font-bold animate-fade-in-scale" style={{ marginBottom: '1rem' }}>
