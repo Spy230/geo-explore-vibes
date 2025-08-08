@@ -107,40 +107,7 @@ const HeroSection = () => {
           />
         ))}
 
-        {/* Движущиеся белые волны */}
-        {Array.from({ length: 6 }, (_, i) => (
-          <div
-            key={`white-wave-${i}`}
-            className="absolute inset-0"
-            style={{
-              background: `linear-gradient(${30 + i * 30}deg, transparent 0%, rgba(255, 255, 255, ${0.05 + Math.random() * 0.03}) 50%, transparent 100%)`,
-              animation: 'wave 20s linear infinite',
-              animationDelay: `${i * 3}s`,
-              transform: `translateZ(0)`,
-              willChange: 'transform'
-            }}
-          />
-        ))}
 
-        {/* Пульсирующие белые области */}
-        {Array.from({ length: 15 }, (_, i) => (
-          <div
-            key={`white-pulse-${i}`}
-            className="absolute animate-glow"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              width: `${15 + Math.random() * 30}px`,
-              height: `${15 + Math.random() * 30}px`,
-              background: `radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%)`,
-              borderRadius: '50%',
-              animationDelay: `${Math.random() * 8}s`,
-              animationDuration: `${6 + Math.random() * 6}s`,
-              transform: `translateZ(0)`,
-              willChange: 'transform'
-            }}
-          />
-        ))}
       </div>
 
       {/* Контент */}
