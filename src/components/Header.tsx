@@ -27,7 +27,7 @@ const Header = () => {
             />
           </div>
 
-          <div className="flex items-center space-x-6 animate-slide-in-right" style={{ paddingLeft: '4rem' }}>
+          <div className="flex items-center space-x-6 animate-slide-in-right" style={{ paddingLeft: '2rem' }}>
             <div className="flex items-center space-x-4 text-sm">
               <a
                 href="tel:+79023845591"
