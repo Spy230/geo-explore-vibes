@@ -93,6 +93,44 @@ const AnimatedBackground = () => {
           />
         ))}
 
+        {/* Белые летающие частицы */}
+        {Array.from({ length: 50 }, (_, i) => (
+          <div
+            key={`white-${i}`}
+            className="absolute animate-float"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${2 + Math.random() * 3}px`,
+              height: `${2 + Math.random() * 3}px`,
+              backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              borderRadius: '50%',
+              boxShadow: `0 0 ${8 + Math.random() * 4}px rgba(255, 255, 255, 0.6), 0 0 ${16 + Math.random() * 8}px rgba(255, 255, 255, 0.3)`,
+              animationDelay: `${Math.random() * 12}s`,
+              animationDuration: `${10 + Math.random() * 8}s`
+            }}
+          />
+        ))}
+
+        {/* Мелкие белые точки */}
+        {Array.from({ length: 30 }, (_, i) => (
+          <div
+            key={`white-small-${i}`}
+            className="absolute animate-glow"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: '1px',
+              height: '1px',
+              backgroundColor: 'rgba(255, 255, 255, 0.9)',
+              borderRadius: '50%',
+              boxShadow: `0 0 ${4 + Math.random() * 3}px rgba(255, 255, 255, 0.8)`,
+              animationDelay: `${Math.random() * 10}s`,
+              animationDuration: `${4 + Math.random() * 4}s`
+            }}
+          />
+        ))}
+
         {/* Движущиеся волны света */}
         {Array.from({ length: 8 }, (_, i) => (
           <div
