@@ -1,6 +1,6 @@
 const AnimatedBackground = () => {
   return (
-    <div className="particles-background fixed inset-0 z-0">
+    <div className="particles-background">
       {/* Темный фон с текстурой */}
       <div
         className="absolute inset-0"
@@ -94,61 +94,39 @@ const AnimatedBackground = () => {
         ))}
 
         {/* Белые летающие частицы */}
-        {Array.from({ length: 80 }, (_, i) => (
+        {Array.from({ length: 50 }, (_, i) => (
           <div
             key={`white-${i}`}
-            className="absolute"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              width: `${3 + Math.random() * 4}px`,
-              height: `${3 + Math.random() * 4}px`,
-              backgroundColor: '#ffffff',
-              borderRadius: '50%',
-              boxShadow: `0 0 ${10 + Math.random() * 8}px rgba(255, 255, 255, 0.8), 0 0 ${20 + Math.random() * 10}px rgba(255, 255, 255, 0.4)`,
-              animation: `float ${8 + Math.random() * 12}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 15}s`,
-              opacity: '0.9'
-            }}
-          />
-        ))}
-
-        {/* Мелкие белые точки */}
-        {Array.from({ length: 120 }, (_, i) => (
-          <div
-            key={`white-small-${i}`}
-            className="absolute"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              width: `${1 + Math.random() * 2}px`,
-              height: `${1 + Math.random() * 2}px`,
-              backgroundColor: '#ffffff',
-              borderRadius: '50%',
-              boxShadow: `0 0 ${5 + Math.random() * 5}px rgba(255, 255, 255, 0.9)`,
-              animation: `glow ${3 + Math.random() * 5}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 10}s`,
-              opacity: '0.8'
-            }}
-          />
-        ))}
-
-        {/* Дополнительные яркие белые частицы */}
-        {Array.from({ length: 40 }, (_, i) => (
-          <div
-            key={`white-bright-${i}`}
-            className="absolute"
+            className="absolute animate-float"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
               width: `${2 + Math.random() * 3}px`,
               height: `${2 + Math.random() * 3}px`,
-              backgroundColor: '#ffffff',
+              backgroundColor: 'rgba(255, 255, 255, 0.8)',
               borderRadius: '50%',
-              boxShadow: `0 0 ${15 + Math.random() * 10}px rgba(255, 255, 255, 1), 0 0 ${30 + Math.random() * 15}px rgba(255, 255, 255, 0.6)`,
-              animation: `float ${6 + Math.random() * 8}s ease-in-out infinite, glow ${4 + Math.random() * 6}s ease-in-out infinite`,
+              boxShadow: `0 0 ${8 + Math.random() * 4}px rgba(255, 255, 255, 0.6), 0 0 ${16 + Math.random() * 8}px rgba(255, 255, 255, 0.3)`,
               animationDelay: `${Math.random() * 12}s`,
-              opacity: '1'
+              animationDuration: `${10 + Math.random() * 8}s`
+            }}
+          />
+        ))}
+
+        {/* Мелкие белые точки */}
+        {Array.from({ length: 30 }, (_, i) => (
+          <div
+            key={`white-small-${i}`}
+            className="absolute animate-glow"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: '1px',
+              height: '1px',
+              backgroundColor: 'rgba(255, 255, 255, 0.9)',
+              borderRadius: '50%',
+              boxShadow: `0 0 ${4 + Math.random() * 3}px rgba(255, 255, 255, 0.8)`,
+              animationDelay: `${Math.random() * 10}s`,
+              animationDuration: `${4 + Math.random() * 4}s`
             }}
           />
         ))}
