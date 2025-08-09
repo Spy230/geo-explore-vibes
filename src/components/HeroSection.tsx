@@ -39,6 +39,7 @@ const HeroSection = () => {
               animationDelay: `${Math.random() * 8}s`,
               animationDuration: `${8 + Math.random() * 12}s`,
               transform: `translateZ(0)`,
+              WebkitTransform: `translateZ(0)`,
               willChange: 'transform'
             }}
           />
@@ -60,6 +61,7 @@ const HeroSection = () => {
               animationDelay: `${Math.random() * 10}s`,
               animationDuration: `${10 + Math.random() * 8}s`,
               transform: `translateZ(0)`,
+              WebkitTransform: `translateZ(0)`,
               willChange: 'transform'
             }}
           />
@@ -81,6 +83,7 @@ const HeroSection = () => {
               animationDelay: `${Math.random() * 6}s`,
               animationDuration: `${4 + Math.random() * 6}s`,
               transform: `translateZ(0)`,
+              WebkitTransform: `translateZ(0)`,
               willChange: 'transform'
             }}
           />
@@ -102,6 +105,7 @@ const HeroSection = () => {
               animationDelay: `${Math.random() * 4}s`,
               animationDuration: `${2 + Math.random() * 4}s`,
               transform: `translateZ(0)`,
+              WebkitTransform: `translateZ(0)`,
               willChange: 'transform'
             }}
           />
@@ -115,12 +119,18 @@ const HeroSection = () => {
         <div className="animate-slide-in-up" style={{ marginBottom: '2rem' }}>
           <h1 className="text-6xl font-bold animate-fade-in-scale" style={{ marginBottom: '1rem' }}>
             <span
-              style={{
-                background: 'linear-gradient(135deg, #7a6145, #9c7a5a, #b8956f)',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                color: 'transparent'
-              }}
+            style={{
+              background: 'linear-gradient(135deg, #7a6145, #9c7a5a, #b8956f)',
+              WebkitBackgroundClip: 'text',
+              MozBackgroundClip: 'text',
+              backgroundClip: 'text',
+              color: 'transparent',
+              // Фоллбэк для старых браузеров
+              ...(typeof CSS === 'undefined' || !CSS.supports('background-clip', 'text') ? {
+                background: 'none',
+                color: '#b8956f'
+              } : {})
+            }}
             >
               Гео-продвижение
             </span>
