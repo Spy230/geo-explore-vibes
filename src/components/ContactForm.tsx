@@ -82,7 +82,14 @@ const ContactForm = () => {
         </div>
 
         <div style={{ maxWidth: '32rem', margin: '0 auto' }}>
-          <form onSubmit={handleSubmit} className="glass-card animate-slide-in-up" style={{ padding: '2rem', borderRadius: '0.75rem', animationDelay: '0.5s' }}>
+          <form onSubmit={handleSubmit} className="animate-slide-in-up contact-form form-container" style={{ 
+            padding: '2rem', 
+            borderRadius: '1rem',
+            background: 'rgba(20, 20, 20, 0.02)',
+            backdropFilter: 'blur(10px)',
+            border: '1px solid rgba(128, 128, 128, 0.3)',
+            animationDelay: '0.5s' 
+          }}>
             <div style={{ marginBottom: '1.5rem' }}>
               <label style={{ display: 'block', marginBottom: '0.5rem', color: '#d4c4b0', fontWeight: '600' }}>
                 Ваше имя
@@ -99,10 +106,11 @@ const ContactForm = () => {
                   width: '100%',
                   padding: '0.75rem',
                   borderRadius: '0.5rem',
-                  border: '1px solid rgba(122, 97, 69, 0.3)',
-                  background: 'rgba(28, 20, 19, 0.5)',
+                  border: '1px solid rgba(128, 128, 128, 0.3)',
+                  background: 'rgba(20, 20, 20, 0.3)',
                   color: '#d4c4b0',
-                  fontSize: '1rem'
+                  fontSize: '1rem',
+                  backdropFilter: 'blur(5px)'
                 }}
               />
             </div>
@@ -123,10 +131,11 @@ const ContactForm = () => {
                   width: '100%',
                   padding: '0.75rem',
                   borderRadius: '0.5rem',
-                  border: '1px solid rgba(122, 97, 69, 0.3)',
-                  background: 'rgba(28, 20, 19, 0.5)',
+                  border: '1px solid rgba(128, 128, 128, 0.3)',
+                  background: 'rgba(20, 20, 20, 0.3)',
                   color: '#d4c4b0',
-                  fontSize: '1rem'
+                  fontSize: '1rem',
+                  backdropFilter: 'blur(5px)'
                 }}
               />
             </div>
@@ -147,10 +156,11 @@ const ContactForm = () => {
                   width: '100%',
                   padding: '0.75rem',
                   borderRadius: '0.5rem',
-                  border: '1px solid rgba(122, 97, 69, 0.3)',
-                  background: 'rgba(28, 20, 19, 0.5)',
+                  border: '1px solid rgba(128, 128, 128, 0.3)',
+                  background: 'rgba(20, 20, 20, 0.3)',
                   color: '#d4c4b0',
-                  fontSize: '1rem'
+                  fontSize: '1rem',
+                  backdropFilter: 'blur(5px)'
                 }}
               />
             </div>
@@ -169,10 +179,11 @@ const ContactForm = () => {
                   width: '100%',
                   padding: '0.75rem',
                   borderRadius: '0.5rem',
-                  border: '1px solid rgba(122, 97, 69, 0.3)',
-                  background: 'rgba(28, 20, 19, 0.5)',
+                  border: '1px solid rgba(128, 128, 128, 0.3)',
+                  background: 'rgba(20, 20, 20, 0.3)',
                   color: '#d4c4b0',
-                  fontSize: '1rem'
+                  fontSize: '1rem',
+                  backdropFilter: 'blur(5px)'
                 }}
               >
                 <option value="">Выберите тип бизнеса</option>
@@ -209,15 +220,17 @@ const ContactForm = () => {
 
           <div className="text-center animate-slide-in-up" style={{ marginTop: '2rem', animationDelay: '0.7s' }}>
             <p style={{ color: '#a08670', marginBottom: '1rem' }}>Или свяжитесь с нами напрямую:</p>
-            <div className="flex justify-center" style={{ gap: '1rem', flexWrap: 'wrap' }}>
+            <div className="flex justify-center contact-buttons" style={{ gap: '1rem', flexWrap: 'wrap' }}>
               <a
                 href="tel:+79023845591"
-                className="px-6 py-3 text-white rounded-lg"
+                className="px-6 py-3 text-white rounded-lg hover-glow contact-button"
                 style={{
-                  background: 'rgba(122, 97, 69, 0.3)',
-                  border: '1px solid rgba(122, 97, 69, 0.5)',
+                  background: 'rgba(20, 20, 20, 0.3)',
+                  border: '1px solid rgba(128, 128, 128, 0.3)',
+                  backdropFilter: 'blur(5px)',
                   textDecoration: 'none',
-                  display: 'inline-block'
+                  display: 'inline-block',
+                  transition: 'all 0.3s ease'
                 }}
               >
                 📞 +7 902 384-55-91
@@ -226,12 +239,14 @@ const ContactForm = () => {
                 href="https://wa.me/79023889482"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 text-white rounded-lg"
+                className="px-6 py-3 text-white rounded-lg hover-glow contact-button"
                 style={{
-                  background: 'rgba(37, 211, 102, 0.3)',
-                  border: '1px solid rgba(37, 211, 102, 0.5)',
+                  background: 'rgba(20, 20, 20, 0.3)',
+                  border: '1px solid rgba(37, 211, 102, 0.3)',
+                  backdropFilter: 'blur(5px)',
                   textDecoration: 'none',
-                  display: 'inline-block'
+                  display: 'inline-block',
+                  transition: 'all 0.3s ease'
                 }}
               >
                 💬 WhatsApp
@@ -240,12 +255,14 @@ const ContactForm = () => {
                 href="https://t.me/+79023889482"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 text-white rounded-lg"
+                className="px-6 py-3 text-white rounded-lg hover-glow contact-button"
                 style={{
-                  background: 'rgba(0, 136, 204, 0.3)',
-                  border: '1px solid rgba(0, 136, 204, 0.5)',
+                  background: 'rgba(20, 20, 20, 0.3)',
+                  border: '1px solid rgba(0, 136, 204, 0.3)',
+                  backdropFilter: 'blur(5px)',
                   textDecoration: 'none',
-                  display: 'inline-block'
+                  display: 'inline-block',
+                  transition: 'all 0.3s ease'
                 }}
               >
                 <img src={telegramIcon} alt="Telegram" style={{ width: '20px', height: '20px', display: 'inline-block', marginRight: '8px' }} />
