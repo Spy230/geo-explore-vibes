@@ -39,7 +39,10 @@ const HeroSection = () => {
               animationDelay: `${Math.random() * 8}s`,
               animationDuration: `${8 + Math.random() * 12}s`,
               transform: `translateZ(0)`,
-              willChange: 'transform'
+              willChange: 'transform',
+              WebkitTransform: `translateZ(0)`,
+              MozTransform: `translateZ(0)`,
+              msTransform: `translateZ(0)`
             }}
           />
         ))}
@@ -60,7 +63,10 @@ const HeroSection = () => {
               animationDelay: `${Math.random() * 10}s`,
               animationDuration: `${10 + Math.random() * 8}s`,
               transform: `translateZ(0)`,
-              willChange: 'transform'
+              willChange: 'transform',
+              WebkitTransform: `translateZ(0)`,
+              MozTransform: `translateZ(0)`,
+              msTransform: `translateZ(0)`
             }}
           />
         ))}
@@ -81,7 +87,10 @@ const HeroSection = () => {
               animationDelay: `${Math.random() * 6}s`,
               animationDuration: `${4 + Math.random() * 6}s`,
               transform: `translateZ(0)`,
-              willChange: 'transform'
+              willChange: 'transform',
+              WebkitTransform: `translateZ(0)`,
+              MozTransform: `translateZ(0)`,
+              msTransform: `translateZ(0)`
             }}
           />
         ))}
@@ -102,7 +111,10 @@ const HeroSection = () => {
               animationDelay: `${Math.random() * 4}s`,
               animationDuration: `${2 + Math.random() * 4}s`,
               transform: `translateZ(0)`,
-              willChange: 'transform'
+              willChange: 'transform',
+              WebkitTransform: `translateZ(0)`,
+              MozTransform: `translateZ(0)`,
+              msTransform: `translateZ(0)`
             }}
           />
         ))}
