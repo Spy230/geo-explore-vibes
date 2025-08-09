@@ -138,7 +138,7 @@ const HeroSection = () => {
             <span style={{ color: '#d4c4b0' }}>для вашего бизнеса</span>
           </h1>
           <p className="text-2xl animate-slide-in-up" style={{ color: '#a08670', maxWidth: '48rem', margin: '0 auto', lineHeight: '1.6', animationDelay: '0.3s' }}>
-            Поднимем ваш бизнес в топ локального поиска.
+            Поднимем ваш бизнес в топ поиска.
             Больше клиентов из вашего города уже через 2 недели
           </p>
         </div>
