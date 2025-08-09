@@ -11,7 +11,7 @@ const Header = () => {
                 textShadow: '0 0 10px rgba(184, 149, 111, 0.3)'
               }}
             >
-              Phenix-project
+              PHENIX-PROJECT
             </h1>
           </div>
 
