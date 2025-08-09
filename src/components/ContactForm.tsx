@@ -102,10 +102,7 @@ const ContactForm = () => {
                   border: '1px solid rgba(122, 97, 69, 0.3)',
                   background: 'rgba(28, 20, 19, 0.5)',
                   color: '#d4c4b0',
-                  fontSize: '1rem',
-                  WebkitAppearance: 'none',
-                  MozAppearance: 'none',
-                  appearance: 'none'
+                  fontSize: '1rem'
                 }}
               />
             </div>
@@ -129,10 +126,7 @@ const ContactForm = () => {
                   border: '1px solid rgba(122, 97, 69, 0.3)',
                   background: 'rgba(28, 20, 19, 0.5)',
                   color: '#d4c4b0',
-                  fontSize: '1rem',
-                  WebkitAppearance: 'none',
-                  MozAppearance: 'none',
-                  appearance: 'none'
+                  fontSize: '1rem'
                 }}
               />
             </div>
@@ -156,10 +150,7 @@ const ContactForm = () => {
                   border: '1px solid rgba(122, 97, 69, 0.3)',
                   background: 'rgba(28, 20, 19, 0.5)',
                   color: '#d4c4b0',
-                  fontSize: '1rem',
-                  WebkitAppearance: 'none',
-                  MozAppearance: 'none',
-                  appearance: 'none'
+                  fontSize: '1rem'
                 }}
               />
             </div>
@@ -181,10 +172,7 @@ const ContactForm = () => {
                   border: '1px solid rgba(122, 97, 69, 0.3)',
                   background: 'rgba(28, 20, 19, 0.5)',
                   color: '#d4c4b0',
-                  fontSize: '1rem',
-                  WebkitAppearance: 'none',
-                  MozAppearance: 'none',
-                  appearance: 'none'
+                  fontSize: '1rem'
                 }}
               >
                 <option value="">Выберите тип бизнеса</option>

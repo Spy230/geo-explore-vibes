@@ -2,83 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Кроссбраузерная совместимость */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-/* Сброс стилей для всех браузеров */
-html {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  scroll-behavior: smooth;
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  font-feature-settings: "kern" 1;
-  font-kerning: normal;
-  line-height: 1.5;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-/* Кроссбраузерные префиксы для анимаций */
-@-webkit-keyframes float {
-  0%, 100% {
-    -webkit-transform: translateY(0px) translateX(0px) scale(1);
-    transform: translateY(0px) translateX(0px) scale(1);
-    opacity: 0.4;
-  }
-  25% {
-    -webkit-transform: translateY(-20px) translateX(10px) scale(1.1);
-    transform: translateY(-20px) translateX(10px) scale(1.1);
-    opacity: 0.8;
-  }
-  50% {
-    -webkit-transform: translateY(-40px) translateX(-15px) scale(0.9);
-    transform: translateY(-40px) translateX(-15px) scale(0.9);
-    opacity: 1;
-  }
-  75% {
-    -webkit-transform: translateY(-25px) translateX(20px) scale(1.05);
-    transform: translateY(-25px) translateX(20px) scale(1.05);
-    opacity: 0.6;
-  }
-}
-
-@-moz-keyframes float {
-  0%, 100% {
-    -moz-transform: translateY(0px) translateX(0px) scale(1);
-    transform: translateY(0px) translateX(0px) scale(1);
-    opacity: 0.4;
-  }
-  25% {
-    -moz-transform: translateY(-20px) translateX(10px) scale(1.1);
-    transform: translateY(-20px) translateX(10px) scale(1.1);
-    opacity: 0.8;
-  }
-  50% {
-    -moz-transform: translateY(-40px) translateX(-15px) scale(0.9);
-    transform: translateY(-40px) translateX(-15px) scale(0.9);
-    opacity: 1;
-  }
-  75% {
-    -moz-transform: translateY(-25px) translateX(20px) scale(1.05);
-    transform: translateY(-25px) translateX(20px) scale(1.05);
-    opacity: 0.6;
-  }
-}
-
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
@@ -203,144 +126,40 @@ html, body, #root {
 
 @keyframes float {
   0%, 100% {
-    -webkit-transform: translateY(0px) translateX(0px) scale(1);
-    -moz-transform: translateY(0px) translateX(0px) scale(1);
-    -ms-transform: translateY(0px) translateX(0px) scale(1);
     transform: translateY(0px) translateX(0px) scale(1);
     opacity: 0.4;
   }
   25% {
-    -webkit-transform: translateY(-20px) translateX(10px) scale(1.1);
-    -moz-transform: translateY(-20px) translateX(10px) scale(1.1);
-    -ms-transform: translateY(-20px) translateX(10px) scale(1.1);
     transform: translateY(-20px) translateX(10px) scale(1.1);
     opacity: 0.8;
   }
   50% {
-    -webkit-transform: translateY(-40px) translateX(-15px) scale(0.9);
-    -moz-transform: translateY(-40px) translateX(-15px) scale(0.9);
-    -ms-transform: translateY(-40px) translateX(-15px) scale(0.9);
     transform: translateY(-40px) translateX(-15px) scale(0.9);
     opacity: 1;
   }
   75% {
-    -webkit-transform: translateY(-25px) translateX(20px) scale(1.05);
-    -moz-transform: translateY(-25px) translateX(20px) scale(1.05);
-    -ms-transform: translateY(-25px) translateX(20px) scale(1.05);
     transform: translateY(-25px) translateX(20px) scale(1.05);
     opacity: 0.6;
-  }
-}
-
-@-webkit-keyframes glow {
-  0%, 100% {
-    opacity: 0.2;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  33% {
-    opacity: 0.5;
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-  66% {
-    opacity: 0.8;
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
-  }
-}
-
-@-moz-keyframes glow {
-  0%, 100% {
-    opacity: 0.2;
-    -moz-transform: scale(1);
-    transform: scale(1);
-  }
-  33% {
-    opacity: 0.5;
-    -moz-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-  66% {
-    opacity: 0.8;
-    -moz-transform: scale(0.95);
-    transform: scale(0.95);
   }
 }
 
 @keyframes glow {
   0%, 100% {
     opacity: 0.2;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
     transform: scale(1);
   }
   33% {
     opacity: 0.5;
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
     transform: scale(1.05);
   }
   66% {
     opacity: 0.8;
-    -webkit-transform: scale(0.95);
-    -moz-transform: scale(0.95);
-    -ms-transform: scale(0.95);
     transform: scale(0.95);
-  }
-}
-
-@-webkit-keyframes wave {
-  0% {
-    -webkit-transform: translateX(-100%) rotate(0deg);
-    transform: translateX(-100%) rotate(0deg);
-    opacity: 0;
-  }
-  25% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  75% {
-    opacity: 0.4;
-  }
-  100% {
-    -webkit-transform: translateX(100%) rotate(360deg);
-    transform: translateX(100%) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes wave {
-  0% {
-    -moz-transform: translateX(-100%) rotate(0deg);
-    transform: translateX(-100%) rotate(0deg);
-    opacity: 0;
-  }
-  25% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  75% {
-    opacity: 0.4;
-  }
-  100% {
-    -moz-transform: translateX(100%) rotate(360deg);
-    transform: translateX(100%) rotate(360deg);
-    opacity: 0;
   }
 }
 
 @keyframes wave {
   0% {
-    -webkit-transform: translateX(-100%) rotate(0deg);
-    -moz-transform: translateX(-100%) rotate(0deg);
-    -ms-transform: translateX(-100%) rotate(0deg);
     transform: translateX(-100%) rotate(0deg);
     opacity: 0;
   }
@@ -354,122 +173,29 @@ html, body, #root {
     opacity: 0.4;
   }
   100% {
-    -webkit-transform: translateX(100%) rotate(360deg);
-    -moz-transform: translateX(100%) rotate(360deg);
-    -ms-transform: translateX(100%) rotate(360deg);
     transform: translateX(100%) rotate(360deg);
     opacity: 0;
-  }
-}
-
-@-webkit-keyframes slideInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@-moz-keyframes slideInUp {
-  from {
-    opacity: 0;
-    -moz-transform: translateY(50px);
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    -moz-transform: translateY(0);
-    transform: translateY(0);
   }
 }
 
 @keyframes slideInUp {
   from {
     opacity: 0;
-    -webkit-transform: translateY(50px);
-    -moz-transform: translateY(50px);
-    -ms-transform: translateY(50px);
     transform: translateY(50px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
     transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes slideInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(-50px);
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-@-moz-keyframes slideInLeft {
-  from {
-    opacity: 0;
-    -moz-transform: translateX(-50px);
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    -moz-transform: translateX(0);
-    transform: translateX(0);
   }
 }
 
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    -webkit-transform: translateX(-50px);
-    -moz-transform: translateX(-50px);
-    -ms-transform: translateX(-50px);
     transform: translateX(-50px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes slideInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-@-moz-keyframes slideInRight {
-  from {
-    opacity: 0;
-    -moz-transform: translateX(50px);
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    -moz-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -477,194 +203,49 @@ html, body, #root {
 @keyframes slideInRight {
   from {
     opacity: 0;
-    -webkit-transform: translateX(50px);
-    -moz-transform: translateX(50px);
-    -ms-transform: translateX(50px);
     transform: translateX(50px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
     transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes fadeInScale {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@-moz-keyframes fadeInScale {
-  from {
-    opacity: 0;
-    -moz-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    -moz-transform: scale(1);
-    transform: scale(1);
   }
 }
 
 @keyframes fadeInScale {
   from {
     opacity: 0;
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -ms-transform: scale(0.8);
     transform: scale(0.8);
   }
   to {
     opacity: 1;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
     transform: scale(1);
-  }
-}
-
-@-webkit-keyframes bounce {
-  0%, 20%, 53%, 80%, 100% {
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-  }
-  40%, 43% {
-    -webkit-transform: translate3d(0, -30px, 0);
-    transform: translate3d(0, -30px, 0);
-  }
-  70% {
-    -webkit-transform: translate3d(0, -15px, 0);
-    transform: translate3d(0, -15px, 0);
-  }
-  90% {
-    -webkit-transform: translate3d(0, -4px, 0);
-    transform: translate3d(0, -4px, 0);
-  }
-}
-
-@-moz-keyframes bounce {
-  0%, 20%, 53%, 80%, 100% {
-    -moz-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-  }
-  40%, 43% {
-    -moz-transform: translate3d(0, -30px, 0);
-    transform: translate3d(0, -30px, 0);
-  }
-  70% {
-    -moz-transform: translate3d(0, -15px, 0);
-    transform: translate3d(0, -15px, 0);
-  }
-  90% {
-    -moz-transform: translate3d(0, -4px, 0);
-    transform: translate3d(0, -4px, 0);
   }
 }
 
 @keyframes bounce {
   0%, 20%, 53%, 80%, 100% {
-    -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
   }
   40%, 43% {
-    -webkit-transform: translate3d(0, -30px, 0);
-    -moz-transform: translate3d(0, -30px, 0);
-    -ms-transform: translate3d(0, -30px, 0);
     transform: translate3d(0, -30px, 0);
   }
   70% {
-    -webkit-transform: translate3d(0, -15px, 0);
-    -moz-transform: translate3d(0, -15px, 0);
-    -ms-transform: translate3d(0, -15px, 0);
     transform: translate3d(0, -15px, 0);
   }
   90% {
-    -webkit-transform: translate3d(0, -4px, 0);
-    -moz-transform: translate3d(0, -4px, 0);
-    -ms-transform: translate3d(0, -4px, 0);
     transform: translate3d(0, -4px, 0);
-  }
-}
-
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@-moz-keyframes pulse {
-  0% {
-    -moz-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -moz-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-  100% {
-    -moz-transform: scale(1);
-    transform: scale(1);
   }
 }
 
 @keyframes pulse {
   0% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
     transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
     transform: scale(1.05);
   }
   100% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
     transform: scale(1);
-  }
-}
-
-@-webkit-keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-@-moz-keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
   }
 }
 
@@ -677,281 +258,74 @@ html, body, #root {
   }
 }
 
-/* Кроссбраузерные классы анимаций */
 .animate-float {
-  -webkit-animation: float infinite ease-in-out;
-  -moz-animation: float infinite ease-in-out;
-  -ms-animation: float infinite ease-in-out;
   animation: float infinite ease-in-out;
 }
 
 .animate-glow {
-  -webkit-animation: glow infinite ease-in-out;
-  -moz-animation: glow infinite ease-in-out;
-  -ms-animation: glow infinite ease-in-out;
   animation: glow infinite ease-in-out;
 }
 
 .animate-slide-in-up {
-  -webkit-animation: slideInUp 0.8s ease-out forwards;
-  -moz-animation: slideInUp 0.8s ease-out forwards;
-  -ms-animation: slideInUp 0.8s ease-out forwards;
   animation: slideInUp 0.8s ease-out forwards;
 }
 
 .animate-slide-in-left {
-  -webkit-animation: slideInLeft 0.8s ease-out forwards;
-  -moz-animation: slideInLeft 0.8s ease-out forwards;
-  -ms-animation: slideInLeft 0.8s ease-out forwards;
   animation: slideInLeft 0.8s ease-out forwards;
 }
 
 .animate-slide-in-right {
-  -webkit-animation: slideInRight 0.8s ease-out forwards;
-  -moz-animation: slideInRight 0.8s ease-out forwards;
-  -ms-animation: slideInRight 0.8s ease-out forwards;
   animation: slideInRight 0.8s ease-out forwards;
 }
 
 .animate-fade-in-scale {
-  -webkit-animation: fadeInScale 0.6s ease-out forwards;
-  -moz-animation: fadeInScale 0.6s ease-out forwards;
-  -ms-animation: fadeInScale 0.6s ease-out forwards;
   animation: fadeInScale 0.6s ease-out forwards;
 }
 
 .animate-bounce {
-  -webkit-animation: bounce 2s infinite;
-  -moz-animation: bounce 2s infinite;
-  -ms-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
 }
 
 .animate-pulse {
-  -webkit-animation: pulse 2s infinite;
-  -moz-animation: pulse 2s infinite;
-  -ms-animation: pulse 2s infinite;
   animation: pulse 2s infinite;
 }
 
 .animate-shimmer {
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
   background-size: 200% 100%;
-  -webkit-animation: shimmer 2s infinite;
-  -moz-animation: shimmer 2s infinite;
-  -ms-animation: shimmer 2s infinite;
   animation: shimmer 2s infinite;
 }
 
-/* Кроссбраузерные переходы */
 .hover-lift {
-  -webkit-transition: -webkit-transform 0.3s ease, box-shadow 0.3s ease;
-  -moz-transition: -moz-transform 0.3s ease, box-shadow 0.3s ease;
-  -ms-transition: -ms-transform 0.3s ease, box-shadow 0.3s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hover-lift:hover {
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  -ms-transform: translateY(-10px);
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
 .hover-glow {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .hover-glow:hover {
   box-shadow: 0 0 30px rgba(184, 149, 111, 0.5);
-  -webkit-transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  -ms-transform: scale(1.02);
   transform: scale(1.02);
-}
-
-/* Кроссбраузерные стили для элементов */
-button, input, select, textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-/* Фиксы для Safari */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
-}
-
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-}
-
-/* Фиксы для IE */
-input:-ms-input-placeholder {
-  color: #999;
-}
-
-input::-ms-input-placeholder {
-  color: #999;
-}
-
-/* Кроссбраузерные стили для скроллбара */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(184, 149, 111, 0.5);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(184, 149, 111, 0.7);
-}
-
-/* Фиксы для Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(184, 149, 111, 0.5) rgba(0, 0, 0, 0.1);
-}
-
-/* Кроссбраузерная поддержка backdrop-filter */
-.glass-card {
-  background: rgba(28, 20, 19, 0.7);
-  border: 1px solid rgba(44, 44, 43, 0.3);
-  -webkit-backdrop-filter: blur(20px);
-  -moz-backdrop-filter: blur(20px);
-  -ms-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  /* Fallback для старых браузеров */
-  background: rgba(28, 20, 19, 0.85);
-}
-
-/* Поддержка backdrop-filter */
-@supports (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px)) {
-  .glass-card {
-    background: rgba(28, 20, 19, 0.7);
-  }
-}
-
-/* Медиа-запросы для разных устройств */
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
-  
-  .animate-float {
-    -webkit-animation-duration: 6s;
-    -moz-animation-duration: 6s;
-    -ms-animation-duration: 6s;
-    animation-duration: 6s;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 12px;
-  }
-}
-
-/* Высокое разрешение экранов */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-}
-
-/* Поддержка темной темы */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-  }
-}
-
-/* Поддержка уменьшенной анимации */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    -webkit-animation-duration: 0.01ms !important;
-    -moz-animation-duration: 0.01ms !important;
-    -ms-animation-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-    -moz-animation-iteration-count: 1 !important;
-    -ms-animation-iteration-count: 1 !important;
-    animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-    -moz-transition-duration: 0.01ms !important;
-    -ms-transition-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }
 
 .stagger-animation {
   opacity: 0;
-  -webkit-transform: translateY(30px);
-  -moz-transform: translateY(30px);
-  -ms-transform: translateY(30px);
   transform: translateY(30px);
-  -webkit-animation: slideInUp 0.8s ease-out forwards;
-  -moz-animation: slideInUp 0.8s ease-out forwards;
-  -ms-animation: slideInUp 0.8s ease-out forwards;
   animation: slideInUp 0.8s ease-out forwards;
 }
 
-.stagger-animation:nth-child(1) { 
-  -webkit-animation-delay: 0.1s; 
-  -moz-animation-delay: 0.1s; 
-  -ms-animation-delay: 0.1s; 
-  animation-delay: 0.1s; 
-}
-.stagger-animation:nth-child(2) { 
-  -webkit-animation-delay: 0.2s; 
-  -moz-animation-delay: 0.2s; 
-  -ms-animation-delay: 0.2s; 
-  animation-delay: 0.2s; 
-}
-.stagger-animation:nth-child(3) { 
-  -webkit-animation-delay: 0.3s; 
-  -moz-animation-delay: 0.3s; 
-  -ms-animation-delay: 0.3s; 
-  animation-delay: 0.3s; 
-}
-.stagger-animation:nth-child(4) { 
-  -webkit-animation-delay: 0.4s; 
-  -moz-animation-delay: 0.4s; 
-  -ms-animation-delay: 0.4s; 
-  animation-delay: 0.4s; 
-}
-.stagger-animation:nth-child(5) { 
-  -webkit-animation-delay: 0.5s; 
-  -moz-animation-delay: 0.5s; 
-  -ms-animation-delay: 0.5s; 
-  animation-delay: 0.5s; 
-}
-.stagger-animation:nth-child(6) { 
-  -webkit-animation-delay: 0.6s; 
-  -moz-animation-delay: 0.6s; 
-  -ms-animation-delay: 0.6s; 
-  animation-delay: 0.6s; 
+.stagger-animation:nth-child(1) { animation-delay: 0.1s; }
+.stagger-animation:nth-child(2) { animation-delay: 0.2s; }
+.stagger-animation:nth-child(3) { animation-delay: 0.3s; }
+.stagger-animation:nth-child(4) { animation-delay: 0.4s; }
+.stagger-animation:nth-child(5) { animation-delay: 0.5s; }
+.stagger-animation:nth-child(6) { animation-delay: 0.6s; }
 
 .container {
   max-width: 1200px;
@@ -959,10 +333,8 @@ input::-ms-input-placeholder {
   padding: 0 1.5rem;
 }
 
-/* Кроссбраузерные утилиты */
 .min-h-screen {
   min-height: 100vh;
-  min-height: -webkit-fill-available;
 }
 
 .fixed {
@@ -987,29 +359,17 @@ input::-ms-input-placeholder {
 
 .flex {
   display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
 }
 
 .items-center {
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .justify-center {
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .justify-between {
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -1051,13 +411,7 @@ input::-ms-input-placeholder {
 
 .transition-colors {
   transition-property: color;
-  -webkit-transition-property: color;
-  -moz-transition-property: color;
-  -ms-transition-property: color;
   transition-duration: 150ms;
-  -webkit-transition-duration: 150ms;
-  -moz-transition-duration: 150ms;
-  -ms-transition-duration: 150ms;
 }
 
 @layer base {
