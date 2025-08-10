@@ -5,9 +5,18 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Мобильная версия - вертикальная компоновка */}
           <div className="block sm:hidden w-full">
-            <div className="flex items-center justify-between mb-2">
+            <div className="flex flex-col items-center mb-2">
+              <img
+                src="https://a.imgfoto.host/2025/07/30/LOGO.png"
+                alt="Phoenix Logo"
+                className="h-12 w-auto mb-2"
+                style={{
+                  filter: 'drop-shadow(0 0 15px #FFD700) drop-shadow(0 0 25px #FFA500)',
+                  maxWidth: '60px'
+                }}
+              />
               <h1
-                className="text-lg font-bold animate-fade-in-scale"
+                className="text-lg font-bold animate-fade-in-scale text-center"
                 style={{
                   color: '#b8956f',
                   textShadow: '0 0 10px rgba(184, 149, 111, 0.3)'
@@ -15,15 +24,6 @@ const Header = () => {
               >
                 PHENIX PROJECT
               </h1>
-              <img
-                src="https://a.imgfoto.host/2025/07/30/LOGO.png"
-                alt="Phoenix Logo"
-                className="h-10 w-auto animate-float"
-                style={{
-                  filter: 'drop-shadow(0 0 15px #FFD700) drop-shadow(0 0 25px #FFA500)',
-                  maxWidth: '60px'
-                }}
-              />
             </div>
             <div className="flex items-center justify-center space-x-3 text-xs">
               <a
@@ -72,7 +72,7 @@ const Header = () => {
               <img
                 src="https://a.imgfoto.host/2025/07/30/LOGO.png"
                 alt="Phoenix Logo"
-                className="h-12 lg:h-16 w-auto animate-float"
+                className="h-12 lg:h-16 w-auto hidden sm:animate-float"
                 style={{
                   filter: 'drop-shadow(0 0 15px #FFD700) drop-shadow(0 0 25px #FFA500)',
                   maxWidth: '120px'
