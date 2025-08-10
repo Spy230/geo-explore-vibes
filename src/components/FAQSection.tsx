@@ -37,8 +37,8 @@ const FAQSection = () => {
   return (
     <section style={{ padding: '5rem 0', background: 'rgba(0, 0, 0, 0.5)', backdropFilter: 'blur(5px)' }}>
       <div className="container">
-        <div className="text-center animate-slide-in-up" style={{ marginBottom: '4rem' }}>
-          <h2 className="text-6xl font-bold animate-fade-in-scale" style={{ marginBottom: '1rem' }}>
+        <div className="text-center animate-slide-in-up px-4" style={{ marginBottom: '4rem' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in-scale" style={{ marginBottom: '1rem' }}>
             <span
               style={{
                 background: 'linear-gradient(135deg, #7a6145, #9c7a5a, #b8956f)',
@@ -50,37 +50,39 @@ const FAQSection = () => {
               Частые вопросы
             </span>
           </h2>
-          <p className="text-2xl animate-slide-in-up" style={{ color: '#a08670', maxWidth: '32rem', margin: '0 auto', animationDelay: '0.3s' }}>
+          <p className="text-lg sm:text-xl md:text-2xl animate-slide-in-up" style={{ color: '#a08670', maxWidth: '32rem', margin: '0 auto', animationDelay: '0.3s' }}>
             Ответы на самые популярные вопросы о гео-продвижении
           </p>
         </div>
 
-        <div style={{ maxWidth: '50rem', margin: '0 auto' }}>
+        <div className="px-4" style={{ maxWidth: '50rem', margin: '0 auto' }}>
           {faqs.map((faq, index) => (
             <div key={index} className="glass-card stagger-animation" style={{ marginBottom: '1rem', borderRadius: '0.75rem' }}>
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full text-left"
                 style={{
-                  padding: '1.5rem',
+                  padding: '1rem sm:1.5rem',
                   background: 'transparent',
                   border: 'none',
                   color: '#d4c4b0',
-                  fontSize: '1.125rem',
+                  fontSize: '1rem sm:1.125rem',
                   fontWeight: '600',
                   cursor: 'pointer',
                   display: 'flex',
                   justifyContent: 'space-between',
-                  alignItems: 'center'
+                  alignItems: 'center',
+                  minHeight: '44px'
                 }}
               >
-                <span>{faq.question}</span>
+                <span style={{ paddingRight: '1rem' }}>{faq.question}</span>
                 <span
                   className=""
                   style={{
                     transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
                     transition: 'transform 0.3s ease',
-                    color: '#b8956f'
+                    color: '#b8956f',
+                    flexShrink: 0
                   }}
                 >
                   ▼
@@ -91,10 +93,11 @@ const FAQSection = () => {
                 <div
                   className="animate-slide-in-up"
                   style={{
-                    padding: '0 1.5rem 1.5rem',
+                    padding: '0 1rem 1rem sm:0 1.5rem 1.5rem',
                     color: '#a08670',
                     lineHeight: '1.6',
-                    borderTop: '1px solid rgba(122, 97, 69, 0.2)'
+                    borderTop: '1px solid rgba(122, 97, 69, 0.2)',
+                    fontSize: '0.9rem sm:1rem'
                   }}
                 >
                   {faq.answer}
@@ -104,17 +107,18 @@ const FAQSection = () => {
           ))}
         </div>
 
-        <div className="text-center animate-slide-in-up" style={{ marginTop: '3rem', animationDelay: '0.8s' }}>
-          <p style={{ color: '#a08670', marginBottom: '1rem', fontSize: '1.125rem' }}>
+        <div className="text-center animate-slide-in-up px-4" style={{ marginTop: '3rem', animationDelay: '0.8s' }}>
+          <p className="text-base sm:text-lg" style={{ color: '#a08670', marginBottom: '1rem' }}>
             Остались вопросы? Мы с радостью на них ответим!
           </p>
           <button
-            className="px-8 py-4 text-lg font-semibold text-white rounded-lg"
+            className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white rounded-lg w-full sm:w-auto"
             style={{
               background: 'linear-gradient(135deg, #6b5439, #7a6145)',
               boxShadow: '0 0 30px rgba(122, 97, 69, 0.4)',
               border: 'none',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              maxWidth: '280px'
             }}
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
