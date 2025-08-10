@@ -72,7 +72,7 @@ const Header = () => {
               <img
                 src="https://a.imgfoto.host/2025/07/30/LOGO.png"
                 alt="Phoenix Logo"
-                className="h-12 lg:h-16 w-auto hidden sm:animate-float"
+                className="h-12 lg:h-16 w-auto animate-float"
                 style={{
                   filter: 'drop-shadow(0 0 15px #FFD700) drop-shadow(0 0 25px #FFA500)',
                   maxWidth: '120px'
