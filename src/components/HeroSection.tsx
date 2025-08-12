@@ -6,7 +6,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ paddingTop: '5rem', paddingBottom: '2.5rem' }}>
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ paddingTop: 'clamp(4rem, 8vh, 5rem)', paddingBottom: 'clamp(1.5rem, 4vh, 2.5rem)' }}>
       {/* Основной фон с изображением */}
       <div 
         className="absolute inset-0 z-0"
@@ -115,9 +115,13 @@ const HeroSection = () => {
       </div>
 
       {/* Контент */}
-      <div className="container text-center relative z-30">
-        <div className="animate-slide-in-up" style={{ marginBottom: '2rem' }}>
-          <h1 className="text-6xl font-bold animate-fade-in-scale" style={{ marginBottom: '1rem' }}>
+      <div className="text-center relative z-30" style={{ width: '100%', padding: '0 clamp(1rem, 4vw, 2rem)' }}>
+        <div className="animate-slide-in-up" style={{ marginBottom: 'clamp(1.5rem, 4vw, 2rem)' }}>
+          <h1 className="font-bold animate-fade-in-scale" style={{ 
+            marginBottom: 'clamp(0.5rem, 2vw, 1rem)',
+            fontSize: 'clamp(2rem, 8vw, 3.75rem)',
+            lineHeight: '1.1'
+          }}>
             <span
             style={{
               background: 'linear-gradient(135deg, #7a6145, #9c7a5a, #b8956f)',
@@ -137,32 +141,52 @@ const HeroSection = () => {
             <br />
             <span style={{ color: '#d4c4b0' }}>для вашего бизнеса</span>
           </h1>
-          <p className="text-2xl animate-slide-in-up" style={{ color: '#a08670', maxWidth: '48rem', margin: '0 auto', lineHeight: '1.6', animationDelay: '0.3s' }}>
+          <p className="animate-slide-in-up" style={{ 
+            color: '#a08670', 
+            maxWidth: '48rem', 
+            margin: '0 auto', 
+            lineHeight: '1.6', 
+            animationDelay: '0.3s',
+            fontSize: 'clamp(1rem, 3vw, 1.5rem)'
+          }}>
             Поднимем ваш бизнес в топ поиска.
             Больше клиентов из вашего города уже через 2 недели
           </p>
         </div>
 
-        <div className="flex justify-center animate-slide-in-up" style={{ gap: '1rem', marginBottom: '4rem', flexWrap: 'wrap', animationDelay: '0.5s' }}>
+        <div className="flex justify-center animate-slide-in-up hero-buttons" style={{ 
+          gap: 'clamp(0.5rem, 2vw, 1rem)', 
+          marginBottom: 'clamp(2rem, 6vw, 4rem)', 
+          flexWrap: 'wrap', 
+          animationDelay: '0.5s',
+          flexDirection: 'row',
+          alignItems: 'center'
+        }}>
           <button
-            className="px-8 py-4 text-lg font-semibold text-white rounded-lg hover-lift animate-pulse"
+            className="font-semibold text-white rounded-lg hover-lift animate-pulse"
             style={{
               background: 'linear-gradient(135deg, #6b5439, #7a6145)',
               boxShadow: '0 0 30px rgba(122, 97, 69, 0.4)',
               border: 'none',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem)',
+              fontSize: 'clamp(0.9rem, 2.5vw, 1.125rem)',
+              minWidth: 'clamp(200px, 40vw, 250px)'
             }}
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Получить консультацию
           </button>
           <button
-            className="px-8 py-4 text-lg font-semibold rounded-lg hover-glow"
+            className="font-semibold rounded-lg hover-glow"
             style={{
               background: 'transparent',
               color: '#d4c4b0',
               border: '2px solid #7a6145',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem)',
+              fontSize: 'clamp(0.9rem, 2.5vw, 1.125rem)',
+              minWidth: 'clamp(200px, 40vw, 250px)'
             }}
             onClick={() => window.open('https://wa.me/79023889482', '_blank')}
           >
@@ -170,19 +194,25 @@ const HeroSection = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ maxWidth: '48rem', margin: '0 auto' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 hero-stats" style={{ maxWidth: '48rem', margin: '0 auto' }}>
           {stats.map((stat, index) => (
-            <div key={index} className="text-center stagger-animation hover-lift">
+            <div key={index} className="text-center stagger-animation hover-lift" style={{ padding: 'clamp(0.5rem, 2vw, 1rem)' }}>
               <div
-                className="text-4xl font-bold animate-pulse"
+                className="font-bold animate-pulse"
                 style={{
                   color: '#b8956f',
-                  textShadow: '0 0 20px rgba(184, 149, 111, 0.3)'
+                  textShadow: '0 0 20px rgba(184, 149, 111, 0.3)',
+                  fontSize: 'clamp(1.5rem, 6vw, 2.25rem)',
+                  lineHeight: '1.2'
                 }}
               >
                 {stat.value}
               </div>
-              <div className="text-lg" style={{ color: '#a08670' }}>
+              <div style={{ 
+                color: '#a08670',
+                fontSize: 'clamp(0.9rem, 2.5vw, 1.125rem)',
+                marginTop: 'clamp(0.25rem, 1vw, 0.5rem)'
+              }}>
                 {stat.label}
               </div>
             </div>
