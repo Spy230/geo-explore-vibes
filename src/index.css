@@ -629,3 +629,63 @@ select option {
     text-align: center;
   }
 }
+
+/* Дополнительные адаптивные стили */
+@media (max-width: 640px) {
+  /* Кнопки в HeroSection в колонку на мобильных */
+  .hero-buttons {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1rem !important;
+  }
+  
+  .hero-buttons button {
+    width: 100% !important;
+    max-width: 280px !important;
+  }
+  
+  /* Контактные кнопки в колонку */
+  .contact-buttons {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  /* Статистика в HeroSection */
+  .hero-stats {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+  /* Уменьшаем отступы */
+  .container {
+    padding: 0 1rem;
+  }
+  
+  /* Упрощаем анимации */
+  .animate-float,
+  .animate-glow {
+    animation-duration: 6s !important;
+  }
+  
+  /* Оптимизируем производительность */
+  .glass-card {
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+  }
+}
+
+/* Ландшафтная ориентация на мобильных */
+@media (max-width: 768px) and (orientation: landscape) {
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  
+  /* Уменьшаем отступы в ландшафте */
+  section {
+    padding-top: clamp(2rem, 5vh, 3rem) !important;
+    padding-bottom: clamp(2rem, 5vh, 3rem) !important;
+  }
+}
