@@ -3,7 +3,7 @@ const CasesSection = () => {
     {
       title: "Подняли трафик с абсолютного нуля, возродив карточку",
       description: "Юридическое бюро Де-Юрекс получил долгожданных клиентов, благодаря грамотному гео-продвижению и seo-оптимизации карточек на картах.",
-      screenshot: "https://a.imgfoto.host/2025/08/16/1card.jpeg",
+      screenshot: "https://a.imgfoto.host/2025/08/17/1card.png",
       metrics: [
         { label: "Звонки", value: "15" },
         { label: "Проложено маршрутов", value: "29" },
@@ -13,13 +13,13 @@ const CasesSection = () => {
     {
       title: "Вывели в топ-3 за месяц",
       description: "Юридическая компания Grade с нуля поднялась в топ-3 локального поиска, обогнав конкурентов с многолетней историей в интернете.",
-      screenshot: "https://a.imgfoto.host/2025/08/16/2card.jpeg",
+      screenshot: "https://a.imgfoto.host/2025/08/17/2card.png",
       metrics: []
     },
     {
       title: "Запустили организацию и обеспечили поток лидов",
       description: "Мужской бутик быстро закрепился на новом месте, получив большой прирост по всем ключевым показателям всего за полмесяца работы.",
-      screenshot: "https://a.imgfoto.host/2025/08/16/3card.jpeg",
+      screenshot: "https://a.imgfoto.host/2025/08/17/3card.png",
       metrics: [
         { label: "Звонки", value: "4" },
         { label: "Проложено маршрутов", value: "34" },
@@ -63,72 +63,100 @@ const CasesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3" style={{ width: '100%', justifyItems: 'center' }}>
           {cases.map((caseItem, index) => (
             <div key={index} className="stagger-animation" style={{
-              padding: 'clamp(1.5rem, 4vw, 4rem)',
+              padding: 'clamp(1.5rem, 4vw, 2rem)',
               borderRadius: 'clamp(1rem, 2vw, 2rem)',
               background: 'rgba(20, 20, 20, 0.02)',
               backdropFilter: 'blur(10px)',
               border: '1px solid rgba(128, 128, 128, 0.3)',
-              minHeight: 'clamp(400px, 50vh, 650px)',
+              height: 'clamp(500px, 60vh, 700px)',
               width: '100%',
-              maxWidth: 'none'
+              maxWidth: 'none',
+              display: 'flex',
+              flexDirection: 'column'
             }}>
-              <img
-                src={caseItem.screenshot}
-                alt={caseItem.title}
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  maxHeight: 'clamp(250px, 35vw, 400px)',
-                  objectFit: 'contain',
-                  objectPosition: 'center',
-                  borderRadius: 'clamp(0.5rem, 1vw, 1rem)',
-                  marginBottom: 'clamp(1rem, 3vw, 2.5rem)',
-                  display: 'block'
-                }}
-              />
-
-              <h3 style={{
-                color: '#d4c4b0',
-                marginBottom: 'clamp(1rem, 2vw, 2rem)',
-                fontSize: 'clamp(1.25rem, 3vw, 1.875rem)',
-                fontWeight: 'bold',
-                lineHeight: '1.2'
+              <div style={{
+                width: '100%',
+                height: 'clamp(220px, 30vh, 280px)',
+                borderRadius: 'clamp(0.5rem, 1vw, 1rem)',
+                marginBottom: 'clamp(1rem, 2vw, 1.5rem)',
+                flexShrink: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                overflow: 'hidden'
               }}>
-                {caseItem.title}
-              </h3>
+                <img
+                  src={caseItem.screenshot}
+                  alt={caseItem.title}
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain',
+                    objectPosition: 'center',
+                    display: 'block',
+                    borderRadius: '12px'
+                  }}
+                />
+              </div>
 
-              <p style={{
-                color: '#a08670',
-                lineHeight: '1.6',
-                marginBottom: 'clamp(1.5rem, 3vw, 2.5rem)',
-                fontSize: 'clamp(0.9rem, 2vw, 1.2rem)'
-              }}>
-                {caseItem.description}
-              </p>
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+                <h3 style={{
+                  color: '#d4c4b0',
+                  marginBottom: 'clamp(0.75rem, 1.5vw, 1rem)',
+                  fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)',
+                  fontWeight: 'bold',
+                  lineHeight: '1.2'
+                }}>
+                  {caseItem.title}
+                </h3>
+
+                <p style={{
+                  color: '#a08670',
+                  lineHeight: '1.5',
+                  marginBottom: 'clamp(1rem, 2vw, 1.5rem)',
+                  fontSize: 'clamp(0.85rem, 1.8vw, 1rem)',
+                  flex: 1
+                }}>
+                  {caseItem.description}
+                </p>
+              </div>
 
               {caseItem.metrics.length > 0 && (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(0.75rem, 2vw, 1rem)' }}>
-                  {caseItem.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex justify-between items-center" style={{ padding: 'clamp(0.25rem, 1vw, 0.5rem) 0' }}>
-                      <span style={{
-                        color: '#a08670',
-                        fontSize: 'clamp(0.8rem, 1.8vw, 1rem)',
-                        flex: '1'
-                      }}>{metric.label}:</span>
-                      <span
-                        className="font-bold"
-                        style={{
+                <table style={{
+                  width: '100%',
+                  marginTop: 'auto',
+                  paddingTop: '1rem',
+                  borderCollapse: 'collapse'
+                }}>
+                  <tbody>
+                    {caseItem.metrics.map((metric, metricIndex) => (
+                      <tr key={metricIndex} style={{
+                        borderBottom: metricIndex < caseItem.metrics.length - 1 ? '1px solid rgba(128, 128, 128, 0.1)' : 'none'
+                      }}>
+                        <td style={{
+                          color: '#a08670',
+                          fontSize: '14px',
+                          padding: '4px 0',
+                          textAlign: 'left',
+                          width: '70%'
+                        }}>
+                          {metric.label}:
+                        </td>
+                        <td style={{
                           color: '#b8956f',
                           textShadow: '0 0 10px rgba(184, 149, 111, 0.3)',
-                          fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
-                          textAlign: 'right'
-                        }}
-                      >
-                        {metric.value}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+                          fontSize: '16px',
+                          fontWeight: 'bold',
+                          padding: '4px 0',
+                          textAlign: 'right',
+                          width: '30%'
+                        }}>
+                          {metric.value}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               )}
             </div>
           ))}
