@@ -259,10 +259,12 @@ const ContactForm = () => {
                 className="text-white rounded-lg hover-glow contact-button"
                 style={{
                   background: 'rgba(20, 20, 20, 0.3)',
-                  border: '1px solid rgba(128, 128, 128, 0.3)',
+                  border: '1px solid rgba(220, 38, 38, 0.3)',
                   backdropFilter: 'blur(5px)',
                   textDecoration: 'none',
-                  display: 'inline-block',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                   transition: 'all 0.3s ease',
                   padding: 'clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem)',
                   fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
@@ -270,7 +272,8 @@ const ContactForm = () => {
                   textAlign: 'center'
                 }}
               >
-                📞 +7 902 384-55-91
+                <span style={{ fontSize: '18px', color: '#dc2626', marginRight: '8px' }}>📞</span>
+                +7 902 384-55-91
               </a>
               <a
                 href="https://wa.me/79023889482"
@@ -282,7 +285,9 @@ const ContactForm = () => {
                   border: '1px solid rgba(37, 211, 102, 0.3)',
                   backdropFilter: 'blur(5px)',
                   textDecoration: 'none',
-                  display: 'inline-block',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                   transition: 'all 0.3s ease',
                   padding: 'clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem)',
                   fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
@@ -290,7 +295,16 @@ const ContactForm = () => {
                   textAlign: 'center'
                 }}
               >
-                💬 WhatsApp
+                <img 
+                  src="https://a.imgfoto.host/2025/08/17/icons8-whatsapp-30.png" 
+                  alt="WhatsApp" 
+                  style={{ 
+                    width: '18px', 
+                    height: '18px', 
+                    marginRight: '8px' 
+                  }}
+                />
+                WhatsApp
               </a>
               <a
                 href="https://t.me/+79023889482"
