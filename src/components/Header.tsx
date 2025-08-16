@@ -1,5 +1,3 @@
-import telegramIcon from '../assets/telegram-icon-new.png';
-
 const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 glass-card border-b border-glass-border animate-slide-in-up">
@@ -72,7 +70,7 @@ const Header = () => {
                 }}
               >
                 <img
-                  src={telegramIcon}
+                  src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
                   alt="Telegram"
                   style={{ width: '24px', height: '24px' }}
                 />
