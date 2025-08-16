@@ -5,24 +5,24 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "Как быстро будут видны результаты?",
-      answer: "Первые результаты вы увидите уже через 2-3 недели. Полноценное продвижение в топ занимает 1-3 месяца в зависимости от конкуренции в вашей нише."
+      question: "Как быстро вы даёте результат?",
+      answer: "Первые результаты вы увидите уже через 2-3 недели. Для полноценного продвижения организации, исходя из специфики работы карт, требуется от 1 до 3 месяцев упорной работы."
     },
     {
-      question: "Какие гарантии вы даете?",
-      answer: "Мы гарантируем попадание в топ-10 по основным запросам или возвращаем деньги. Также предоставляем еженедельные отчеты о проделанной работе."
+      question: "Какие гарантии вы даёте?",
+      answer: "Мы гарантируем выполнение своих обязанностей - пунктов плана работы, оговоренного до начала сотрудничества."
     },
     {
       question: "Сколько стоят ваши услуги?",
-      answer: "Стоимость зависит от региона, конкуренции и количества продвигаемых запросов. Базовый пакет от 25 000 рублей в месяц. Точную стоимость рассчитаем после анализа вашей ниши."
+      answer: "Стоимость работы складывается из нескольких факторов: поставленные цели в виде желаемых результатов; нынешняя ситуация, в которой находится ваша карточка; а также объём работ, которые предстоит выполнить для достижения поставленных целей. Базовый пакет стартует от 27 999 рублей."
     },
     {
       question: "Работаете ли вы с небольшими городами?",
-      answer: "Да, мы работаем по всей России. В небольших городах конкуренция ниже, поэтому результаты достигаются быстрее и стоимость продвижения меньше."
+      answer: "Да, мы работаем по всей России."
     },
     {
-      question: "Что входит в услугу гео-продвижения?",
-      answer: "Оптимизация карточек в Яндекс.Картах и Google Maps, работа с отзывами, создание и оптимизация сайта, настройка рекламы, SEO-продвижение, аналитика и отчетность."
+      question: "Что входит в ваши услуги?",
+      answer: "Создание контент плана, настройка алгоритмов продвижения, seo-оптимизация, визуальное оформление, создание воронки конверсии лидов и множество других, не менее важных пунктов работы."
     },
     {
       question: "Можно ли продвигать несколько точек одновременно?",
@@ -38,7 +38,7 @@ const FAQSection = () => {
     <section style={{ padding: 'clamp(3rem, 8vh, 5rem) 0', background: 'rgba(0, 0, 0, 0.5)', backdropFilter: 'blur(5px)' }}>
       <div style={{ width: '100%', padding: '0 clamp(1rem, 4vw, 2rem)' }}>
         <div className="text-center animate-slide-in-up" style={{ marginBottom: 'clamp(2rem, 6vw, 4rem)' }}>
-          <h2 className="font-bold animate-fade-in-scale" style={{ 
+          <h2 className="font-bold animate-fade-in-scale" style={{
             marginBottom: 'clamp(0.5rem, 2vw, 1rem)',
             fontSize: 'clamp(2rem, 8vw, 3.75rem)',
             lineHeight: '1.1'
@@ -54,10 +54,10 @@ const FAQSection = () => {
               Частые вопросы
             </span>
           </h2>
-          <p className="animate-slide-in-up" style={{ 
-            color: '#a08670', 
-            maxWidth: '32rem', 
-            margin: '0 auto', 
+          <p className="animate-slide-in-up" style={{
+            color: '#a08670',
+            maxWidth: '32rem',
+            margin: '0 auto',
             animationDelay: '0.3s',
             fontSize: 'clamp(1rem, 3vw, 1.5rem)',
             lineHeight: '1.4'
@@ -68,9 +68,9 @@ const FAQSection = () => {
 
         <div style={{ maxWidth: 'clamp(300px, 90vw, 50rem)', margin: '0 auto' }}>
           {faqs.map((faq, index) => (
-            <div key={index} className="glass-card stagger-animation" style={{ 
-              marginBottom: 'clamp(0.75rem, 2vw, 1rem)', 
-              borderRadius: 'clamp(0.5rem, 1.5vw, 0.75rem)' 
+            <div key={index} className="glass-card stagger-animation" style={{
+              marginBottom: 'clamp(0.75rem, 2vw, 1rem)',
+              borderRadius: 'clamp(0.5rem, 1.5vw, 0.75rem)'
             }}>
               <button
                 onClick={() => toggleFAQ(index)}
@@ -123,9 +123,9 @@ const FAQSection = () => {
         </div>
 
         <div className="text-center animate-slide-in-up" style={{ marginTop: 'clamp(2rem, 5vw, 3rem)', animationDelay: '0.8s' }}>
-          <p style={{ 
-            color: '#a08670', 
-            marginBottom: 'clamp(0.75rem, 2vw, 1rem)', 
+          <p style={{
+            color: '#a08670',
+            marginBottom: 'clamp(0.75rem, 2vw, 1rem)',
             fontSize: 'clamp(0.9rem, 2.5vw, 1.125rem)',
             lineHeight: '1.4'
           }}>
