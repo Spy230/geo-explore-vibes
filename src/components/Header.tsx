@@ -5,51 +5,75 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Мобильная версия - вертикальная компоновка */}
           <div className="block sm:hidden w-full">
-            <div className="flex flex-col items-center mb-2">
+            <div className="flex flex-col items-center mb-3">
               <img
                 src="https://a.imgfoto.host/2025/07/30/LOGO.png"
                 alt="Phoenix Logo"
-                className="h-12 w-auto mb-2"
+                className="h-10 w-auto mb-2"
                 style={{
                   filter: 'drop-shadow(0 0 15px #FFD700) drop-shadow(0 0 25px #FFA500)',
-                  maxWidth: '60px'
+                  maxWidth: '50px'
                 }}
               />
               <h1
-                className="text-lg font-bold animate-fade-in-scale text-center"
+                className="text-base font-bold animate-fade-in-scale text-center"
                 style={{
                   color: '#b8956f',
-                  textShadow: '0 0 10px rgba(184, 149, 111, 0.3)'
+                  textShadow: '0 0 10px rgba(184, 149, 111, 0.3)',
+                  marginBottom: '8px'
                 }}
               >
                 PHENIX PROJECT
               </h1>
             </div>
-            <div className="flex items-center justify-center space-x-3 text-xs">
+            <div className="flex items-center justify-center space-x-4">
               <a
                 href="tel:+79023845591"
-                className="transition-colors px-2 py-1 rounded"
-                style={{ color: '#d4c4b0', background: 'rgba(212, 196, 176, 0.1)' }}
+                className="transition-all duration-300 px-3 py-2 rounded-lg flex items-center justify-center"
+                style={{ 
+                  background: 'rgba(220, 38, 38, 0.15)', 
+                  border: '1px solid rgba(220, 38, 38, 0.3)',
+                  minWidth: '44px',
+                  minHeight: '44px'
+                }}
               >
-                📞
+                <span style={{ fontSize: '20px', color: '#dc2626' }}>📞</span>
               </a>
               <a
                 href="https://wa.me/79023889482"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors px-2 py-1 rounded"
-                style={{ color: '#25D366', background: 'rgba(37, 211, 102, 0.1)' }}
+                className="transition-all duration-300 px-3 py-2 rounded-lg flex items-center justify-center"
+                style={{ 
+                  background: 'rgba(37, 211, 102, 0.15)', 
+                  border: '1px solid rgba(37, 211, 102, 0.3)',
+                  minWidth: '44px',
+                  minHeight: '44px'
+                }}
               >
-                💬
+                <img 
+                  src="https://a.imgfoto.host/2025/08/17/icons8-whatsapp-30.png" 
+                  alt="WhatsApp" 
+                  style={{ width: '24px', height: '24px' }}
+                />
               </a>
               <a
                 href="https://t.me/+79023889482"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors px-2 py-1 rounded"
-                style={{ color: '#0088cc', background: 'rgba(0, 136, 204, 0.1)' }}
+                className="transition-all duration-300 px-3 py-2 rounded-lg flex items-center justify-center"
+                style={{ 
+                  background: 'rgba(0, 136, 204, 0.15)', 
+                  border: '1px solid rgba(0, 136, 204, 0.3)',
+                  minWidth: '44px',
+                  minHeight: '44px'
+                }}
               >
-                ✈️
+                <img 
+                  src="/src/assets/telegram-icon-new.png" 
+                  alt="Telegram" 
+                  style={{ width: '24px', height: '24px' }}
+                />
               </a>
             </div>
           </div>
