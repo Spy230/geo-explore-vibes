@@ -1,3 +1,5 @@
+import telegramIcon from '../assets/telegram-icon-new.png';
+
 const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 glass-card border-b border-glass-border animate-slide-in-up">
@@ -30,8 +32,8 @@ const Header = () => {
               <a
                 href="tel:+79023845591"
                 className="transition-all duration-300 px-3 py-2 rounded-lg flex items-center justify-center"
-                style={{ 
-                  background: 'rgba(220, 38, 38, 0.15)', 
+                style={{
+                  background: 'rgba(220, 38, 38, 0.15)',
                   border: '1px solid rgba(220, 38, 38, 0.3)',
                   minWidth: '44px',
                   minHeight: '44px'
@@ -44,16 +46,16 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all duration-300 px-3 py-2 rounded-lg flex items-center justify-center"
-                style={{ 
-                  background: 'rgba(37, 211, 102, 0.15)', 
+                style={{
+                  background: 'rgba(37, 211, 102, 0.15)',
                   border: '1px solid rgba(37, 211, 102, 0.3)',
                   minWidth: '44px',
                   minHeight: '44px'
                 }}
               >
-                <img 
-                  src="https://a.imgfoto.host/2025/08/17/icons8-whatsapp-30.png" 
-                  alt="WhatsApp" 
+                <img
+                  src="https://a.imgfoto.host/2025/08/17/icons8-whatsapp-30.png"
+                  alt="WhatsApp"
                   style={{ width: '24px', height: '24px' }}
                 />
               </a>
@@ -62,16 +64,16 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all duration-300 px-3 py-2 rounded-lg flex items-center justify-center"
-                style={{ 
-                  background: 'rgba(0, 136, 204, 0.15)', 
+                style={{
+                  background: 'rgba(0, 136, 204, 0.15)',
                   border: '1px solid rgba(0, 136, 204, 0.3)',
                   minWidth: '44px',
                   minHeight: '44px'
                 }}
               >
-                <img 
-                  src="/src/assets/telegram-icon-new.png" 
-                  alt="Telegram" 
+                <img
+                  src={telegramIcon}
+                  alt="Telegram"
                   style={{ width: '24px', height: '24px' }}
                 />
               </a>
