@@ -1,33 +1,29 @@
 const CasesSection = () => {
   const cases = [
     {
-      title: "Подняли трафик в 3 раза за 2 недели",
-      description: "Ресторан в центре города увеличил количество посетителей на 300% благодаря грамотному гео-продвижению и оптимизации карточек в картах.",
-      screenshot: "https://via.placeholder.com/400x300/1a1a1a/7a6145?text=Кейс+1",
+      title: "Подняли трафик с абсолютного нуля, возродив карточку",
+      description: "Юридическое бюро Де-Юрекс получил долгожданных клиентов, благодаря грамотному гео-продвижению и seo-оптимизации карточек на картах.",
+      screenshot: "https://a.imgfoto.host/2025/08/16/1card.jpeg",
       metrics: [
-        { label: "Рост трафика", value: "+300%" },
-        { label: "Новые клиенты", value: "+150 в месяц" },
-        { label: "Время до результата", value: "14 дней" }
+        { label: "Звонки", value: "15" },
+        { label: "Проложено маршрутов", value: "29" },
+        { label: "Переходов на сайт", value: "62" }
       ]
     },
     {
       title: "Вывели в топ-3 за месяц",
-      description: "Салон красоты с нуля поднялся в топ-3 локального поиска, обогнав конкурентов с многолетней историей в интернете.",
-      screenshot: "https://via.placeholder.com/400x300/1a1a1a/9c7a5a?text=Кейс+2",
-      metrics: [
-        { label: "Позиция в поиске", value: "Топ-3" },
-        { label: "Охват аудитории", value: "+500%" },
-        { label: "Запись клиентов", value: "+80%" }
-      ]
+      description: "Юридическая компания Grade с нуля поднялась в топ-3 локального поиска, обогнав конкурентов с многолетней историей в интернете.",
+      screenshot: "https://a.imgfoto.host/2025/08/16/2card.jpeg",
+      metrics: []
     },
     {
-      title: "Запустили франшизу в новом городе",
-      description: "Федеральная сеть быстро закрепилась в новом регионе, заняв лидирующие позиции по всем ключевым запросам за первый месяц работы.",
-      screenshot: "https://via.placeholder.com/400x300/1a1a1a/b8956f?text=Кейс+3",
+      title: "Запустили организацию и обеспечили поток лидов",
+      description: "Мужской бутик быстро закрепился на новом месте, получив большой прирост по всем ключевым показателям всего за полмесяца работы.",
+      screenshot: "https://a.imgfoto.host/2025/08/16/3card.jpeg",
       metrics: [
-        { label: "Покрытие города", value: "100%" },
-        { label: "Конверсия звонков", value: "+400%" },
-        { label: "ROI кампании", value: "850%" }
+        { label: "Звонки", value: "4" },
+        { label: "Проложено маршрутов", value: "34" },
+        { label: "Переходов на сайт", value: "8" }
       ]
     }
   ];
@@ -79,13 +75,15 @@ const CasesSection = () => {
               <img
                 src={caseItem.screenshot}
                 alt={caseItem.title}
-                className=""
                 style={{
                   width: '100%',
-                  height: 'clamp(180px, 25vw, 280px)',
-                  objectFit: 'cover',
+                  height: 'auto',
+                  maxHeight: 'clamp(250px, 35vw, 400px)',
+                  objectFit: 'contain',
+                  objectPosition: 'center',
                   borderRadius: 'clamp(0.5rem, 1vw, 1rem)',
-                  marginBottom: 'clamp(1rem, 3vw, 2.5rem)'
+                  marginBottom: 'clamp(1rem, 3vw, 2.5rem)',
+                  display: 'block'
                 }}
               />
 
@@ -108,28 +106,30 @@ const CasesSection = () => {
                 {caseItem.description}
               </p>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(0.75rem, 2vw, 1rem)' }}>
-                {caseItem.metrics.map((metric, metricIndex) => (
-                  <div key={metricIndex} className="flex justify-between items-center" style={{ padding: 'clamp(0.25rem, 1vw, 0.5rem) 0' }}>
-                    <span style={{
-                      color: '#a08670',
-                      fontSize: 'clamp(0.8rem, 1.8vw, 1rem)',
-                      flex: '1'
-                    }}>{metric.label}:</span>
-                    <span
-                      className="font-bold"
-                      style={{
-                        color: '#b8956f',
-                        textShadow: '0 0 10px rgba(184, 149, 111, 0.3)',
-                        fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
-                        textAlign: 'right'
-                      }}
-                    >
-                      {metric.value}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              {caseItem.metrics.length > 0 && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(0.75rem, 2vw, 1rem)' }}>
+                  {caseItem.metrics.map((metric, metricIndex) => (
+                    <div key={metricIndex} className="flex justify-between items-center" style={{ padding: 'clamp(0.25rem, 1vw, 0.5rem) 0' }}>
+                      <span style={{
+                        color: '#a08670',
+                        fontSize: 'clamp(0.8rem, 1.8vw, 1rem)',
+                        flex: '1'
+                      }}>{metric.label}:</span>
+                      <span
+                        className="font-bold"
+                        style={{
+                          color: '#b8956f',
+                          textShadow: '0 0 10px rgba(184, 149, 111, 0.3)',
+                          fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                          textAlign: 'right'
+                        }}
+                      >
+                        {metric.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
