@@ -689,38 +689,3 @@ select option {
     padding-bottom: clamp(2rem, 5vh, 3rem) !important;
   }
 }
-
-/* Мобильная адаптация фиксированной шапки */
-@media (max-width: 640px) {
-  /* Фиксированная шапка */
-  header {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    z-index: 1000 !important;
-    width: 100% !important;
-  }
-  
-  /* Основной контент */
-  main {
-    padding-top: 140px !important;
-  }
-}
-
-/* Десктопная версия */
-@media (min-width: 641px) {
-  main {
-    padding-top: 120px !important;
-  }
-}
-
-/* Общие стили для фиксированной шапки */
-header {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  z-index: 1000 !important;
-  width: 100% !important;
-}
