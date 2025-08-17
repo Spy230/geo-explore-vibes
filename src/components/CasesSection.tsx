@@ -68,12 +68,12 @@ const CasesSection = () => {
               background: 'rgba(20, 20, 20, 0.02)',
               backdropFilter: 'blur(10px)',
               border: '1px solid rgba(128, 128, 128, 0.3)',
-              height: 'clamp(500px, 60vh, 700px)',
+              minHeight: 'clamp(500px, 60vh, 700px)',
               width: '100%',
               maxWidth: 'none',
               display: 'flex',
               flexDirection: 'column',
-              overflow: 'hidden',
+              overflow: 'visible',
               position: 'relative',
               boxSizing: 'border-box'
             }}>
@@ -107,7 +107,7 @@ const CasesSection = () => {
                 display: 'flex', 
                 flexDirection: 'column',
                 minHeight: 0,
-                overflow: 'hidden',
+                overflow: 'visible',
                 marginBottom: 'clamp(0.5rem, 1vw, 1rem)'
               }}>
                 <h3 style={{
@@ -127,10 +127,9 @@ const CasesSection = () => {
                   marginBottom: 'clamp(1rem, 2vw, 1.5rem)',
                   fontSize: 'clamp(0.85rem, 1.8vw, 1rem)',
                   flex: 1,
-                  overflow: 'hidden',
-                  display: '-webkit-box',
-                  WebkitLineClamp: 4,
-                  WebkitBoxOrient: 'vertical'
+                  overflow: 'visible',
+                  wordWrap: 'break-word',
+                  hyphens: 'auto'
                 }}>
                   {caseItem.description}
                 </p>
@@ -144,7 +143,7 @@ const CasesSection = () => {
                   position: 'relative',
                   zIndex: 10,
                   flexShrink: 0,
-                  overflow: 'hidden',
+                  overflow: 'visible',
                   maxWidth: '100%',
                   boxSizing: 'border-box'
                 }}>
@@ -154,8 +153,7 @@ const CasesSection = () => {
                     tableLayout: 'fixed',
                     position: 'relative',
                     zIndex: 10,
-                    maxWidth: '100%',
-                    overflow: 'hidden'
+                    maxWidth: '100%'
                   }}>
                     <tbody>
                       {caseItem.metrics.map((metric, metricIndex) => (
