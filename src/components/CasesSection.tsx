@@ -72,7 +72,9 @@ const CasesSection = () => {
               width: '100%',
               maxWidth: 'none',
               display: 'flex',
-              flexDirection: 'column'
+              flexDirection: 'column',
+              overflow: 'hidden',
+              position: 'relative'
             }}>
               <div style={{
                 width: '100%',
@@ -99,13 +101,20 @@ const CasesSection = () => {
                 />
               </div>
 
-              <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+              <div style={{ 
+                flex: 1, 
+                display: 'flex', 
+                flexDirection: 'column',
+                minHeight: 0,
+                overflow: 'hidden'
+              }}>
                 <h3 style={{
                   color: '#d4c4b0',
                   marginBottom: 'clamp(0.75rem, 1.5vw, 1rem)',
                   fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)',
                   fontWeight: 'bold',
-                  lineHeight: '1.2'
+                  lineHeight: '1.2',
+                  flexShrink: 0
                 }}>
                   {caseItem.title}
                 </h3>
@@ -115,7 +124,11 @@ const CasesSection = () => {
                   lineHeight: '1.5',
                   marginBottom: 'clamp(1rem, 2vw, 1.5rem)',
                   fontSize: 'clamp(0.85rem, 1.8vw, 1rem)',
-                  flex: 1
+                  flex: 1,
+                  overflow: 'hidden',
+                  display: '-webkit-box',
+                  WebkitLineClamp: 4,
+                  WebkitBoxOrient: 'vertical'
                 }}>
                   {caseItem.description}
                 </p>
@@ -127,7 +140,9 @@ const CasesSection = () => {
                   marginTop: 'auto',
                   paddingTop: '1rem',
                   position: 'relative',
-                  zIndex: 10
+                  zIndex: 10,
+                  flexShrink: 0,
+                  overflow: 'hidden'
                 }}>
                   <table style={{
                     width: '100%',
@@ -152,7 +167,10 @@ const CasesSection = () => {
                             position: 'relative',
                             zIndex: 10,
                             transform: 'translateZ(0)',
-                            backfaceVisibility: 'hidden'
+                            backfaceVisibility: 'hidden',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            whiteSpace: 'nowrap'
                           }}>
                             {metric.label}:
                           </td>
@@ -167,7 +185,10 @@ const CasesSection = () => {
                             position: 'relative',
                             zIndex: 10,
                             transform: 'translateZ(0)',
-                            backfaceVisibility: 'hidden'
+                            backfaceVisibility: 'hidden',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            whiteSpace: 'nowrap'
                           }}>
                             {metric.value}
                           </td>
