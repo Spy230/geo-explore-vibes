@@ -6,7 +6,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ paddingTop: 'clamp(4rem, 8vh, 5rem)', paddingBottom: 'clamp(1.5rem, 4vh, 2.5rem)' }}>
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ paddingBottom: 'clamp(1.5rem, 4vh, 2.5rem)' }}>
       {/* Основной фон с изображением */}
       <div 
         className="absolute inset-0 z-0"
@@ -194,16 +194,34 @@ const HeroSection = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 hero-stats" style={{ maxWidth: '48rem', margin: '0 auto' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 hero-stats" style={{ 
+          maxWidth: '48rem', 
+          margin: '0 auto',
+          position: 'relative',
+          zIndex: 40
+        }}>
           {stats.map((stat, index) => (
-            <div key={index} className="text-center stagger-animation hover-lift" style={{ padding: 'clamp(0.5rem, 2vw, 1rem)' }}>
+            <div 
+              key={index} 
+              className="text-center stagger-animation hover-lift" 
+              style={{ 
+                padding: 'clamp(0.5rem, 2vw, 1rem)',
+                position: 'relative',
+                transform: 'translateZ(0)',
+                backfaceVisibility: 'hidden'
+              }}
+            >
               <div
                 className="font-bold animate-pulse"
                 style={{
                   color: '#b8956f',
                   textShadow: '0 0 20px rgba(184, 149, 111, 0.3)',
                   fontSize: 'clamp(1.5rem, 6vw, 2.25rem)',
-                  lineHeight: '1.2'
+                  lineHeight: '1.2',
+                  position: 'relative',
+                  zIndex: 1,
+                  transform: 'translateZ(0)',
+                  willChange: 'transform'
                 }}
               >
                 {stat.value}
@@ -211,7 +229,10 @@ const HeroSection = () => {
               <div style={{ 
                 color: '#a08670',
                 fontSize: 'clamp(0.9rem, 2.5vw, 1.125rem)',
-                marginTop: 'clamp(0.25rem, 1vw, 0.5rem)'
+                marginTop: 'clamp(0.25rem, 1vw, 0.5rem)',
+                position: 'relative',
+                zIndex: 1,
+                transform: 'translateZ(0)'
               }}>
                 {stat.label}
               </div>
