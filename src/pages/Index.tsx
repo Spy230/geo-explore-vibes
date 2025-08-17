@@ -12,7 +12,7 @@ const Index = () => {
       <AnimatedBackground />
       <Header />
 
-      <main className="pt-[140px] sm:pt-[120px]">
+      <main>
         <HeroSection />
         <CasesSection />
         <ContactForm />
