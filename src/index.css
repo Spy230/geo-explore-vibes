@@ -704,14 +704,14 @@ select option {
   
   /* Основной контент */
   main {
-    padding-top: 140px !important;
+    padding-top: 180px !important;
   }
 }
 
 /* Десктопная версия */
 @media (min-width: 641px) {
   main {
-    padding-top: 120px !important;
+    padding-top: 150px !important;
   }
 }
 
