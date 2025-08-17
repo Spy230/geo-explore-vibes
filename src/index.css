@@ -698,20 +698,45 @@ select option {
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
-    z-index: 1000 !important;
+    z-index: 9999 !important;
     width: 100% !important;
+    height: auto !important;
+    background: rgba(28, 20, 19, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
   }
   
   /* Основной контент */
   main {
-    padding-top: 180px !important;
+    padding-top: 200px !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Убираем все отступы у body */
+  body {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
   }
 }
 
 /* Десктопная версия */
 @media (min-width: 641px) {
   main {
-    padding-top: 150px !important;
+    padding-top: 160px !important;
+    margin-top: 0 !important;
+  }
+  
+  header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    width: 100% !important;
+    height: auto !important;
+    background: rgba(28, 20, 19, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
   }
 }
 
@@ -721,6 +746,10 @@ header {
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
-  z-index: 1000 !important;
+  z-index: 9999 !important;
   width: 100% !important;
+  height: auto !important;
+  background: rgba(28, 20, 19, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
 }
