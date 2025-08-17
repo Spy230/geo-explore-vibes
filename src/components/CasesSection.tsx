@@ -126,10 +126,10 @@ const CasesSection = () => {
                   lineHeight: '1.5',
                   marginBottom: 'clamp(1rem, 2vw, 1.5rem)',
                   fontSize: 'clamp(0.85rem, 1.8vw, 1rem)',
-                  flex: 1,
-                  overflow: 'visible',
-                  wordWrap: 'break-word',
-                  hyphens: 'auto'
+                  flex: '1 1 auto', /* Обновлено */
+                  overflowWrap: 'anywhere', /* Обновлено */
+                  minHeight: 0, /* Обновлено */
+                  overflow: 'auto' /* Обновлено */
                 }}>
                   {caseItem.description}
                 </p>
