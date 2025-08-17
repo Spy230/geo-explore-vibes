@@ -74,7 +74,8 @@ const CasesSection = () => {
               display: 'flex',
               flexDirection: 'column',
               overflow: 'hidden',
-              position: 'relative'
+              position: 'relative',
+              boxSizing: 'border-box'
             }}>
               <div style={{
                 width: '100%',
@@ -106,7 +107,8 @@ const CasesSection = () => {
                 display: 'flex', 
                 flexDirection: 'column',
                 minHeight: 0,
-                overflow: 'hidden'
+                overflow: 'hidden',
+                marginBottom: 'clamp(0.5rem, 1vw, 1rem)'
               }}>
                 <h3 style={{
                   color: '#d4c4b0',
@@ -142,21 +144,26 @@ const CasesSection = () => {
                   position: 'relative',
                   zIndex: 10,
                   flexShrink: 0,
-                  overflow: 'hidden'
+                  overflow: 'hidden',
+                  maxWidth: '100%',
+                  boxSizing: 'border-box'
                 }}>
                   <table style={{
                     width: '100%',
                     borderCollapse: 'collapse',
                     tableLayout: 'fixed',
                     position: 'relative',
-                    zIndex: 10
+                    zIndex: 10,
+                    maxWidth: '100%',
+                    overflow: 'hidden'
                   }}>
                     <tbody>
                       {caseItem.metrics.map((metric, metricIndex) => (
                         <tr key={metricIndex} style={{
                           borderBottom: metricIndex < caseItem.metrics.length - 1 ? '1px solid rgba(128, 128, 128, 0.1)' : 'none',
                           position: 'relative',
-                          zIndex: 10
+                          zIndex: 10,
+                          maxWidth: '100%'
                         }}>
                           <td style={{
                             color: '#a08670',
@@ -170,7 +177,9 @@ const CasesSection = () => {
                             backfaceVisibility: 'hidden',
                             overflow: 'hidden',
                             textOverflow: 'ellipsis',
-                            whiteSpace: 'nowrap'
+                            whiteSpace: 'nowrap',
+                            maxWidth: '70%',
+                            boxSizing: 'border-box'
                           }}>
                             {metric.label}:
                           </td>
@@ -188,7 +197,9 @@ const CasesSection = () => {
                             backfaceVisibility: 'hidden',
                             overflow: 'hidden',
                             textOverflow: 'ellipsis',
-                            whiteSpace: 'nowrap'
+                            whiteSpace: 'nowrap',
+                            maxWidth: '30%',
+                            boxSizing: 'border-box'
                           }}>
                             {metric.value}
                           </td>
