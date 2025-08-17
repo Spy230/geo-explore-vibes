@@ -29,7 +29,7 @@ const CasesSection = () => {
   ];
 
   return (
-    <section style={{ padding: '5rem 0', background: 'rgba(0, 0, 0, 0.3)', backdropFilter: 'blur(5px)' }}>
+    <section className="cases-section" style={{ padding: '5rem 0', background: 'rgba(0, 0, 0, 0.3)', backdropFilter: 'blur(5px)' }}>
       <div style={{ width: '100%', padding: '0 clamp(1rem, 4vw, 2rem)' }}>
         <div className="text-center animate-slide-in-up" style={{ marginBottom: 'clamp(2rem, 6vw, 4rem)' }}>
           <h2 className="font-bold animate-fade-in-scale" style={{
@@ -122,41 +122,60 @@ const CasesSection = () => {
               </div>
 
               {caseItem.metrics.length > 0 && (
-                <table style={{
+                <div style={{
                   width: '100%',
                   marginTop: 'auto',
                   paddingTop: '1rem',
-                  borderCollapse: 'collapse'
+                  position: 'relative',
+                  zIndex: 10
                 }}>
-                  <tbody>
-                    {caseItem.metrics.map((metric, metricIndex) => (
-                      <tr key={metricIndex} style={{
-                        borderBottom: metricIndex < caseItem.metrics.length - 1 ? '1px solid rgba(128, 128, 128, 0.1)' : 'none'
-                      }}>
-                        <td style={{
-                          color: '#a08670',
-                          fontSize: '14px',
-                          padding: '4px 0',
-                          textAlign: 'left',
-                          width: '70%'
+                  <table style={{
+                    width: '100%',
+                    borderCollapse: 'collapse',
+                    tableLayout: 'fixed',
+                    position: 'relative',
+                    zIndex: 10
+                  }}>
+                    <tbody>
+                      {caseItem.metrics.map((metric, metricIndex) => (
+                        <tr key={metricIndex} style={{
+                          borderBottom: metricIndex < caseItem.metrics.length - 1 ? '1px solid rgba(128, 128, 128, 0.1)' : 'none',
+                          position: 'relative',
+                          zIndex: 10
                         }}>
-                          {metric.label}:
-                        </td>
-                        <td style={{
-                          color: '#b8956f',
-                          textShadow: '0 0 10px rgba(184, 149, 111, 0.3)',
-                          fontSize: '16px',
-                          fontWeight: 'bold',
-                          padding: '4px 0',
-                          textAlign: 'right',
-                          width: '30%'
-                        }}>
-                          {metric.value}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                          <td style={{
+                            color: '#a08670',
+                            fontSize: 'clamp(12px, 2vw, 14px)',
+                            padding: 'clamp(3px, 1vw, 4px) 0',
+                            textAlign: 'left',
+                            width: '70%',
+                            position: 'relative',
+                            zIndex: 10,
+                            transform: 'translateZ(0)',
+                            backfaceVisibility: 'hidden'
+                          }}>
+                            {metric.label}:
+                          </td>
+                          <td style={{
+                            color: '#b8956f',
+                            textShadow: '0 0 10px rgba(184, 149, 111, 0.3)',
+                            fontSize: 'clamp(14px, 2.5vw, 16px)',
+                            fontWeight: 'bold',
+                            padding: 'clamp(3px, 1vw, 4px) 0',
+                            textAlign: 'right',
+                            width: '30%',
+                            position: 'relative',
+                            zIndex: 10,
+                            transform: 'translateZ(0)',
+                            backfaceVisibility: 'hidden'
+                          }}>
+                            {metric.value}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               )}
             </div>
           ))}
