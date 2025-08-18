@@ -18,7 +18,7 @@ const ContactForm = () => {
     // Разрешаем только цифры, Backspace, Delete, Tab, Enter, стрелки
     const allowedKeys = ['Backspace', 'Delete', 'Tab', 'Enter', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'];
     const isNumber = /^[0-9]$/.test(e.key);
-    
+
     if (!isNumber && !allowedKeys.includes(e.key)) {
       e.preventDefault();
     }
@@ -26,14 +26,14 @@ const ContactForm = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    
+
     if (name === 'phone') {
       // Удаляем все символы кроме цифр
       const digits = value.replace(/\D/g, '');
-      
+
       // Ограничиваем до 11 цифр (1 для кода страны + 10 для номера)
       const limitedDigits = digits.slice(0, 11);
-      
+
       // Форматируем номер
       let formattedPhone = '';
       if (limitedDigits.length > 0) {
@@ -81,7 +81,7 @@ const ContactForm = () => {
           }
         }
       }
-      
+
       setFormData({
         ...formData,
         phone: formattedPhone
@@ -129,7 +129,7 @@ const ContactForm = () => {
     <section id="contact" style={{ padding: 'clamp(3rem, 8vh, 5rem) 0', background: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
       <div style={{ width: '100%', padding: '0 clamp(1rem, 4vw, 2rem)' }}>
         <div className="text-center animate-slide-in-up" style={{ marginBottom: 'clamp(2rem, 6vw, 4rem)' }}>
-          <h2 className="font-bold animate-fade-in-scale" style={{ 
+          <h2 className="font-bold animate-fade-in-scale" style={{
             marginBottom: 'clamp(0.5rem, 2vw, 1rem)',
             fontSize: 'clamp(2rem, 8vw, 3.75rem)',
             lineHeight: '1.1'
@@ -145,10 +145,10 @@ const ContactForm = () => {
               Получить консультацию
             </span>
           </h2>
-          <p className="animate-slide-in-up" style={{ 
-            color: '#a08670', 
-            maxWidth: '32rem', 
-            margin: '0 auto', 
+          <p className="animate-slide-in-up" style={{
+            color: '#a08670',
+            maxWidth: '32rem',
+            margin: '0 auto',
             animationDelay: '0.3s',
             fontSize: 'clamp(1rem, 3vw, 1.5rem)',
             lineHeight: '1.4'
@@ -158,19 +158,19 @@ const ContactForm = () => {
         </div>
 
         <div style={{ maxWidth: 'clamp(300px, 90vw, 32rem)', margin: '0 auto' }}>
-          <form onSubmit={handleSubmit} className="animate-slide-in-up contact-form form-container" style={{ 
-            padding: 'clamp(1.5rem, 4vw, 2rem)', 
+          <form onSubmit={handleSubmit} className="animate-slide-in-up contact-form form-container" style={{
+            padding: 'clamp(1.5rem, 4vw, 2rem)',
             borderRadius: 'clamp(0.75rem, 2vw, 1rem)',
             background: 'rgba(20, 20, 20, 0.02)',
             backdropFilter: 'blur(10px)',
             border: '1px solid rgba(128, 128, 128, 0.3)',
-            animationDelay: '0.5s' 
+            animationDelay: '0.5s'
           }}>
             <div style={{ marginBottom: 'clamp(1rem, 3vw, 1.5rem)' }}>
-              <label style={{ 
-                display: 'block', 
-                marginBottom: 'clamp(0.25rem, 1vw, 0.5rem)', 
-                color: '#d4c4b0', 
+              <label style={{
+                display: 'block',
+                marginBottom: 'clamp(0.25rem, 1vw, 0.5rem)',
+                color: '#d4c4b0',
                 fontWeight: '600',
                 fontSize: 'clamp(0.9rem, 2.5vw, 1rem)'
               }}>
@@ -298,9 +298,9 @@ const ContactForm = () => {
               {isLoading ? 'Отправка...' : 'Получить консультацию'}
             </button>
 
-            <p style={{ 
-              textAlign: 'center', 
-              color: '#a08670', 
+            <p style={{
+              textAlign: 'center',
+              color: '#a08670',
               fontSize: 'clamp(0.75rem, 2vw, 0.875rem)',
               lineHeight: '1.4'
             }}>
@@ -309,13 +309,13 @@ const ContactForm = () => {
           </form>
 
           <div className="text-center animate-slide-in-up" style={{ marginTop: 'clamp(1.5rem, 4vw, 2rem)', animationDelay: '0.7s' }}>
-            <p style={{ 
-              color: '#a08670', 
+            <p style={{
+              color: '#a08670',
               marginBottom: 'clamp(0.75rem, 2vw, 1rem)',
               fontSize: 'clamp(0.9rem, 2.5vw, 1rem)'
             }}>Или свяжитесь с нами напрямую:</p>
-            <div className="flex justify-center contact-buttons" style={{ 
-              gap: 'clamp(0.5rem, 2vw, 1rem)', 
+            <div className="flex justify-center contact-buttons" style={{
+              gap: 'clamp(0.5rem, 2vw, 1rem)',
               flexWrap: 'wrap',
               flexDirection: 'row',
               alignItems: 'center'
@@ -338,7 +338,19 @@ const ContactForm = () => {
                   textAlign: 'center'
                 }}
               >
-                <span style={{ fontSize: '18px', color: '#dc2626', marginRight: '8px' }}>📞</span>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style={{ marginRight: '8px' }}
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    fill="#dc2626"
+                  />
+                </svg>
                 +7 902 384-55-91
               </a>
               <a
@@ -361,13 +373,13 @@ const ContactForm = () => {
                   textAlign: 'center'
                 }}
               >
-                <img 
-                  src="https://a.imgfoto.host/2025/08/17/icons8-whatsapp-30.png" 
-                  alt="WhatsApp" 
-                  style={{ 
-                    width: '18px', 
-                    height: '18px', 
-                    marginRight: '8px' 
+                <img
+                  src="https://a.imgfoto.host/2025/08/17/icons8-whatsapp-30.png"
+                  alt="WhatsApp"
+                  style={{
+                    width: '18px',
+                    height: '18px',
+                    marginRight: '8px'
                   }}
                 />
                 WhatsApp
@@ -390,11 +402,11 @@ const ContactForm = () => {
                   textAlign: 'center'
                 }}
               >
-                <img src={telegramIcon} alt="Telegram" style={{ 
-                  width: 'clamp(16px, 4vw, 20px)', 
-                  height: 'clamp(16px, 4vw, 20px)', 
-                  display: 'inline-block', 
-                  marginRight: 'clamp(4px, 1vw, 8px)' 
+                <img src={telegramIcon} alt="Telegram" style={{
+                  width: 'clamp(16px, 4vw, 20px)',
+                  height: 'clamp(16px, 4vw, 20px)',
+                  display: 'inline-block',
+                  marginRight: 'clamp(4px, 1vw, 8px)'
                 }} />
                 Telegram
               </a>
