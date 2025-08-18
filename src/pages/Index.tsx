@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection';
 import CasesSection from '../components/CasesSection';
 import ContactForm from '../components/ContactForm';
 import FAQSection from '../components/FAQSection';
+import SEOContent from '../components/SEOContent';
 import { Toaster } from '../components/ui/toaster';
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
         <CasesSection />
         <ContactForm />
         <FAQSection />
+        <SEOContent />
       </main>
 
       <footer className="animate-slide-in-up" style={{ padding: '2rem 0', borderTop: '1px solid rgba(44, 44, 43, 0.3)' }}>
