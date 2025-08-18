@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { toast } from '../hooks/use-toast';
 import telegramIcon from '../assets/telegram-icon-new.png';
 
 const ContactForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -36,18 +38,8 @@ const ContactForm = () => {
         'RpE_8tUva8bMWnOdf' // Public Key
       );
 
-      toast({
-        title: "Заявка отправлена!",
-        description: "Мы свяжемся с вами в течение 15 минут.",
-      });
-
-      // Очистка формы
-      setFormData({
-        name: '',
-        phone: '',
-        city: '',
-        business_type: ''
-      });
+      // Перенаправление на страницу благодарности
+      navigate('/thank-you');
     } catch (error) {
       console.error('EmailJS error:', error);
       toast({
