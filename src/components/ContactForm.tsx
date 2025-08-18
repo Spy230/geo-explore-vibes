@@ -14,11 +14,84 @@ const ContactForm = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
 
+  const handlePhoneKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    // Разрешаем только цифры, Backspace, Delete, Tab, Enter, стрелки
+    const allowedKeys = ['Backspace', 'Delete', 'Tab', 'Enter', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'];
+    const isNumber = /^[0-9]$/.test(e.key);
+    
+    if (!isNumber && !allowedKeys.includes(e.key)) {
+      e.preventDefault();
+    }
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    
+    if (name === 'phone') {
+      // Удаляем все символы кроме цифр
+      const digits = value.replace(/\D/g, '');
+      
+      // Ограничиваем до 11 цифр (1 для кода страны + 10 для номера)
+      const limitedDigits = digits.slice(0, 11);
+      
+      // Форматируем номер
+      let formattedPhone = '';
+      if (limitedDigits.length > 0) {
+        if (limitedDigits.startsWith('7')) {
+          formattedPhone = '+7';
+          if (limitedDigits.length > 1) {
+            formattedPhone += ' (' + limitedDigits.slice(1, 4);
+            if (limitedDigits.length > 4) {
+              formattedPhone += ') ' + limitedDigits.slice(4, 7);
+              if (limitedDigits.length > 7) {
+                formattedPhone += '-' + limitedDigits.slice(7, 9);
+                if (limitedDigits.length > 9) {
+                  formattedPhone += '-' + limitedDigits.slice(9, 11);
+                }
+              }
+            }
+          }
+        } else if (limitedDigits.startsWith('8')) {
+          // Заменяем 8 на +7
+          const russianDigits = '7' + limitedDigits.slice(1);
+          formattedPhone = '+7';
+          if (russianDigits.length > 1) {
+            formattedPhone += ' (' + russianDigits.slice(1, 4);
+            if (russianDigits.length > 4) {
+              formattedPhone += ') ' + russianDigits.slice(4, 7);
+              if (russianDigits.length > 7) {
+                formattedPhone += '-' + russianDigits.slice(7, 9);
+                if (russianDigits.length > 9) {
+                  formattedPhone += '-' + russianDigits.slice(9, 11);
+                }
+              }
+            }
+          }
+        } else {
+          // Если номер не начинается с 7 или 8, добавляем +7
+          formattedPhone = '+7 (' + limitedDigits.slice(0, 3);
+          if (limitedDigits.length > 3) {
+            formattedPhone += ') ' + limitedDigits.slice(3, 6);
+            if (limitedDigits.length > 6) {
+              formattedPhone += '-' + limitedDigits.slice(6, 8);
+              if (limitedDigits.length > 8) {
+                formattedPhone += '-' + limitedDigits.slice(8, 10);
+              }
+            }
+          }
+        }
+      }
+      
+      setFormData({
+        ...formData,
+        phone: formattedPhone
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value
+      });
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -133,6 +206,7 @@ const ContactForm = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
+                onKeyDown={handlePhoneKeyPress}
                 placeholder="+7 (___) ___-__-__"
                 required
                 className=""
