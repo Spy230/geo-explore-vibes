@@ -10,7 +10,7 @@ Disallow: /debug
 Disallow: /simple
 
 # Sitemap
-Sitemap: https://phenix-project.ru/sitemap.xml
+Sitemap: https://yandex-maps-2gis-prodvigenie-phenix.ru/sitemap.xml
 
 # Основные поисковые боты
 User-agent: Googlebot
