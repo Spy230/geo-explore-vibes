@@ -136,75 +136,64 @@ const CasesSection = () => {
               </div>
 
               {caseItem.metrics.length > 0 && (
-                <div style={{
+                <div className="metrics-container" style={{
                   width: '100%',
                   marginTop: 'auto',
                   paddingTop: '1rem',
                   position: 'relative',
-                  zIndex: 10,
+                  zIndex: 15,
                   flexShrink: 0,
                   overflow: 'visible',
                   maxWidth: '100%',
                   boxSizing: 'border-box'
                 }}>
-                  <table style={{
+                  <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 'clamp(4px, 1vw, 6px)',
                     width: '100%',
-                    borderCollapse: 'collapse',
-                    tableLayout: 'fixed',
                     position: 'relative',
-                    zIndex: 10,
-                    maxWidth: '100%'
+                    zIndex: 10
                   }}>
-                    <tbody>
-                      {caseItem.metrics.map((metric, metricIndex) => (
-                        <tr key={metricIndex} style={{
-                          borderBottom: metricIndex < caseItem.metrics.length - 1 ? '1px solid rgba(128, 128, 128, 0.1)' : 'none',
-                          position: 'relative',
-                          zIndex: 10,
-                          maxWidth: '100%'
+                    {caseItem.metrics.map((metric, metricIndex) => (
+                      <div key={metricIndex} style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        borderBottom: metricIndex < caseItem.metrics.length - 1 ? '1px solid rgba(128, 128, 128, 0.1)' : 'none',
+                        paddingBottom: metricIndex < caseItem.metrics.length - 1 ? 'clamp(4px, 1vw, 6px)' : '0',
+                        position: 'relative',
+                        zIndex: 10,
+                        width: '100%',
+                        minHeight: 'clamp(20px, 4vw, 24px)'
+                      }}>
+                        <span style={{
+                          color: '#a08670',
+                          fontSize: 'clamp(12px, 2vw, 14px)',
+                          textAlign: 'left',
+                          flex: '1 1 auto',
+                          marginRight: '8px',
+                          lineHeight: '1.2',
+                          wordBreak: 'break-word',
+                          hyphens: 'auto'
                         }}>
-                          <td style={{
-                            color: '#a08670',
-                            fontSize: 'clamp(12px, 2vw, 14px)',
-                            padding: 'clamp(3px, 1vw, 4px) 0',
-                            textAlign: 'left',
-                            width: '70%',
-                            position: 'relative',
-                            zIndex: 10,
-                            transform: 'translateZ(0)',
-                            backfaceVisibility: 'hidden',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            whiteSpace: 'nowrap',
-                            maxWidth: '70%',
-                            boxSizing: 'border-box'
-                          }}>
-                            {metric.label}:
-                          </td>
-                          <td style={{
-                            color: '#b8956f',
-                            textShadow: '0 0 10px rgba(184, 149, 111, 0.3)',
-                            fontSize: 'clamp(14px, 2.5vw, 16px)',
-                            fontWeight: 'bold',
-                            padding: 'clamp(3px, 1vw, 4px) 0',
-                            textAlign: 'right',
-                            width: '30%',
-                            position: 'relative',
-                            zIndex: 10,
-                            transform: 'translateZ(0)',
-                            backfaceVisibility: 'hidden',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            whiteSpace: 'nowrap',
-                            maxWidth: '30%',
-                            boxSizing: 'border-box'
-                          }}>
-                            {metric.value}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                          {metric.label}:
+                        </span>
+                        <span style={{
+                          color: '#b8956f',
+                          textShadow: '0 0 10px rgba(184, 149, 111, 0.3)',
+                          fontSize: 'clamp(14px, 2.5vw, 16px)',
+                          fontWeight: 'bold',
+                          textAlign: 'right',
+                          flex: '0 0 auto',
+                          lineHeight: '1.2',
+                          whiteSpace: 'nowrap'
+                        }}>
+                          {metric.value}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
