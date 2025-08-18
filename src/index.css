@@ -100,7 +100,9 @@ All colors MUST be HSL.
   box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   background: url('https://a.imgfoto.host/2025/07/30/GLAVNOE-FOTO.png') center center / cover no-repeat;
   color: #d4c4b0;
@@ -109,25 +111,29 @@ html, body, #root {
 
 /* Оптимизация для мобильных устройств */
 @media (max-width: 768px) {
-  html, body, #root {
-    background-attachment: scroll; /* Убираем fixed для мобильных */
+
+  html,
+  body,
+  #root {
+    background-attachment: scroll;
+    /* Убираем fixed для мобильных */
   }
-  
+
   /* Отключаем анимацию логотипа на мобильных */
   img[alt="Phoenix Logo"] {
     animation: none !important;
     transform: none !important;
   }
-  
+
   /* Упрощаем анимации для мобильных */
   .animate-float {
     animation-duration: 8s !important;
   }
-  
+
   .animate-glow {
     animation-duration: 4s !important;
   }
-  
+
   /* Отключаем сложные эффекты на слабых устройствах */
   @media (max-width: 480px) {
     .glass-card {
@@ -135,7 +141,7 @@ html, body, #root {
       -webkit-backdrop-filter: none;
       background: rgba(28, 20, 19, 0.9);
     }
-    
+
     /* Полностью отключаем анимацию логотипа на маленьких экранах */
     img[alt="Phoenix Logo"] {
       animation: none !important;
@@ -172,18 +178,23 @@ html, body, #root {
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate3d(0, 0, 0) scale(1);
     opacity: 0.4;
   }
+
   25% {
     transform: translate3d(10px, -20px, 0) scale(1.05);
     opacity: 0.7;
   }
+
   50% {
     transform: translate3d(-15px, -30px, 0) scale(0.95);
     opacity: 1;
   }
+
   75% {
     transform: translate3d(15px, -15px, 0) scale(1.02);
     opacity: 0.6;
@@ -191,10 +202,13 @@ html, body, #root {
 }
 
 @keyframes glow {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.3;
     transform: scale3d(1, 1, 1);
   }
+
   50% {
     opacity: 0.8;
     transform: scale3d(1.02, 1.02, 1);
@@ -206,15 +220,19 @@ html, body, #root {
     transform: translateX(-100%) rotate(0deg);
     opacity: 0;
   }
+
   25% {
     opacity: 0.3;
   }
+
   50% {
     opacity: 0.1;
   }
+
   75% {
     opacity: 0.4;
   }
+
   100% {
     transform: translateX(100%) rotate(360deg);
     opacity: 0;
@@ -226,6 +244,7 @@ html, body, #root {
     opacity: 0;
     transform: translateY(50px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -237,6 +256,7 @@ html, body, #root {
     opacity: 0;
     transform: translateX(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -248,6 +268,7 @@ html, body, #root {
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -259,6 +280,7 @@ html, body, #root {
     opacity: 0;
     transform: scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -266,15 +288,24 @@ html, body, #root {
 }
 
 @keyframes bounce {
-  0%, 20%, 53%, 80%, 100% {
-    transform: translate3d(0,0,0);
+
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translate3d(0, 0, 0);
   }
-  40%, 43% {
+
+  40%,
+  43% {
     transform: translate3d(0, -30px, 0);
   }
+
   70% {
     transform: translate3d(0, -15px, 0);
   }
+
   90% {
     transform: translate3d(0, -4px, 0);
   }
@@ -284,9 +315,11 @@ html, body, #root {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
@@ -296,6 +329,7 @@ html, body, #root {
   0% {
     background-position: -200% 0;
   }
+
   100% {
     background-position: 200% 0;
   }
@@ -303,23 +337,27 @@ html, body, #root {
 
 .animate-float {
   animation: float infinite ease-in-out;
-  transform: translateZ(0); /* Включаем аппаратное ускорение */
+  transform: translateZ(0);
+  /* Включаем аппаратное ускорение */
   backface-visibility: hidden;
 }
 
 .animate-glow {
   animation: glow infinite ease-in-out;
-  transform: translateZ(0); /* Включаем аппаратное ускорение */
+  transform: translateZ(0);
+  /* Включаем аппаратное ускорение */
   backface-visibility: hidden;
 }
 
 /* Оптимизация производительности */
 .particles-background * {
-  pointer-events: none; /* Отключаем события мыши для частиц */
+  pointer-events: none;
+  /* Отключаем события мыши для частиц */
 }
 
 /* Дополнительные оптимизации для слабых устройств */
 @media (max-width: 768px) and (max-height: 1024px) {
+
   .animate-float,
   .animate-glow {
     animation-play-state: running;
@@ -328,6 +366,7 @@ html, body, #root {
 
 /* Для очень слабых устройств отключаем анимации */
 @media (max-width: 480px) and (max-height: 800px) {
+
   .animate-float,
   .animate-glow {
     animation: none !important;
@@ -360,7 +399,7 @@ html, body, #root {
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
@@ -371,7 +410,7 @@ html, body, #root {
 
 .hover-lift:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .hover-glow {
@@ -389,12 +428,29 @@ html, body, #root {
   animation: slideInUp 0.8s ease-out forwards;
 }
 
-.stagger-animation:nth-child(1) { animation-delay: 0.1s; }
-.stagger-animation:nth-child(2) { animation-delay: 0.2s; }
-.stagger-animation:nth-child(3) { animation-delay: 0.3s; }
-.stagger-animation:nth-child(4) { animation-delay: 0.4s; }
-.stagger-animation:nth-child(5) { animation-delay: 0.5s; }
-.stagger-animation:nth-child(6) { animation-delay: 0.6s; }
+.stagger-animation:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.stagger-animation:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stagger-animation:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.stagger-animation:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.stagger-animation:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.stagger-animation:nth-child(6) {
+  animation-delay: 0.6s;
+}
 
 .container {
   max-width: 1200px;
@@ -442,11 +498,11 @@ html, body, #root {
   justify-content: space-between;
 }
 
-.space-x-4 > * + * {
+.space-x-4>*+* {
   margin-left: 1rem;
 }
 
-.space-x-6 > * + * {
+.space-x-6>*+* {
   margin-left: 1.5rem;
 }
 
@@ -497,27 +553,37 @@ html, body, #root {
   .story-link {
     @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
   }
-  
+
   .hover-scale {
     @apply transition-transform duration-200 hover:scale-105;
   }
-  
+
   .hover-glow {
     @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/25;
   }
-  
+
   .animated-gradient {
     background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
     background-size: 200% 200%;
     animation: gradient-shift 3s ease infinite;
   }
-  
+
   @keyframes gradient-shift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
   }
-}/* 
+}
+
+/* 
 ===== СТИЛИ ДЛЯ ФОРМЫ ОБРАТНОЙ СВЯЗИ ===== */
 
 /* Стили для полей ввода */
@@ -590,6 +656,7 @@ select option {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -618,12 +685,12 @@ select option {
   .contact-form {
     padding: 1.5rem;
   }
-  
+
   .contact-buttons {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .contact-button {
     width: 100%;
     text-align: center;
@@ -632,39 +699,40 @@ select option {
 
 /* Дополнительные адаптивные стили */
 @media (max-width: 640px) {
+
   /* Кнопки в HeroSection в колонку на мобильных */
   .hero-buttons {
     flex-direction: column !important;
     align-items: center !important;
     gap: 1rem !important;
   }
-  
+
   .hero-buttons button {
     width: 100% !important;
     max-width: 280px !important;
   }
-  
+
   /* Контактные кнопки в колонку */
   .contact-buttons {
     flex-direction: column !important;
     align-items: center !important;
   }
-  
+
   /* Статистика в HeroSection */
   .hero-stats {
     grid-template-columns: 1fr !important;
     gap: 1rem !important;
   }
-  
+
   /* Отступ для основного контента под фиксированную шапку */
   body {
     padding-top: 70px !important;
   }
-  
+
   main {
     margin-top: 0 !important;
   }
-  
+
   /* Дополнительный отступ для первой секции */
   section:first-of-type {
     padding-top: 0 !important;
@@ -673,17 +741,18 @@ select option {
 
 /* Очень маленькие экраны */
 @media (max-width: 480px) {
+
   /* Уменьшаем отступы */
   .container {
     padding: 0 1rem;
   }
-  
+
   /* Упрощаем анимации */
   .animate-float,
   .animate-glow {
     animation-duration: 6s !important;
   }
-  
+
   /* Оптимизируем производительность */
   .glass-card {
     backdrop-filter: blur(5px) !important;
@@ -696,7 +765,7 @@ select option {
   .min-h-screen {
     min-height: 100vh;
   }
-  
+
   /* Уменьшаем отступы в ландшафте */
   section {
     padding-top: clamp(2rem, 5vh, 3rem) !important;
@@ -713,7 +782,7 @@ select option {
   will-change: auto !important;
 }
 
-.hero-stats > div {
+.hero-stats>div {
   position: relative !important;
   transform: translateZ(0) !important;
   backface-visibility: hidden !important;
@@ -760,7 +829,7 @@ select option {
     contain: layout style paint !important;
     isolation: isolate !important;
   }
-  
+
   .cases-section .metrics-container {
     contain: layout style !important;
     isolation: isolate !important;
@@ -779,14 +848,27 @@ body {
   padding-top: 70px !important;
 }
 
+/* Базовые стили для отладки */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Дополнительные стили для стабильности layout */
 @media (max-width: 768px) {
+
   /* Предотвращение сдвига при изменении размера viewport */
   * {
     -webkit-text-size-adjust: 100% !important;
     text-size-adjust: 100% !important;
   }
-  
+
   /* Фиксированная высота header */
   header {
     position: fixed !important;
@@ -800,28 +882,29 @@ body {
     z-index: 50 !important;
     contain: layout style !important;
   }
-  
+
   /* Предотвращение горизонтального скролла */
-  body, html {
+  body,
+  html {
     overflow-x: hidden !important;
     width: 100% !important;
     max-width: 100% !important;
   }
-  
+
   /* Стабилизация контейнеров */
   .container {
     width: 100% !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
   }
-  
+
   /* Стабилизация grid элементов */
   .grid {
     width: 100% !important;
     max-width: 100% !important;
     overflow: visible !important;
   }
-  
+
   /* Стабилизация flex элементов */
   .flex {
     width: 100% !important;
@@ -832,29 +915,113 @@ body {
 
 /* Дополнительные стили для очень маленьких экранов */
 @media (max-width: 480px) {
+
   /* Уменьшение анимаций для производительности */
   .animate-float,
   .animate-glow {
     animation-duration: 8s !important;
     animation-timing-function: ease-in-out !important;
   }
-  
+
   /* Упрощение backdrop-filter для слабых устройств */
   .glass-card {
     backdrop-filter: blur(8px) !important;
     -webkit-backdrop-filter: blur(8px) !important;
   }
-  
+
   /* Стабилизация текста */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     word-break: break-word !important;
     hyphens: auto !important;
     overflow-wrap: break-word !important;
   }
-  
+
   p {
     word-break: break-word !important;
     hyphens: auto !important;
     overflow-wrap: break-word !important;
   }
+}
+
+/* Стили для страницы благодарности */
+@keyframes successPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 40px rgba(34, 197, 94, 0.4);
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 60px rgba(34, 197, 94, 0.6);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 40px rgba(34, 197, 94, 0.4);
+  }
+}
+
+.success-icon {
+  animation: successPulse 2s infinite ease-in-out;
+}
+
+/* Дополнительные анимации для страницы благодарности */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #d4af37, #ffd700, #ffed4e, #d4af37);
+  background-size: 200% 100%;
+  animation: goldShimmer 3s ease-in-out infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Фоллбэк для браузеров без поддержки background-clip */
+@supports not (background-clip: text) {
+  .gold-text {
+    background: none;
+    color: #ffd700;
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+  }
+}
+
+/* Улучшенная анимация для кнопок на странице благодарности */
+.thank-you-button {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.thank-you-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.thank-you-button:hover::before {
+  left: 100%;
+}
+
+.thank-you-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
