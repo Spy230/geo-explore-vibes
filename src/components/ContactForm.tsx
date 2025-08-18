@@ -324,8 +324,8 @@ const ContactForm = () => {
                 href="tel:+79023845591"
                 className="text-white rounded-lg hover-glow contact-button"
                 style={{
-                  background: 'rgba(20, 20, 20, 0.3)',
-                  border: '1px solid rgba(220, 38, 38, 0.3)',
+                  background: 'rgba(20, 20, 20, 0.5)',
+                  border: '1px solid rgba(0, 0, 0, 0.8)',
                   backdropFilter: 'blur(5px)',
                   textDecoration: 'none',
                   display: 'inline-flex',
