@@ -8,19 +8,10 @@ const Header = () => {
         <div className="flex items-center justify-between w-full h-full">
           {/* Мобильная версия - компактная горизонтальная компоновка */}
           <div className="block sm:hidden w-full h-full">
-            <div className="flex items-center justify-between h-full">
-              <div className="flex items-center space-x-3">
-                <img
-                  src="https://a.imgfoto.host/2025/07/30/LOGO.png"
-                  alt="Phoenix Logo"
-                  className="h-8 w-auto"
-                  style={{
-                    filter: 'drop-shadow(0 0 10px #FFD700) drop-shadow(0 0 15px #FFA500)',
-                    maxWidth: '40px'
-                  }}
-                />
+            <div className="grid grid-cols-3 items-center h-full w-full">
+              <div className="flex justify-start">
                 <h1
-                  className="text-sm font-bold animate-fade-in-scale"
+                  className="text-sm font-bold animate-fade-in-scale whitespace-nowrap"
                   style={{
                     color: '#b8956f',
                     textShadow: '0 0 8px rgba(184, 149, 111, 0.3)',
@@ -30,55 +21,70 @@ const Header = () => {
                   PHENIX PROJECT
                 </h1>
               </div>
-              <div className="flex items-center space-x-2">
-                <a
-                  href="tel:+79023845591"
-                  className="transition-all duration-300 px-2 py-2 rounded-lg flex items-center justify-center"
+
+              <div className="flex justify-center">
+                <img
+                  src="https://a.imgfoto.host/2025/07/30/LOGO.png"
+                  alt="Phoenix Logo"
+                  className="h-8 w-auto"
                   style={{
-                    background: 'rgba(220, 38, 38, 0.15)',
-                    border: '1px solid rgba(220, 38, 38, 0.3)',
-                    minWidth: '36px',
-                    minHeight: '36px'
+                    filter: 'drop-shadow(0 0 10px #FFD700) drop-shadow(0 0 15px #FFA500)',
+                    maxWidth: '40px'
                   }}
-                >
-                  <span style={{ fontSize: '16px', color: '#dc2626' }}>📞</span>
-                </a>
-                <a
-                  href="https://wa.me/79023889482"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-all duration-300 px-2 py-2 rounded-lg flex items-center justify-center"
-                  style={{
-                    background: 'rgba(37, 211, 102, 0.15)',
-                    border: '1px solid rgba(37, 211, 102, 0.3)',
-                    minWidth: '36px',
-                    minHeight: '36px'
-                  }}
-                >
-                  <img
-                    src="https://a.imgfoto.host/2025/08/17/icons8-whatsapp-30.png"
-                    alt="WhatsApp"
-                    style={{ width: '20px', height: '20px' }}
-                  />
-                </a>
-                <a
-                  href="https://t.me/+79023889482"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-all duration-300 px-2 py-2 rounded-lg flex items-center justify-center"
-                  style={{
-                    background: 'rgba(0, 136, 204, 0.15)',
-                    border: '1px solid rgba(0, 136, 204, 0.3)',
-                    minWidth: '36px',
-                    minHeight: '36px'
-                  }}
-                >
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
-                    alt="Telegram"
-                    style={{ width: '20px', height: '20px' }}
-                  />
-                </a>
+                />
+              </div>
+
+              <div className="flex justify-end">
+                <div className="flex items-center space-x-0.5">
+                  <a
+                    href="tel:+79023845591"
+                    className="transition-all duration-300 px-0.5 py-0.5 rounded flex items-center justify-center"
+                    style={{
+                      background: 'rgba(0, 0, 0, 0.3)',
+                      border: '1px solid rgba(0, 0, 0, 0.5)',
+                      minWidth: '20px',
+                      minHeight: '20px'
+                    }}
+                  >
+                    <span style={{ fontSize: '10px', color: '#dc2626' }}>📞</span>
+                  </a>
+                  <a
+                    href="https://wa.me/79023889482"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-all duration-300 px-0.5 py-0.5 rounded flex items-center justify-center"
+                    style={{
+                      background: 'rgba(37, 211, 102, 0.15)',
+                      border: '1px solid rgba(37, 211, 102, 0.3)',
+                      minWidth: '20px',
+                      minHeight: '20px'
+                    }}
+                  >
+                    <img
+                      src="https://a.imgfoto.host/2025/08/17/icons8-whatsapp-30.png"
+                      alt="WhatsApp"
+                      style={{ width: '10px', height: '10px' }}
+                    />
+                  </a>
+                  <a
+                    href="https://t.me/+79023889482"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-all duration-300 px-0.5 py-0.5 rounded flex items-center justify-center"
+                    style={{
+                      background: 'rgba(0, 136, 204, 0.15)',
+                      border: '1px solid rgba(0, 136, 204, 0.3)',
+                      minWidth: '20px',
+                      minHeight: '20px'
+                    }}
+                  >
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
+                      alt="Telegram"
+                      style={{ width: '10px', height: '10px' }}
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
