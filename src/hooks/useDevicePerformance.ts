@@ -32,8 +32,10 @@ export const useDevicePerformance = (): DevicePerformance => {
 
       // Проверяем поддержку backdrop-filter
       const supportsBackdropFilter = 
-        CSS.supports('backdrop-filter', 'blur(1px)') ||
-        CSS.supports('-webkit-backdrop-filter', 'blur(1px)');
+        (typeof CSS !== 'undefined' && CSS.supports && (
+          CSS.supports('backdrop-filter', 'blur(1px)') ||
+          CSS.supports('-webkit-backdrop-filter', 'blur(1px)')
+        )) || false;
 
       // Проверяем предпочтения пользователя по анимации
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
