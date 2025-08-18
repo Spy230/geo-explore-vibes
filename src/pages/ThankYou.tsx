@@ -10,7 +10,7 @@ const ThankYou = () => {
       <main>
         <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ paddingBottom: 'clamp(1.5rem, 4vh, 2.5rem)' }}>
           {/* Основной фон с изображением */}
-          <div 
+          <div
             className="absolute inset-0 z-0"
             style={{
               backgroundImage: 'url("https://a.imgfoto.host/2025/07/30/GLAVNOE-FOTO.png")',
@@ -19,7 +19,7 @@ const ThankYou = () => {
               backgroundRepeat: 'no-repeat'
             }}
           />
-          
+
           {/* Темный оверлей */}
           <div className="absolute inset-0 z-10 bg-black bg-opacity-50" />
 
@@ -107,8 +107,8 @@ const ThankYou = () => {
                   justifyContent: 'center',
                   margin: '0 auto'
                 }}>
-                  <span style={{ 
-                    fontSize: 'clamp(2rem, 6vw, 3rem)', 
+                  <span style={{
+                    fontSize: 'clamp(2rem, 6vw, 3rem)',
                     color: 'white',
                     fontWeight: 'bold'
                   }}>
@@ -117,7 +117,7 @@ const ThankYou = () => {
                 </div>
               </div>
 
-              <h1 className="font-bold animate-fade-in-scale" style={{ 
+              <h1 className="font-bold animate-fade-in-scale" style={{
                 marginBottom: 'clamp(1rem, 3vw, 1.5rem)',
                 fontSize: 'clamp(2.5rem, 9vw, 4rem)',
                 lineHeight: '1.1'
@@ -142,11 +142,11 @@ const ThankYou = () => {
                 </span>
               </h1>
 
-              <p className="animate-slide-in-up" style={{ 
-                color: '#d4c4b0', 
-                maxWidth: '48rem', 
-                margin: '0 auto', 
-                lineHeight: '1.6', 
+              <p className="animate-slide-in-up" style={{
+                color: '#d4c4b0',
+                maxWidth: '48rem',
+                margin: '0 auto',
+                lineHeight: '1.6',
                 animationDelay: '0.3s',
                 fontSize: 'clamp(1.1rem, 3.5vw, 1.6rem)',
                 marginBottom: 'clamp(1rem, 3vw, 1.5rem)'
@@ -154,22 +154,22 @@ const ThankYou = () => {
                 Ваша заявка успешно отправлена!
               </p>
 
-              <p className="animate-slide-in-up" style={{ 
-                color: '#a08670', 
-                maxWidth: '42rem', 
-                margin: '0 auto', 
-                lineHeight: '1.5', 
+              <p className="animate-slide-in-up" style={{
+                color: '#a08670',
+                maxWidth: '42rem',
+                margin: '0 auto',
+                lineHeight: '1.5',
                 animationDelay: '0.5s',
                 fontSize: 'clamp(0.95rem, 2.8vw, 1.3rem)'
               }}>
-                Наш менеджер свяжется с вами в течение 15 минут для обсуждения деталей вашего проекта и подготовки персонального предложения.
+                Свяжемся с вами в течении 15 минут, детально обсудим грядущий проект и подготовим персональное предложение!
               </p>
             </div>
 
-            <div className="flex justify-center animate-slide-in-up" style={{ 
-              gap: 'clamp(0.5rem, 2vw, 1rem)', 
-              marginBottom: 'clamp(2rem, 6vw, 3rem)', 
-              flexWrap: 'wrap', 
+            <div className="flex justify-center animate-slide-in-up" style={{
+              gap: 'clamp(0.5rem, 2vw, 1rem)',
+              marginBottom: 'clamp(2rem, 6vw, 3rem)',
+              flexWrap: 'wrap',
               animationDelay: '0.7s',
               flexDirection: 'row',
               alignItems: 'center'
@@ -223,59 +223,59 @@ const ThankYou = () => {
                 Что дальше?
               </h3>
               <div style={{ textAlign: 'left' }}>
-                <div style={{ 
-                  display: 'flex', 
-                  alignItems: 'flex-start', 
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'flex-start',
                   marginBottom: 'clamp(0.75rem, 2vw, 1rem)',
                   gap: '0.75rem'
                 }}>
-                  <span style={{ 
-                    color: '#22c55e', 
+                  <span style={{
+                    color: '#22c55e',
                     fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
                     fontWeight: 'bold',
                     minWidth: '1.5rem'
                   }}>1.</span>
-                  <span style={{ 
-                    color: '#a08670', 
+                  <span style={{
+                    color: '#a08670',
                     fontSize: 'clamp(0.9rem, 2.2vw, 1.1rem)',
                     lineHeight: '1.4'
                   }}>
                     Анализируем ваш бизнес и конкурентов
                   </span>
                 </div>
-                <div style={{ 
-                  display: 'flex', 
-                  alignItems: 'flex-start', 
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'flex-start',
                   marginBottom: 'clamp(0.75rem, 2vw, 1rem)',
                   gap: '0.75rem'
                 }}>
-                  <span style={{ 
-                    color: '#22c55e', 
+                  <span style={{
+                    color: '#22c55e',
                     fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
                     fontWeight: 'bold',
                     minWidth: '1.5rem'
                   }}>2.</span>
-                  <span style={{ 
-                    color: '#a08670', 
+                  <span style={{
+                    color: '#a08670',
                     fontSize: 'clamp(0.9rem, 2.2vw, 1.1rem)',
                     lineHeight: '1.4'
                   }}>
                     Составляем персональную стратегию продвижения
                   </span>
                 </div>
-                <div style={{ 
-                  display: 'flex', 
-                  alignItems: 'flex-start', 
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'flex-start',
                   gap: '0.75rem'
                 }}>
-                  <span style={{ 
-                    color: '#22c55e', 
+                  <span style={{
+                    color: '#22c55e',
                     fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
                     fontWeight: 'bold',
                     minWidth: '1.5rem'
                   }}>3.</span>
-                  <span style={{ 
-                    color: '#a08670', 
+                  <span style={{
+                    color: '#a08670',
                     fontSize: 'clamp(0.9rem, 2.2vw, 1.1rem)',
                     lineHeight: '1.4'
                   }}>
