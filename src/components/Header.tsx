@@ -1,85 +1,90 @@
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 w-full z-50 glass-card border-b border-glass-border animate-slide-in-up">
-      <div className="w-full px-4 sm:px-6 py-3 sm:py-4">
-        <div className="flex items-center justify-between">
-          {/* Мобильная версия - вертикальная компоновка */}
-          <div className="block sm:hidden w-full">
-            <div className="flex flex-col items-center mb-3">
-              <img
-                src="https://a.imgfoto.host/2025/07/30/LOGO.png"
-                alt="Phoenix Logo"
-                className="h-10 w-auto mb-2"
-                style={{
-                  filter: 'drop-shadow(0 0 15px #FFD700) drop-shadow(0 0 25px #FFA500)',
-                  maxWidth: '50px'
-                }}
-              />
-              <h1
-                className="text-base font-bold animate-fade-in-scale text-center"
-                style={{
-                  color: '#b8956f',
-                  textShadow: '0 0 10px rgba(184, 149, 111, 0.3)',
-                  marginBottom: '8px'
-                }}
-              >
-                PHENIX PROJECT
-              </h1>
-            </div>
-            <div className="flex items-center justify-center space-x-4">
-              <a
-                href="tel:+79023845591"
-                className="transition-all duration-300 px-3 py-2 rounded-lg flex items-center justify-center"
-                style={{
-                  background: 'rgba(220, 38, 38, 0.15)',
-                  border: '1px solid rgba(220, 38, 38, 0.3)',
-                  minWidth: '44px',
-                  minHeight: '44px'
-                }}
-              >
-                <span style={{ fontSize: '20px', color: '#dc2626' }}>📞</span>
-              </a>
-              <a
-                href="https://wa.me/79023889482"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-all duration-300 px-3 py-2 rounded-lg flex items-center justify-center"
-                style={{
-                  background: 'rgba(37, 211, 102, 0.15)',
-                  border: '1px solid rgba(37, 211, 102, 0.3)',
-                  minWidth: '44px',
-                  minHeight: '44px'
-                }}
-              >
+    <header
+      className="fixed top-0 left-0 right-0 w-full z-50 glass-card border-b border-glass-border animate-slide-in-up"
+      style={{ height: '70px' }}
+    >
+      <div className="w-full px-4 sm:px-6 h-full flex items-center" style={{ height: '70px' }}>
+        <div className="flex items-center justify-between w-full h-full">
+          {/* Мобильная версия - компактная горизонтальная компоновка */}
+          <div className="block sm:hidden w-full h-full">
+            <div className="flex items-center justify-between h-full">
+              <div className="flex items-center space-x-3">
                 <img
-                  src="https://a.imgfoto.host/2025/08/17/icons8-whatsapp-30.png"
-                  alt="WhatsApp"
-                  style={{ width: '24px', height: '24px' }}
+                  src="https://a.imgfoto.host/2025/07/30/LOGO.png"
+                  alt="Phoenix Logo"
+                  className="h-8 w-auto"
+                  style={{
+                    filter: 'drop-shadow(0 0 10px #FFD700) drop-shadow(0 0 15px #FFA500)',
+                    maxWidth: '40px'
+                  }}
                 />
-              </a>
-              <a
-                href="https://t.me/+79023889482"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-all duration-300 px-3 py-2 rounded-lg flex items-center justify-center"
-                style={{
-                  background: 'rgba(0, 136, 204, 0.15)',
-                  border: '1px solid rgba(0, 136, 204, 0.3)',
-                  minWidth: '44px',
-                  minHeight: '44px'
-                }}
-              >
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
-                  alt="Telegram"
-                  style={{ width: '24px', height: '24px' }}
-                />
-              </a>
+                <h1
+                  className="text-sm font-bold animate-fade-in-scale"
+                  style={{
+                    color: '#b8956f',
+                    textShadow: '0 0 8px rgba(184, 149, 111, 0.3)',
+                    lineHeight: '1.2'
+                  }}
+                >
+                  PHENIX PROJECT
+                </h1>
+              </div>
+              <div className="flex items-center space-x-2">
+                <a
+                  href="tel:+79023845591"
+                  className="transition-all duration-300 px-2 py-2 rounded-lg flex items-center justify-center"
+                  style={{
+                    background: 'rgba(220, 38, 38, 0.15)',
+                    border: '1px solid rgba(220, 38, 38, 0.3)',
+                    minWidth: '36px',
+                    minHeight: '36px'
+                  }}
+                >
+                  <span style={{ fontSize: '16px', color: '#dc2626' }}>📞</span>
+                </a>
+                <a
+                  href="https://wa.me/79023889482"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 px-2 py-2 rounded-lg flex items-center justify-center"
+                  style={{
+                    background: 'rgba(37, 211, 102, 0.15)',
+                    border: '1px solid rgba(37, 211, 102, 0.3)',
+                    minWidth: '36px',
+                    minHeight: '36px'
+                  }}
+                >
+                  <img
+                    src="https://a.imgfoto.host/2025/08/17/icons8-whatsapp-30.png"
+                    alt="WhatsApp"
+                    style={{ width: '20px', height: '20px' }}
+                  />
+                </a>
+                <a
+                  href="https://t.me/+79023889482"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 px-2 py-2 rounded-lg flex items-center justify-center"
+                  style={{
+                    background: 'rgba(0, 136, 204, 0.15)',
+                    border: '1px solid rgba(0, 136, 204, 0.3)',
+                    minWidth: '36px',
+                    minHeight: '36px'
+                  }}
+                >
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
+                    alt="Telegram"
+                    style={{ width: '20px', height: '20px' }}
+                  />
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Десктопная версия - горизонтальная компоновка */}
-          <div className="hidden sm:flex items-center justify-between w-full">
+          <div className="hidden sm:flex items-center justify-between w-full h-full">
             <div className="flex-1 flex justify-start">
               <h1
                 className="text-2xl lg:text-3xl font-bold animate-fade-in-scale"
