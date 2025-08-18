@@ -136,10 +136,10 @@ const HeroSection = () => {
               } : {})
             }}
             >
-              Гео-продвижение
+              SEO продвижение в Яндекс картах и 2ГИС
             </span>
             <br />
-            <span style={{ color: '#d4c4b0' }}>для вашего бизнеса</span>
+            <span style={{ color: '#d4c4b0' }}>Реклама на картах для вашего бизнеса</span>
           </h1>
           <p className="animate-slide-in-up" style={{ 
             color: '#a08670', 
