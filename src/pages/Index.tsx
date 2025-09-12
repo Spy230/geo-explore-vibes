@@ -5,6 +5,7 @@ import CasesSection from '../components/CasesSection';
 import ContactForm from '../components/ContactForm';
 import FAQSection from '../components/FAQSection';
 import SEOContent from '../components/SEOContent';
+import CookieBanner from '../components/legal/CookieBanner';
 import { Toaster } from '../components/ui/toaster';
 
 const Index = () => {
@@ -35,6 +36,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      <CookieBanner />
       <Toaster />
     </div>
   );
