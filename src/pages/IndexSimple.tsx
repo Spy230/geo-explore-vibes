@@ -1,3 +1,5 @@
+import CookieBanner from '../components/legal/CookieBanner';
+
 const IndexSimple = () => {
   return (
     <div style={{ 
@@ -31,6 +33,7 @@ const IndexSimple = () => {
       }}>
         Тестовая страница работает!
       </p>
+      <CookieBanner />
     </div>
   );
 };
