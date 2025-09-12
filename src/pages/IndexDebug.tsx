@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import CookieBanner from '../components/legal/CookieBanner';
 import { Toaster } from '../components/ui/toaster';
 
 const IndexDebug = () => {
@@ -41,6 +42,7 @@ const IndexDebug = () => {
           <p>&copy; 2024 Phenix-project. Все права защищены.</p>
         </div>
       </footer>
+      <CookieBanner />
       <Toaster />
     </div>
   );
