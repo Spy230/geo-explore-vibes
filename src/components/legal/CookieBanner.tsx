@@ -9,7 +9,11 @@ const CookieBanner = () => {
     // Проверяем, было ли уже дано согласие на cookie
     const cookieConsent = localStorage.getItem('cookieConsent');
     if (!cookieConsent) {
-      setIsVisible(true);
+      // Небольшая задержка для лучшего UX
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+      }, 1000);
+      return () => clearTimeout(timer);
     }
   }, []);
 
@@ -22,6 +26,15 @@ const CookieBanner = () => {
     localStorage.setItem('cookieConsent', 'declined');
     setIsVisible(false);
   };
+
+  // Функция для сброса согласия (для тестирования)
+  // Можно вызвать в консоли: window.resetCookieConsent()
+  useEffect(() => {
+    (window as any).resetCookieConsent = () => {
+      localStorage.removeItem('cookieConsent');
+      setIsVisible(true);
+    };
+  }, []);
 
   if (!isVisible) return null;
 
