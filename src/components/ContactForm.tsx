@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { toast } from '../hooks/use-toast';
 import telegramIcon from '../assets/telegram-icon-new.png';
+import ConsentCheckboxes from './legal/ConsentCheckboxes';
 
 const ContactForm = () => {
   const navigate = useNavigate();
@@ -11,6 +12,11 @@ const ContactForm = () => {
     phone: '',
     city: '',
     business_type: ''
+  });
+  const [consents, setConsents] = useState({
+    terms: false,
+    privacy: false,
+    marketing: false,
   });
   const [isLoading, setIsLoading] = useState(false);
 
@@ -96,6 +102,17 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Проверяем обязательные согласия
+    if (!consents.terms || !consents.privacy) {
+      toast({
+        title: "Ошибка",
+        description: "Необходимо дать согласие на обработку персональных данных и принять условия оферты",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsLoading(true);
 
     try {
@@ -280,17 +297,26 @@ const ContactForm = () => {
               </select>
             </div>
 
+            {/* Чекбоксы согласий */}
+            <div style={{ marginBottom: '1.5rem', paddingTop: '1rem', borderTop: '1px solid rgba(128, 128, 128, 0.2)' }}>
+              <ConsentCheckboxes
+                onConsentChange={setConsents}
+                showMarketing={true}
+                className="space-y-3"
+              />
+            </div>
+
             <button
               type="submit"
-              disabled={isLoading}
+              disabled={isLoading || !consents.terms || !consents.privacy}
               className="w-full font-semibold text-white rounded-lg"
               style={{
-                background: isLoading ? 'rgba(122, 97, 69, 0.5)' : 'linear-gradient(135deg, #6b5439, #7a6145)',
+                background: (isLoading || !consents.terms || !consents.privacy) ? 'rgba(122, 97, 69, 0.5)' : 'linear-gradient(135deg, #6b5439, #7a6145)',
                 boxShadow: '0 0 30px rgba(122, 97, 69, 0.4)',
                 border: 'none',
-                cursor: isLoading ? 'not-allowed' : 'pointer',
+                cursor: (isLoading || !consents.terms || !consents.privacy) ? 'not-allowed' : 'pointer',
                 marginBottom: 'clamp(0.75rem, 2vw, 1rem)',
-                opacity: isLoading ? 0.7 : 1,
+                opacity: (isLoading || !consents.terms || !consents.privacy) ? 0.7 : 1,
                 padding: 'clamp(0.75rem, 3vw, 1rem) clamp(1.5rem, 4vw, 2rem)',
                 fontSize: 'clamp(0.9rem, 2.5vw, 1.125rem)'
               }}
@@ -304,7 +330,7 @@ const ContactForm = () => {
               fontSize: 'clamp(0.75rem, 2vw, 0.875rem)',
               lineHeight: '1.4'
             }}>
-              Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+              * Обязательные поля и согласия
             </p>
           </form>
 
@@ -321,7 +347,7 @@ const ContactForm = () => {
               alignItems: 'center'
             }}>
               <a
-                href="tel:+79023845591"
+                href="tel:+79023889482"
                 className="text-white rounded-lg hover-glow contact-button"
                 style={{
                   background: 'rgba(20, 20, 20, 0.5)',
@@ -351,7 +377,7 @@ const ContactForm = () => {
                     fill="#dc2626"
                   />
                 </svg>
-                +7 902 384-55-91
+                +7 902 388-94-82
               </a>
               <a
                 href="https://wa.me/79023889482"
