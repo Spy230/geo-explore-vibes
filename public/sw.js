@@ -3,8 +3,7 @@ const urlsToCache = [
   '/',
   '/src/main.tsx',
   '/src/index.css',
-  'https://a.imgfoto.host/2025/07/30/GLAVNOE-FOTO.png',
-  'https://a.imgfoto.host/2025/07/30/LOGO.png'
+  'https://a.imgfoto.host/2025/07/30/GLAVNOE-FOTO.png'
 ];
 
 // Установка Service Worker
