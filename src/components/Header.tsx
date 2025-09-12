@@ -37,7 +37,7 @@ const Header = () => {
               <div className="flex justify-end">
                 <div className="flex items-center space-x-0.5">
                   <a
-                    href="tel:+79023845591"
+                    href="tel:+79023889482"
                     className="transition-all duration-300 px-0.5 py-0.5 rounded flex items-center justify-center"
                     style={{
                       background: 'rgba(0, 0, 0, 0.3)',
@@ -128,11 +128,11 @@ const Header = () => {
 
             <div className="flex items-center space-x-2 lg:space-x-4 text-xs lg:text-sm animate-slide-in-right">
               <a
-                href="tel:+79023845591"
+                href="tel:+79023889482"
                 className="transition-colors hidden lg:inline"
                 style={{ color: '#d4c4b0' }}
               >
-                +7 902 384-55-91
+                +7 902 388-94-82
               </a>
               <a
                 href="mailto:XSchoolbiz@yandex.ru"
