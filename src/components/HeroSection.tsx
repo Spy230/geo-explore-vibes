@@ -2,7 +2,7 @@ const HeroSection = () => {
   const stats = [
     { value: '300%', label: 'Рост трафика' },
     { value: '500+', label: 'Городов' },
-    { value: '1000+', label: 'Клиентов' },
+    { value: '100+', label: 'Клиентов' },
   ];
 
   return (
