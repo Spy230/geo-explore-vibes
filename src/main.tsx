@@ -6,8 +6,8 @@ import { addPolyfills } from './utils/browserSupport'
 // Загружаем полифиллы для совместимости
 addPolyfills();
 
-// Регистрируем Service Worker для кэширования
-if ('serviceWorker' in navigator) {
+// Регистрируем Service Worker для кэширования (только если файл существует)
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
