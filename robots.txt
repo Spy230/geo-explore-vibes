@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Основные страницы
+Allow: /
+Allow: /thank-you
+
+# Запрещаем индексацию служебных страниц
+Disallow: /debug
+Disallow: /simple
+
+# Sitemap
+Sitemap: https://yandex-maps-2gis-prodvigenie-phenix.ru/sitemap.xml
+
+# Основные поисковые боты
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Bingbot
+Allow: /
