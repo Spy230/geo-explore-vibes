@@ -24,12 +24,16 @@ const Header = () => {
 
               <div className="flex justify-center">
                 <img
-                  src="https://a.imgfoto.host/2025/07/30/LOGO.png"
+                  src="/images/phoenix-logo.png"
                   alt="Phoenix Logo"
                   className="h-8 w-auto"
                   style={{
                     filter: 'drop-shadow(0 0 10px #FFD700) drop-shadow(0 0 15px #FFA500)',
                     maxWidth: '40px'
+                  }}
+                  onError={(e) => {
+                    console.error('Failed to load logo:', e);
+                    e.currentTarget.style.display = 'none';
                   }}
                 />
               </div>
@@ -116,7 +120,7 @@ const Header = () => {
 
             <div className="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center">
               <img
-                src="https://a.imgfoto.host/2025/07/30/LOGO.png"
+                src="/images/phoenix-logo.png"
                 alt="Phoenix Logo"
                 className="h-12 lg:h-16 w-auto animate-float"
                 style={{

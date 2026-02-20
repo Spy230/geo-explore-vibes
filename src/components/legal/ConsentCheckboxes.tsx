@@ -46,7 +46,6 @@ const ConsentCheckboxes = ({
           <Link 
             to="/legal/terms" 
             className="hover:underline"
-            target="_blank"
             style={{ color: '#7a6145' }}
           >
             публичной оферты
@@ -69,7 +68,6 @@ const ConsentCheckboxes = ({
           <Link 
             to="/legal/data-processing" 
             className="hover:underline"
-            target="_blank"
             style={{ color: '#7a6145' }}
           >
             согласие на обработку персональных данных
@@ -78,7 +76,6 @@ const ConsentCheckboxes = ({
           <Link 
             to="/legal/privacy" 
             className="hover:underline"
-            target="_blank"
             style={{ color: '#7a6145' }}
           >
             политикой конфиденциальности
@@ -102,7 +99,6 @@ const ConsentCheckboxes = ({
             <Link 
               to="/legal/marketing" 
               className="hover:underline"
-              target="_blank"
               style={{ color: '#7a6145' }}
             >
               согласие на рекламную рассылку
