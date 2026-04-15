@@ -24,7 +24,7 @@ const Header = () => {
 
               <div className="flex justify-center">
                 <img
-                  src="/images/phoenix-logo.png"
+                  src="/images/logo.png"
                   alt="Phoenix Logo"
                   className="h-8 w-auto"
                   style={{
@@ -120,7 +120,7 @@ const Header = () => {
 
             <div className="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center">
               <img
-                src="/images/phoenix-logo.png"
+                src="/images/logo.png"
                 alt="Phoenix Logo"
                 className="h-12 lg:h-16 w-auto animate-float"
                 style={{
